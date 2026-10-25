@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Skins de Astrea</title>
+<meta name="description" content="Catálogo de todas as skins de Astrea: Pokémon, armaduras, armas e asas, com preço em Éter e visualizador 3D.">
+<link rel="icon" href="img/eter.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Alegreya+Sans:wght@400;500;700&display=swap">
+<style>
+/* Mesma noite de Astrea do Mercado de Éter (Angela): tema escuro único por escolha. */
+:root {
+  color-scheme: dark;
+  --noite: #120d1f; --pedra: #1c1530; --pedra2: #241b3d; --texto: #ece6f7; --apagado: #a99cc4; --linha: #ffffff14;
+  --eter: #7fe7f2; --lenda: #ffc446; --visao: #ce6efa; --pressagio: #60b0ff;
+  --c-loja: #ffc446; --c-armadura: #ce6efa; --c-arma: #ff7a6b; --c-asa: #9fd8ff; --c-cosmetico: #ff9fd8; --c-pesca: #4fd6b8;
+  --c-natureza: #8fdc5f; --c-historia: #f2a65a; --c-emissario: #ff5f8f; --c-eventos: #60b0ff; --c-passe: #7fe7f2;
+  --f-pixel: "Pixelify Sans", "Courier New", monospace;
+  --f-texto: "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+  --prisma: linear-gradient(100deg, #ffd6f4, #c9f3ff 30%, #fff3c4 55%, #d9c9ff 80%, #ffd6f4);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 132px; }
+body {
+  margin: 0; background: var(--noite); color: var(--texto); font-family: var(--f-texto); font-size: 16px; line-height: 1.5;
+  background-image:
+    radial-gradient(1px 1px at 12% 18%, #ffffff55 50%, transparent 51%), radial-gradient(1px 1px at 72% 9%, #ffffff44 50%, transparent 51%),
+    radial-gradient(1px 1px at 38% 64%, #ffffff33 50%, transparent 51%), radial-gradient(1px 1px at 88% 52%, #ffffff44 50%, transparent 51%),
+    radial-gradient(1px 1px at 22% 82%, #ffffff33 50%, transparent 51%), radial-gradient(1px 1px at 58% 34%, #ffffff2a 50%, transparent 51%),
+    radial-gradient(60% 30% at 50% 0%, #2b1d4a 0%, transparent 70%);
+  background-attachment: fixed;
+}
+.pix { image-rendering: pixelated; }
+.pagina { max-width: 1180px; margin: 0 auto; padding: 44px max(16px, env(safe-area-inset-right)) 64px max(16px, env(safe-area-inset-left)); display: grid; gap: 34px; }
+
+/* topo */
+header { text-align: center; display: grid; gap: 10px; justify-items: center; }
+.eyebrow { font-family: var(--f-pixel); letter-spacing: .22em; text-transform: uppercase; color: var(--eter); font-size: 13px; }
+h1 { font-family: var(--f-pixel); font-weight: 700; font-size: clamp(36px, 6.4vw, 62px); margin: 0; line-height: 1; text-wrap: balance; text-shadow: 0 3px 0 #000a, 0 0 40px #7fe7f233; }
+header p { margin: 0; color: var(--apagado); max-width: 62ch; }
+.numeros { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 6px; }
+.numero { display: grid; justify-items: center; min-width: 108px; padding: 8px 14px; background: #0004; border: 2px solid color-mix(in srgb, var(--c) 55%, #000); box-shadow: inset 0 0 0 1px #ffffff0c; }
+.numero b { font-family: var(--f-pixel); font-size: 28px; line-height: 1.1; color: var(--c); font-variant-numeric: tabular-nums; }
+.numero span { font-size: 13px; color: var(--apagado); }
+
+/* barra fixa: categorias + busca */
+.barra { position: sticky; top: 0; z-index: 20; margin: 0 calc(-1 * max(16px, env(safe-area-inset-left))); padding: 10px max(16px, env(safe-area-inset-left));
+  background: color-mix(in srgb, var(--noite) 88%, transparent); backdrop-filter: blur(8px); border-bottom: 1px solid var(--linha); display: grid; grid-template-columns: minmax(0, 1fr); gap: 10px; }
+.abas { min-width: 0; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+.abas::-webkit-scrollbar { display: none; }
+.aba { --c: var(--eter); flex: none; display: inline-flex; align-items: center; gap: 6px; font: 600 14px var(--f-pixel); color: var(--texto); text-decoration: none;
+  padding: 5px 10px; background: #0005; border: 2px solid color-mix(in srgb, var(--c) 45%, #000); cursor: pointer; white-space: nowrap; }
+.aba small { font: 500 12px var(--f-texto); color: var(--apagado); }
+.aba:hover, .aba.ativa { background: color-mix(in srgb, var(--c) 20%, #0006); border-color: var(--c); }
+.aba::before { content: ""; width: 8px; height: 8px; background: var(--c); box-shadow: 0 0 8px var(--c); }
+.ferramentas { display: flex; gap: 8px; flex-wrap: wrap; }
+.busca { flex: 1 1 260px; display: flex; align-items: center; gap: 8px; padding: 0 12px; background: #0006; border: 2px solid #ffffff1c; }
+.busca:focus-within { border-color: var(--eter); }
+.busca input { flex: 1; min-width: 0; background: none; border: 0; outline: 0; color: var(--texto); font: 16px var(--f-texto); padding: 8px 0; }
+.busca svg { flex: none; opacity: .6; }
+select { background: #0006; color: var(--texto); border: 2px solid #ffffff1c; font: 15px var(--f-texto); padding: 6px 10px; }
+.vazio { text-align: center; color: var(--apagado); padding: 40px 0; }
+
+/* seções */
+section { --c: var(--eter); background: linear-gradient(180deg, color-mix(in srgb, var(--c) 12%, var(--pedra)) 0%, var(--pedra) 260px);
+  border: 3px solid color-mix(in srgb, var(--c) 60%, #000);
+  box-shadow: 0 0 0 3px #0008, 0 0 40px -10px color-mix(in srgb, var(--c) 50%, transparent), inset 0 0 0 2px #ffffff10;
+  padding: 24px 22px; display: grid; gap: 18px; min-width: 0; }
+section[hidden] { display: none; }
+.cab { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 6px 16px; }
+section h2 { margin: 0; font-family: var(--f-pixel); font-weight: 700; font-size: 28px; line-height: 1.1; color: var(--c); text-shadow: 0 2px 0 #000a; }
+.cab .qtd { font-family: var(--f-pixel); color: var(--apagado); font-size: 14px; letter-spacing: .08em; }
+section .sub { margin: -8px 0 0; color: var(--apagado); max-width: 75ch; }
+.grupo { display: grid; gap: 12px; }
+.grupo h3 { margin: 6px 0 0; font: 600 16px var(--f-pixel); letter-spacing: .12em; text-transform: uppercase; color: color-mix(in srgb, var(--c) 75%, #fff); display: flex; align-items: center; gap: 10px; }
+.grupo h3::after { content: ""; flex: 1; height: 2px; background: linear-gradient(90deg, color-mix(in srgb, var(--c) 40%, transparent), transparent); }
+
+/* cards */
+.vitrine { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 14px; }
+.skin { --r: var(--c); position: relative; margin: 0; min-width: 0; background: #0005; border: 2px solid color-mix(in srgb, var(--r) 40%, #000); display: grid; grid-template-rows: auto 1fr;
+  cursor: pointer; transition: transform .15s, border-color .15s, box-shadow .15s; text-align: left; color: inherit; font: inherit; padding: 0; }
+.skin:hover, .skin:focus-visible { transform: translateY(-3px); border-color: var(--r); box-shadow: 0 10px 28px -12px var(--r); outline: none; }
+.skin.lendario { --r: var(--lenda); }
+.palco { position: relative; height: 196px; overflow: hidden; padding: 14px;
+  background: radial-gradient(55% 55% at 50% 62%, color-mix(in srgb, var(--r) 26%, transparent), transparent 72%), linear-gradient(180deg, transparent 70%, #0006); }
+.palco img { display: block; width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 6px 6px #000a); transition: transform .25s; }
+.skin:hover .palco img { transform: scale(1.06); }
+.selo3d { position: absolute; right: 8px; bottom: 8px; font: 700 11px var(--f-pixel); letter-spacing: .1em; padding: 2px 6px; background: #000a; border: 1px solid color-mix(in srgb, var(--r) 60%, #000); color: var(--r); opacity: .85; }
+.tag { position: absolute; left: 8px; top: 8px; font: 700 11px var(--f-pixel); letter-spacing: .12em; text-transform: uppercase; padding: 2px 6px; background: #000b; color: var(--r); border: 1px solid color-mix(in srgb, var(--r) 60%, #000); }
+.skin figcaption { display: grid; gap: 6px; padding: 10px 12px 12px; border-top: 1px solid var(--linha); align-content: start; }
+.skin b { font-family: var(--f-pixel); font-size: 17px; line-height: 1.15; color: color-mix(in srgb, var(--r) 70%, #fff); }
+.esp { font-size: 13px; color: var(--apagado); margin-top: -4px; }
+.vars { display: flex; flex-wrap: wrap; gap: 4px; min-width: 0; }
+.var { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 1px 6px; background: #0006; border: 1px solid #ffffff18; color: var(--apagado); }
+.var i { width: 8px; height: 8px; flex: none; }
+.var.normal i { background: #cfc6e4; } .var.shiny i { background: #ffd34d; box-shadow: 0 0 6px #ffd34d; } .var.prismatica i { background: var(--prisma); box-shadow: 0 0 6px #d9c9ff; }
+.var .v { font-size: 13px; }
+.v { display: inline-flex; align-items: center; gap: 5px; font-family: var(--f-texto); font-weight: 700; color: var(--eter); font-variant-numeric: tabular-nums; white-space: nowrap; text-shadow: 0 0 12px #7fe7f244; }
+.v img { width: 14px; height: 14px; }
+.preco-grande .v { font-size: 22px; } .preco-grande .v img { width: 18px; height: 18px; }
+.onde { font-size: 13px; color: var(--apagado); line-height: 1.35; }
+
+/* passe */
+.misterio .palco { display: grid; place-items: center; }
+.misterio .palco span { font: 700 64px var(--f-pixel); color: color-mix(in srgb, var(--r) 60%, #000); text-shadow: 0 0 22px var(--r); }
+.misterio { cursor: default; } .misterio:hover { transform: none; }
+
+/* visualizador 3D */
+dialog { padding: 0; border: 3px solid color-mix(in srgb, var(--r, var(--eter)) 70%, #000); background: var(--pedra); color: var(--texto);
+  width: min(980px, calc(100vw - 24px)); max-height: calc(100dvh - 24px); box-shadow: 0 0 0 3px #000a, 0 0 80px -20px var(--r, var(--eter)); }
+dialog { overflow-x: hidden; }
+.vis > * { min-width: 0; }
+dialog::backdrop { background: #07040ecc; backdrop-filter: blur(3px); }
+.vis { display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(260px, 1fr); min-height: min(600px, calc(100dvh - 30px)); }
+.cena { position: relative; min-height: 360px; background: radial-gradient(60% 55% at 50% 58%, color-mix(in srgb, var(--r, var(--eter)) 24%, transparent), transparent 75%), linear-gradient(180deg, #0b0816, #1a1230); }
+.cena canvas { position: absolute; inset: 0; width: 100%; height: 100%; cursor: grab; touch-action: none; }
+.cena canvas:active { cursor: grabbing; }
+.cena .dica { position: absolute; left: 0; right: 0; bottom: 10px; text-align: center; font-size: 13px; color: var(--apagado); pointer-events: none; }
+.cena .carregando[hidden] { display: none; }
+.cena .carregando { position: absolute; inset: 0; display: grid; place-items: center; font-family: var(--f-pixel); color: var(--apagado); }
+.info { padding: 22px 20px; display: grid; gap: 14px; align-content: start; border-left: 2px solid var(--linha); overflow-y: auto; }
+.info .tipo { font: 600 12px var(--f-pixel); letter-spacing: .16em; text-transform: uppercase; color: var(--r, var(--eter)); }
+.info h2 { margin: -6px 0 0; font: 700 28px/1.1 var(--f-pixel); color: color-mix(in srgb, var(--r, var(--eter)) 70%, #fff); text-shadow: 0 2px 0 #000a; }
+.info .esp { margin-top: -10px; font-size: 15px; }
+.botoes-var { display: grid; gap: 6px; }
+.formas { display: flex; gap: 6px; flex-wrap: wrap; }
+.formas[hidden] { display: none; }
+.fb { flex: 1 1 0; min-width: 80px; padding: 7px 10px; background: #0005; border: 2px solid #ffffff18; color: var(--texto); font: 700 14px var(--f-pixel); letter-spacing: .06em; cursor: pointer; }
+.fb.ativo { border-color: var(--r, var(--eter)); background: color-mix(in srgb, var(--r, var(--eter)) 16%, #0006); color: color-mix(in srgb, var(--r, var(--eter)) 70%, #fff); }
+.mega { position: absolute; right: 8px; top: 8px; font: 700 11px var(--f-pixel); letter-spacing: .12em; text-transform: uppercase; padding: 2px 6px; color: #120d1f;
+  background: linear-gradient(100deg, #ff9ad5, #b98cff, #7fe7f2); box-shadow: 0 0 10px #b98cff88; }
+.bv { display: flex; align-items: center; justify-content: space-between; gap: 10px; width: 100%; padding: 8px 12px; background: #0005; border: 2px solid #ffffff18; color: var(--texto); font: 600 15px var(--f-pixel); cursor: pointer; text-align: left; }
+.bv span:first-child { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; min-width: 0; flex: 1; }
+.bv .v { flex: none; }
+.bv i { width: 10px; height: 10px; }
+.bv.normal i { background: #cfc6e4; } .bv.shiny i { background: #ffd34d; box-shadow: 0 0 6px #ffd34d; } .bv.prismatica i { background: var(--prisma); box-shadow: 0 0 8px #d9c9ff; }
+.bv.ativo { border-color: var(--r, var(--eter)); background: color-mix(in srgb, var(--r, var(--eter)) 16%, #0006); }
+.bv small { font: 13px var(--f-texto); color: var(--apagado); }
+.info .onde { font-size: 15px; padding: 10px 12px; background: #0004; border-left: 3px solid var(--r, var(--eter)); }
+.controles { display: flex; gap: 6px; flex-wrap: wrap; }
+.controles button, .fechar { background: #0006; color: var(--texto); border: 2px solid #ffffff1c; font: 600 13px var(--f-pixel); padding: 5px 10px; cursor: pointer; }
+.controles button:hover, .fechar:hover { border-color: var(--r, var(--eter)); }
+.fechar { position: absolute; top: 10px; right: 10px; z-index: 2; font-size: 16px; padding: 2px 10px; }
+
+footer { text-align: center; color: var(--apagado); font-size: 14px; display: grid; gap: 4px; }
+footer b { font-family: var(--f-pixel); color: var(--texto); font-weight: 600; }
+
+@media (max-width: 760px) {
+  .vis { grid-template-columns: minmax(0, 1fr); }
+  .cena { min-height: 46dvh; }
+  .info { border-left: 0; border-top: 2px solid var(--linha); }
+  dialog { width: 100%; max-width: 100%; height: 100dvh; max-height: 100dvh; border-width: 0; margin: 0; }
+  .vitrine { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .palco { height: 150px; padding: 10px; }
+  section { padding: 18px 12px; }
+  html { scroll-padding-top: 120px; }
+}
+@media (max-width: 360px) { .vitrine { grid-template-columns: minmax(0, 1fr); } .palco { height: 190px; } }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; scroll-behavior: auto !important; } }
+</style>
+</head>
+<body>
+<div class="pagina">
+  <header>
+    <div class="eyebrow">Catálogo de Astrea</div>
+    <h1>Todas as skins de Astrea</h1>
+    <p>Pokémon, armaduras, armas e asas, separados por onde você consegue cada um. Clique em qualquer skin pra ver em 3D, girar e trocar entre normal, shiny e prismática.</p>
+    <div class="numeros" id="numeros"></div>
+  </header>
+
+  <div class="barra">
+    <nav class="abas" id="abas" aria-label="Categorias"></nav>
+    <div class="ferramentas">
+      <label class="busca"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M6 0h4v2H6zM4 2h2v2H4zm6 0h2v2h-2zM2 4h2v4H2zm10 0h2v4h-2zM4 8h2v2H4zm6 0h2v2h-2zM6 10h4v2H6zm6 0h2v2h-2zm2 2h2v2h-2z"/></svg>
+        <input id="busca" type="search" placeholder="Procurar skin ou Pokémon..." autocomplete="off" aria-label="Procurar skin"></label>
+      <select id="ordem" aria-label="Ordenar">
+        <option value="padrao">Ordem padrão</option>
+        <option value="barato">Menor preço</option>
+        <option value="caro">Maior preço</option>
+        <option value="novos">Mais novos</option>
+        <option value="az">Nome A–Z</option>
+      </select>
+    </div>
+  </div>
+
+  <main id="secoes" style="display:grid;gap:34px"></main>
+  <p class="vazio" id="vazio" hidden>Nenhuma skin com esse nome.</p>
+
+  <footer>
+    <div><b>Astrea</b> · servidor Cobblemon RPG</div>
+    <div id="atualizado"></div>
+  </footer>
+</div>
+
+<dialog id="vis" aria-label="Visualizador 3D">
+  <button class="fechar" id="fechar" aria-label="Fechar">✕</button>
+  <div class="vis">
+    <div class="cena" id="cena"><div class="carregando" id="carregando">Carregando...</div><div class="dica">arraste pra girar · role ou pince pra aproximar</div></div>
+    <div class="info">
+      <div class="tipo" id="v-tipo"></div>
+      <h2 id="v-nome"></h2>
+      <div class="esp" id="v-esp"></div>
+      <div class="formas" id="v-formas" hidden></div>
+      <div class="botoes-var" id="v-vars"></div>
+      <div class="onde" id="v-onde"></div>
+      <div class="controles">
+        <button id="b-girar">Pausar giro</button>
+        <button id="b-frente">Centralizar</button>
+      </div>
+    </div>
+  </div>
+</dialog>
+
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js",
+               "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/" } }
+</script>
+<script type="module">
+import * as THREE from "three";
+import { OrbitControls } from "three/addons/controls/OrbitControls.js";
+
+const CATS = [
+  { id: "loja", nome: "Loja de Skins", cor: "--c-loja", sub: "Compradas com Éter no Mercado. A vitrine troca todo dia às 21h, então fique de olho na sua favorita. Cada skin tem a versão normal, a shiny e a prismática, cada uma com seu preço." },
+  { id: "armadura", nome: "Armaduras", cor: "--c-armadura", sub: "Skins de armadura pro /armario: trocam o visual do que você está vestindo." },
+  { id: "arma", nome: "Armas", cor: "--c-arma", sub: "Skins de arma valem pra toda arma da mesma classe: compre uma vez e use em qualquer cajado, espada ou foice." },
+  { id: "asa", nome: "Asas", cor: "--c-asa", sub: "Asas 3D animadas pro slot Costas do /armario." },
+  { id: "cosmetico", nome: "Cosméticos", cor: "--c-cosmetico", sub: "Chapéus, coroas, auréolas, símbolos e asinhas de borboleta pro /armario." },
+  { id: "pesca", nome: "Pescaria", cor: "--c-pesca", sub: "Pokémon que só aparecem com skin na vara. Cada um tem seu spot de pesca." },
+  { id: "natureza", nome: "Natureza", cor: "--c-natureza", sub: "Skins que nascem soltas pelo mundo, em lugares certos. Explore pra encontrar." },
+  { id: "historia", nome: "Histórias", cor: "--c-historia", sub: "O prêmio do final de cada história de Astrea: o Pokémon chega com a skin e 3 IVs perfeitos." },
+  { id: "emissario", nome: "Emissários", cor: "--c-emissario", sub: "O visual dos chefes da Temporada 1, Luz contra Trevas, espalhados pelo mapa." },
+  // "eventos" (Eventos e recompensas) fica oculto por enquanto (dono, 19/10)
+];
+const NOME_VAR = { normal: "Normal", shiny: "Shiny", prismatica: "Prismática" };
+const NOME_FORMA = { mega: "Mega", mega_x: "Mega X", mega_y: "Mega Y", mega_z: "Mega Z", primal: "Primal", gmax: "Gigamax" };
+const nomeForma = f => NOME_FORMA[f] || f;
+const fmt = n => n == null ? "" : n.toLocaleString("pt-BR");
+const eter = (n, cls = "") => n == null ? "" : `<span class="v ${cls}"><img class="pix" src="img/eter.png" alt="Éter">${fmt(n)}</span>`;
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const sem = s => String(s).normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+
+let DADOS = [];
+const $ = id => document.getElementById(id);
+
+async function iniciar() {
+  const r = await fetch("dados/catalogo.json", { cache: "no-cache" });
+  const cat = await r.json();
+  DADOS = cat.itens.filter(x => x.categoria !== "eventos");
+  $("atualizado").textContent = "Atualizado em " + cat.atualizado;
+  const conta = id => DADOS.filter(x => x.categoria === id).length;
+  const pk = DADOS.filter(x => x.pokemon).length;
+  $("numeros").innerHTML = [
+    ["Pokémon", pk, "--c-loja"], ["Armaduras", conta("armadura"), "--c-armadura"], ["Armas", conta("arma"), "--c-arma"], ["Asas", conta("asa"), "--c-asa"], ["Cosméticos", conta("cosmetico"), "--c-cosmetico"],
+  ].map(([n, q, c]) => `<div class="numero" style="--c:var(${c})"><b>${q}</b><span>${n}</span></div>`).join("");
+  $("abas").innerHTML = CATS.filter(c => conta(c.id)).map(c =>
+    `<a class="aba" href="#${c.id}" style="--c:var(${c.cor})">${c.nome}<small>${conta(c.id)}</small></a>`).join("");
+  desenhar();
+  $("busca").addEventListener("input", desenhar);
+  $("ordem").addEventListener("change", desenhar);
+  const obs = new IntersectionObserver(es => es.forEach(e => {
+    if (e.isIntersecting) document.querySelectorAll(".aba").forEach(a => a.classList.toggle("ativa", a.hash === "#" + e.target.id));
+  }), { rootMargin: "-40% 0px -55% 0px" });
+  document.querySelectorAll("section").forEach(s => obs.observe(s));
+  const h = decodeURIComponent(location.hash.slice(1));
+  const alvo = DADOS.find(x => x.id === h);
+  if (alvo) abrir(alvo);
+}
+
+function preco(x) { return Math.min(...(x.variantes || [x]).map(v => v.preco ?? Infinity)); }
+
+function ordenar(lista) {
+  const o = $("ordem").value;
+  const l = [...lista];
+  if (o === "barato") l.sort((a, b) => preco(a) - preco(b));
+  else if (o === "caro") l.sort((a, b) => (preco(b) === Infinity ? -1 : preco(b)) - (preco(a) === Infinity ? -1 : preco(a)));
+  else if (o === "novos") l.sort((a, b) => (b.add || "").localeCompare(a.add || ""));
+  else if (o === "az") l.sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR"));
+  return l;
+}
+
+function card(x) {
+  if (x.misterio) {
+    return `<figure class="skin misterio"><div class="palco"><span>?</span><div class="tag">${esc(x.lado)}</div></div>
+      <figcaption><b>${esc(x.nome)}</b><span class="onde">${esc(x.detalhe)}</span></figcaption></figure>`;
+  }
+  const vars = (x.variantes || []).map(v => `<span class="var ${v.tipo}"><i></i>${NOME_VAR[v.tipo]}${v.preco != null ? " " + eter(v.preco) : ""}</span>`).join("");
+  const pk = x.pokemon ? `<span class="esp">${esc(x.especie)}</span>` : "";
+  const unico = !x.pokemon && x.preco != null ? `<div class="preco-grande">${eter(x.preco)}</div>` : "";
+  const tag = (x.lendario ? `<div class="tag">Lendário</div>` : "") + (x.formas ? `<div class="mega">+ ${x.formas.map(f => nomeForma(f.forma)).join(" / ")}</div>` : "");
+  return `<button class="skin${x.lendario ? " lendario" : ""}" data-id="${esc(x.id)}" aria-label="Ver ${esc(x.nome)} em 3D">
+    <div class="palco">${tag}<img class="pix" loading="lazy" decoding="async" src="${esc(x.foto)}" alt="${esc(x.nome)}"><div class="selo3d">3D</div></div>
+    <figcaption><b>${esc(x.nome)}</b>${pk}${vars ? `<div class="vars">${vars}</div>` : ""}${unico}${(x.categoria !== "loja" && x.pokemon) || (!x.pokemon && x.preco == null) ? `<span class="onde">${esc(x.detalhe)}</span>` : ""}</figcaption></button>`;
+}
+
+function desenhar() {
+  const q = sem($("busca").value.trim());
+  const filtra = x => !q || sem(`${x.nome} ${x.especie || ""} ${(x.variantes || []).map(v => v.nome).join(" ")} ${(x.formas || []).map(f => nomeForma(f.forma)).join(" ")}`).includes(q);
+  let total = 0;
+  $("secoes").innerHTML = CATS.map(c => {
+    const itens = ordenar(DADOS.filter(x => x.categoria === c.id && filtra(x)));
+    total += itens.length;
+    if (!itens.length) return "";
+    let corpo;
+    if (c.id === "loja" && $("ordem").value === "padrao" && !q) {
+      const lend = itens.filter(x => x.lendario), resto = itens.filter(x => !x.lendario);
+      corpo = (lend.length ? `<div class="grupo"><h3>Lendários e míticos</h3><div class="vitrine">${lend.map(card).join("")}</div></div>` : "")
+            + `<div class="grupo"><h3>Pokémon</h3><div class="vitrine">${resto.map(card).join("")}</div></div>`;
+    } else corpo = `<div class="vitrine">${itens.map(card).join("")}</div>`;
+    return `<section id="${c.id}" style="--c:var(${c.cor})"><div class="cab"><h2>${c.nome}</h2><span class="qtd">${itens.length} ${itens.length === 1 ? "skin" : "skins"}</span></div>
+      <p class="sub">${c.sub}</p>${corpo}</section>`;
+  }).join("");
+  $("vazio").hidden = total > 0;
+  document.querySelectorAll("button.skin").forEach(b => b.addEventListener("click", () => abrir(DADOS.find(x => x.id === b.dataset.id))));
+}
+
+/* ------------------------------------------------------------------ visualizador 3D */
+const dlg = $("vis");
+let renderer, scene, camera, controls, grupo, raf, girando = true, atual = null, animadas = [];
+const cacheModelo = new Map(), cacheTex = new Map();
+const loader = new THREE.TextureLoader();
+
+function prepara3D() {
+  if (renderer) return;
+  renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+  renderer.setPixelRatio(Math.min(devicePixelRatio, 2));
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  $("cena").prepend(renderer.domElement);
+  scene = new THREE.Scene();
+  camera = new THREE.PerspectiveCamera(32, 1, 0.01, 200);
+  scene.add(new THREE.HemisphereLight(0xfff6ff, 0x3a2a55, 2.1));
+  const sol = new THREE.DirectionalLight(0xffffff, 1.5); sol.position.set(2, 4, 3); scene.add(sol);
+  const contra = new THREE.DirectionalLight(0x9fd8ff, 0.6); contra.position.set(-3, 1, -2); scene.add(contra);
+  controls = new OrbitControls(camera, renderer.domElement);
+  controls.enableDamping = true; controls.dampingFactor = 0.08; controls.enablePan = false;
+  controls.autoRotate = true; controls.autoRotateSpeed = 2.2;
+  controls.addEventListener("start", () => { if (girando) alternaGiro(); });
+  new ResizeObserver(ajusta).observe($("cena"));
+}
+
+function ajusta() {
+  const el = $("cena"), w = el.clientWidth, h = el.clientHeight;
+  if (!w || !h) return;
+  renderer.setSize(w, h, false); camera.aspect = w / h; camera.updateProjectionMatrix();
+}
+
+function loop(t) {
+  raf = requestAnimationFrame(loop);
+  for (const a of animadas) {
+    const f = Math.floor(t / 1000 * a.fps) % a.n;
+    a.tex.offset.y = 1 - (f + 1) / a.n;
+  }
+  controls.update(); renderer.render(scene, camera);
+}
+
+async function modelo(arq) {
+  if (!cacheModelo.has(arq)) cacheModelo.set(arq, fetch("m3d/" + arq).then(r => r.json()));
+  return cacheModelo.get(arq);
+}
+function textura(info) {
+  const chave = info.arq;
+  if (!cacheTex.has(chave)) cacheTex.set(chave, new Promise((ok, erro) => loader.load("tex/" + info.arq, t => {
+    t.magFilter = t.minFilter = THREE.NearestFilter; t.generateMipmaps = false; t.colorSpace = THREE.SRGBColorSpace;
+    ok(t);
+  }, undefined, erro)));
+  return cacheTex.get(chave).then(t => {
+    const c = t.clone(); c.needsUpdate = true;
+    const n = info.quadros || 1; c.repeat.set(1, 1 / n); c.offset.set(0, 1 - 1 / n);
+    if (n > 1 && info.fps) animadas.push({ tex: c, n, fps: info.fps });
+    return c;
+  });
+}
+
+function geometria(q, tw, th) {
+  const nq = q.length / 20, pos = new Float32Array(nq * 12), uv = new Float32Array(nq * 8), idx = [];
+  for (let i = 0; i < nq; i++) {
+    const o = i * 20;
+    for (let k = 0; k < 12; k++) pos[i * 12 + k] = q[o + k] / 16;
+    for (let k = 0; k < 4; k++) { uv[i * 8 + k * 2] = q[o + 12 + k * 2] / tw; uv[i * 8 + k * 2 + 1] = 1 - q[o + 13 + k * 2] / th; }
+    const b = i * 4; idx.push(b, b + 1, b + 2, b, b + 2, b + 3);
+  }
+  const g = new THREE.BufferGeometry();
+  g.setAttribute("position", new THREE.BufferAttribute(pos, 3));
+  g.setAttribute("uv", new THREE.BufferAttribute(uv, 2));
+  g.setIndex(idx); g.computeVertexNormals();
+  return g;
+}
+
+async function montar(m, texs, emi) {
+  const partes = m.partes || [{ q: m.q, t: 0 }];
+  const novo = new THREE.Group();
+  for (const p of partes) {
+    const g = geometria(p.q, m.tw, m.th);
+    const mapa = await textura(texs[p.t]);
+    novo.add(new THREE.Mesh(g, new THREE.MeshLambertMaterial({ map: mapa, transparent: true, alphaTest: 0.04, side: THREE.DoubleSide })));
+    if (emi) {
+      const em = await textura(emi);
+      const mesh = new THREE.Mesh(g, new THREE.MeshBasicMaterial({ map: em, transparent: true, depthWrite: false, side: THREE.DoubleSide,
+        polygonOffset: true, polygonOffsetFactor: -1, polygonOffsetUnits: -1 }));
+      mesh.renderOrder = 1; novo.add(mesh);
+    }
+  }
+  return novo;
+}
+
+function enquadra(primeira) {
+  const box = new THREE.Box3().setFromObject(grupo), c = box.getCenter(new THREE.Vector3()), s = box.getSize(new THREE.Vector3());
+  grupo.position.sub(c);
+  const raio = Math.max(s.x, s.y, s.z) * 0.62 + 0.05;
+  const d = raio / Math.sin(THREE.MathUtils.degToRad(camera.fov / 2)) * (camera.aspect < 1 ? 1.25 : 1);
+  if (primeira) camera.position.set(d * 0.55, d * 0.22, d * 0.8);
+  else camera.position.setLength(d);
+  controls.target.set(0, 0, 0); controls.minDistance = d * 0.25; controls.maxDistance = d * 3; controls.update();
+}
+
+async function mostrar(x, v, primeira) {
+  $("carregando").hidden = false;
+  animadas = [];
+  try {
+    const m = await modelo(v ? v.modelo : x.modelo);
+    const novo = await montar(m, v ? [v.tex] : x.texturas, v ? v.emi : null);
+    if (atual !== x) return;
+    if (grupo) { scene.remove(grupo); grupo.traverse(o => o.material && o.material.dispose()); }
+    grupo = novo; scene.add(grupo); enquadra(primeira);
+  } catch (e) { $("carregando").textContent = "Não deu pra carregar o modelo."; return; }
+  $("carregando").hidden = true;
+}
+
+function abrir(x) {
+  if (!x || x.misterio) return;
+  prepara3D(); atual = x;
+  const cat = CATS.find(c => c.id === x.categoria);
+  const cor = x.lendario ? "var(--lenda)" : `var(${cat.cor})`;
+  dlg.style.setProperty("--r", cor);
+  $("v-tipo").textContent = cat.nome; $("v-nome").textContent = x.nome; $("v-esp").textContent = x.pokemon ? x.especie : "";
+  $("v-onde").textContent = x.detalhe || "";
+  const vs = x.variantes || [];
+  const formas = [{ forma: null, variantes: vs }, ...(x.formas || [])];
+  let fi = 0, tipo = vs[0] ? vs[0].tipo : null;
+  const atualiza = () => {
+    const f = formas[fi];
+    const v = f.variantes.find(o => o.tipo === tipo) || f.variantes[0];
+    const base = vs.find(o => o.tipo === tipo) || vs[0];
+    $("v-nome").textContent = (base ? base.nome : x.nome) + (f.forma ? " · " + nomeForma(f.forma) : "");
+    $("v-vars").querySelectorAll("button").forEach(b => {
+      const t = b.dataset.t;
+      b.classList.toggle("ativo", t === v.tipo);
+      b.disabled = !f.variantes.some(o => o.tipo === t);
+      b.style.opacity = b.disabled ? .45 : "";
+    });
+    $("v-formas").querySelectorAll("button").forEach((b, i) => b.classList.toggle("ativo", i === fi));
+    return v;
+  };
+  $("v-formas").hidden = formas.length < 2;
+  $("v-formas").innerHTML = formas.map((f, i) => `<button class="fb" data-i="${i}">${f.forma ? nomeForma(f.forma) : "Normal"}</button>`).join("");
+  $("v-formas").querySelectorAll("button").forEach(b => b.addEventListener("click", () => { fi = +b.dataset.i; mostrar(x, atualiza(), false); }));
+  $("v-vars").innerHTML = vs.length ? vs.map(v => `<button class="bv ${v.tipo}" data-t="${v.tipo}"><span><i></i>${NOME_VAR[v.tipo]}${v.nome !== x.nome && v.tipo !== "normal" ? ` <small>${esc(v.nome)}</small>` : ""}</span>${eter(v.preco)}</button>`).join("")
+    : (x.preco != null ? `<div class="bv ativo"><span>Preço</span>${eter(x.preco)}</div>` : "");
+  $("v-vars").querySelectorAll("button").forEach(b => b.addEventListener("click", () => { tipo = b.dataset.t; mostrar(x, atualiza(), false); }));
+  const primeira = vs.length ? atualiza() : null;
+  if (!dlg.open) dlg.showModal();
+  history.replaceState(null, "", "#" + x.id);
+  ajusta(); cancelAnimationFrame(raf); raf = requestAnimationFrame(loop);
+  if (!girando) alternaGiro();
+  mostrar(x, primeira, true);
+}
+
+function alternaGiro() { girando = !girando; controls.autoRotate = girando; $("b-girar").textContent = girando ? "Pausar giro" : "Girar"; }
+$("b-girar").addEventListener("click", alternaGiro);
+$("b-frente").addEventListener("click", () => grupo && enquadra(true));
+$("fechar").addEventListener("click", () => dlg.close());
+dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+dlg.addEventListener("close", () => { cancelAnimationFrame(raf); atual = null; history.replaceState(null, "", location.pathname + location.search); });
+
+iniciar();
+</script>
+</body>
+</html>
