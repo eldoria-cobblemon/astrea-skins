@@ -1,0 +1,4041 @@
+{
+ "tirado_em": "25 de outubro de 2026",
+ "itens": [
+  {
+   "id": "aggron_rpg",
+   "especie": "Aggron",
+   "aspecto": "rpg",
+   "nome": "Aggron Ariete",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Quem Desce a Escada (Avsohm).",
+   "lendario": false,
+   "foto": "img/pk/aggron_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "aggron_rpg__aggron_rpg.json",
+     "tex": {
+      "arq": "910a726ba82856a1.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 464
+     },
+     "emi": {
+      "arq": "2ee1d7e55653cb44.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 464
+     },
+     "nome": "Aggron Ariete",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "aggron_rpg__aggron_rpg.json",
+     "tex": {
+      "arq": "afe075175e2669b2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 464
+     },
+     "emi": {
+      "arq": "34beec153f6c9698.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 464
+     },
+     "nome": "Aggron Ariete Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "aggron_rpg__aggron_rpg.json",
+     "tex": {
+      "arq": "e81a20c02db018d3.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 464
+     },
+     "emi": {
+      "arq": "2ee1d7e55653cb44.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 464
+     },
+     "nome": "Aggron Ariete Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "alakazam_rpg",
+   "especie": "Alakazam",
+   "aspecto": "rpg",
+   "nome": "Alakazam Arquimago",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Livro pela Metade (Fogueira Alta e Hospedaria do Vale).",
+   "lendario": false,
+   "foto": "img/pk/alakazam_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "alakazam_rpg__alakazam_rpg.json",
+     "tex": {
+      "arq": "11ff04e47f3cdc68.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 304
+     },
+     "emi": {
+      "arq": "d957784ae172cff3.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 304
+     },
+     "nome": "Alakazam Arquimago",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "alakazam_rpg__alakazam_rpg.json",
+     "tex": {
+      "arq": "5b3298378c83ad44.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 304
+     },
+     "emi": {
+      "arq": "21d455ec9f2a3e9a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 304
+     },
+     "nome": "Alakazam Arquimago Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "alakazam_rpg__alakazam_rpg.json",
+     "tex": {
+      "arq": "3fa5d9ba027c3683.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 304
+     },
+     "emi": {
+      "arq": "94b2130dabd6700b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 304
+     },
+     "nome": "Alakazam Arquimago Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "alcremie_rpg",
+   "especie": "Alcremie",
+   "aspecto": "rpg",
+   "nome": "Alcremie Bolo",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Vinho Esquecido (Esipeli).",
+   "lendario": false,
+   "foto": "img/pk/alcremie_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "alcremie_rpg__alcremie_rpg.json",
+     "tex": {
+      "arq": "15de5e7718a445ec.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "1f1b321cdbc6c2c3.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Alcremie Bolo",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "alcremie_rpg__alcremie_rpg.json",
+     "tex": {
+      "arq": "dc4d3e4ce2f9b317.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "42aa717ff24e8abe.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Alcremie Bolo Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "alcremie_rpg__alcremie_rpg.json",
+     "tex": {
+      "arq": "2820db7e07af0b6b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "3f731ee55042e420.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Alcremie Bolo Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "audino_rpg",
+   "especie": "Audino",
+   "aspecto": "rpg",
+   "nome": "Audino Cleriga",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Rã que Coaxou Duas Vezes (Nenúfar).",
+   "lendario": false,
+   "foto": "img/pk/audino_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "audino_rpg__audino_rpg.json",
+     "tex": {
+      "arq": "8b72e3ddac65d270.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "e96028b0426f957c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Audino Cleriga",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "audino_rpg__audino_rpg.json",
+     "tex": {
+      "arq": "d56336b0aed792c1.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "ba97c2f1b22aab7b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Audino Cleriga Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "audino_rpg__audino_rpg.json",
+     "tex": {
+      "arq": "99b4d0a4a68bb140.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "0e9cd39e55b5fb5a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Audino Cleriga Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "bergmite_rpg",
+   "especie": "Bergmite",
+   "aspecto": "rpg",
+   "nome": "Bergmite Geodo",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Ordem de Troca (Chifre-Partido).",
+   "lendario": false,
+   "foto": "img/pk/bergmite_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "bergmite_rpg__bergmite_rpg.json",
+     "tex": {
+      "arq": "4fb9f9ca63354c84.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "3719dc0fe62bd411.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Bergmite Geodo",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "bergmite_rpg__bergmite_rpg.json",
+     "tex": {
+      "arq": "79d3e4fc9ddd31d5.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "ca2b63862ddc9d2e.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Bergmite Geodo Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "bergmite_rpg__bergmite_rpg.json",
+     "tex": {
+      "arq": "ad2c29da67989bbe.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "f7fe29b4c6fe8962.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Bergmite Geodo Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "boldore_rpg",
+   "especie": "Boldore",
+   "aspecto": "rpg",
+   "nome": "Boldore Safira",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Carvão Novo (Fundição).",
+   "lendario": false,
+   "foto": "img/pk/boldore_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "boldore_rpg__boldore_rpg.json",
+     "tex": {
+      "arq": "e51135fc62ef6d21.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 128
+     },
+     "emi": {
+      "arq": "d983f251ef5852fa.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 128
+     },
+     "nome": "Boldore Safira",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "boldore_rpg__boldore_rpg.json",
+     "tex": {
+      "arq": "7efe72b6b73bd570.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 128
+     },
+     "emi": {
+      "arq": "7541a643ba1bde5c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 128
+     },
+     "nome": "Boldore Safira Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "boldore_rpg__boldore_rpg.json",
+     "tex": {
+      "arq": "2cbd85ec71f18b38.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 128
+     },
+     "emi": {
+      "arq": "2b621aaaa231f9de.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 128
+     },
+     "nome": "Boldore Safira Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "claydol_rpg",
+   "especie": "Claydol",
+   "aspecto": "rpg",
+   "nome": "Claydol Idolo",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Ilha que Duvida (Percepção).",
+   "lendario": false,
+   "foto": "img/pk/claydol_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "claydol_rpg__claydol_rpg.json",
+     "tex": {
+      "arq": "00cc40fa65ef7f79.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 352
+     },
+     "emi": {
+      "arq": "c2974c8e9f344d93.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 352
+     },
+     "nome": "Claydol Idolo",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "claydol_rpg__claydol_rpg.json",
+     "tex": {
+      "arq": "b4b1a432a90bceba.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 352
+     },
+     "emi": {
+      "arq": "d39c95ddcc60470a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 352
+     },
+     "nome": "Claydol Idolo Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "claydol_rpg__claydol_rpg.json",
+     "tex": {
+      "arq": "f6df7a957d9577a7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 352
+     },
+     "emi": {
+      "arq": "1e86f4d5360cc788.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 352
+     },
+     "nome": "Claydol Idolo Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "clefable_rpg",
+   "especie": "Clefable",
+   "aspecto": "rpg",
+   "nome": "Clefable Bruxinha",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Terceira Lua (Alquimara).",
+   "lendario": false,
+   "foto": "img/pk/clefable_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "clefable_rpg__clefable_rpg.json",
+     "tex": {
+      "arq": "ccbc9d0ecc7f3f28.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 192
+     },
+     "emi": {
+      "arq": "a39a28d3076ac16b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 192
+     },
+     "nome": "Clefable Bruxinha",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "clefable_rpg__clefable_rpg.json",
+     "tex": {
+      "arq": "20b78eff5f792395.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 192
+     },
+     "emi": {
+      "arq": "e2da3f52b6e38f63.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 192
+     },
+     "nome": "Clefable Bruxinha Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "clefable_rpg__clefable_rpg.json",
+     "tex": {
+      "arq": "4cb3c2d24b323fab.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 192
+     },
+     "emi": {
+      "arq": "1bdf955636fce227.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 192
+     },
+     "nome": "Clefable Bruxinha Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "cubchoo_rpg",
+   "especie": "Cubchoo",
+   "aspecto": "rpg",
+   "nome": "Cubchoo Aurora",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Aurora que Dormiu (Dracária, Cogumelário e Crepúsculo).",
+   "lendario": false,
+   "foto": "img/pk/cubchoo_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "cubchoo_rpg__cubchoo_rpg.json",
+     "tex": {
+      "arq": "880a33304cd212e7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "2c9b08a4eb2e9a64.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Cubchoo Aurora",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "cubchoo_rpg__cubchoo_rpg.json",
+     "tex": {
+      "arq": "a4aa5824697c4b4f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "b82ea8f045476758.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Cubchoo Aurora Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "cubchoo_rpg__cubchoo_rpg.json",
+     "tex": {
+      "arq": "00349d778f07330a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "b5ea86758b8907e4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Cubchoo Aurora Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "dedenne_rpg",
+   "especie": "Dedenne",
+   "aspecto": "rpg",
+   "nome": "Dedenne Lanterna",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Vela que Ninguém Pediu (Ribeirão).",
+   "lendario": false,
+   "foto": "img/pk/dedenne_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "dedenne_rpg__dedenne_rpg.json",
+     "tex": {
+      "arq": "e92eb4cf38224168.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "emi": {
+      "arq": "bcc5c31f072ab412.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "nome": "Dedenne Lanterna",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "dedenne_rpg__dedenne_rpg.json",
+     "tex": {
+      "arq": "f4a31cb204a92b62.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "emi": {
+      "arq": "b19abd62f4d51615.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "nome": "Dedenne Lanterna Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "dedenne_rpg__dedenne_rpg.json",
+     "tex": {
+      "arq": "37a4e4b78a6a1813.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "emi": {
+      "arq": "ba1720104c6c2eed.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "nome": "Dedenne Lanterna Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "drifloon_rpg",
+   "especie": "Drifloon",
+   "aspecto": "rpg",
+   "nome": "Drifloon Lanterna",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Vento que Repetiu (Cabana dos Ventos).",
+   "lendario": false,
+   "foto": "img/pk/drifloon_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "drifloon_rpg__drifloon_rpg.json",
+     "tex": {
+      "arq": "375c595271a17c7d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "a13888c1c1e5c2b2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Drifloon Lanterna",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "drifloon_rpg__drifloon_rpg.json",
+     "tex": {
+      "arq": "c5147559c820e3ea.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "d36599e766e05feb.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Drifloon Lanterna Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "drifloon_rpg__drifloon_rpg.json",
+     "tex": {
+      "arq": "f5e2b2f6f8bc8221.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "9685a77fcf3e1815.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Drifloon Lanterna Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "dusclops_rpg",
+   "especie": "Dusclops",
+   "aspecto": "rpg",
+   "nome": "Dusclops Mumia",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Que Acordou Embaixo (Ossário).",
+   "lendario": false,
+   "foto": "img/pk/dusclops_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "dusclops_rpg__dusclops_rpg.json",
+     "tex": {
+      "arq": "89e434c26cfc4c36.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "20b289f042f4dbc4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Dusclops Mumia",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "dusclops_rpg__dusclops_rpg.json",
+     "tex": {
+      "arq": "80661c221b950065.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "d29d669149c833e8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Dusclops Mumia Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "dusclops_rpg__dusclops_rpg.json",
+     "tex": {
+      "arq": "1e5abaec8d059d3a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "95985e19f4b4d9d1.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Dusclops Mumia Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "empoleon_rpg",
+   "especie": "Empoleon",
+   "aspecto": "rpg",
+   "nome": "Empoleon Paladino",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Suíte do Duque (Varadouro).",
+   "lendario": false,
+   "foto": "img/pk/empoleon_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "empoleon_rpg__empoleon_rpg.json",
+     "tex": {
+      "arq": "997575def0f656dd.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "ddb116aa3f257fa0.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Empoleon Paladino",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "empoleon_rpg__empoleon_rpg.json",
+     "tex": {
+      "arq": "772324ec5e66f524.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "bb7fe4ca59147c6f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Empoleon Paladino Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "empoleon_rpg__empoleon_rpg.json",
+     "tex": {
+      "arq": "856348bc0ecea3ae.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "8da7352138b860ba.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Empoleon Paladino Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "espeon_rpg",
+   "especie": "Espeon",
+   "aspecto": "rpg",
+   "nome": "Espeon · Skin de Astrea",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Turno do Poente (Arrebol).",
+   "lendario": false,
+   "foto": "img/pk/espeon_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "espeon__espeon.json",
+     "tex": {
+      "arq": "548d790b193025b8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "0c33b43dca1cc101.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Espeon · Skin de Astrea",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "espeon__espeon.json",
+     "tex": {
+      "arq": "93dee47cb671610f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "0c33b43dca1cc101.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Espeon · Skin de Astrea Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "espurr_rpg",
+   "especie": "Espurr",
+   "aspecto": "rpg",
+   "nome": "Espurr Aprendiz",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Pergunta de Formatura (Cátedra).",
+   "lendario": false,
+   "foto": "img/pk/espurr_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "espurr_rpg__espurr_rpg.json",
+     "tex": {
+      "arq": "8a731959365994d5.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "cd736a792f28cc3c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Espurr Aprendiz",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "espurr_rpg__espurr_rpg.json",
+     "tex": {
+      "arq": "a18837236f1f0af6.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "c9025606087768b7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Espurr Aprendiz Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "espurr_rpg__espurr_rpg.json",
+     "tex": {
+      "arq": "992a3272c9a67fa2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "6c5bd25a86f3ed8a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Espurr Aprendiz Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "froslass_rpg",
+   "especie": "Froslass",
+   "aspecto": "rpg",
+   "nome": "Froslass Noiva Yokai",
+   "categoria": "loja",
+   "detalhe": "Compre com Éter no Mercado. A vitrine troca todo dia às 21h.",
+   "lendario": false,
+   "foto": "img/pk/froslass_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "froslass_rpg__froslass_rpg.json",
+     "tex": {
+      "arq": "ea5d533ba27ce8ee.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "emi": {
+      "arq": "83b4d571d8339b9a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "nome": "Froslass Noiva Yokai",
+     "preco": 2000,
+     "raridade": "epica"
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "froslass_rpg__froslass_rpg.json",
+     "tex": {
+      "arq": "7ae0bd72e140a78b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "emi": {
+      "arq": "7f822aed86a9e753.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "nome": "Froslass Noiva de Gelo",
+     "preco": 2500,
+     "raridade": "lendaria"
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "froslass_rpg__froslass_rpg.json",
+     "tex": {
+      "arq": "c36cb3a2c5f81837.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "emi": {
+      "arq": "83b4d571d8339b9a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "nome": "Froslass Noiva Yokai Prismática",
+     "preco": 3000,
+     "raridade": "prismatica"
+    }
+   ],
+   "formas": [
+    {
+     "forma": "mega",
+     "variantes": [
+      {
+       "tipo": "normal",
+       "modelo": "froslass_mega_rpg__froslass_mega_rpg.json",
+       "tex": {
+        "arq": "80c8de4741931ed9.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 608
+       },
+       "emi": {
+        "arq": "79c455e104b72743.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 608
+       }
+      },
+      {
+       "tipo": "shiny",
+       "modelo": "froslass_mega_rpg__froslass_mega_rpg.json",
+       "tex": {
+        "arq": "1c5d1339f1f2eaa7.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 608
+       },
+       "emi": {
+        "arq": "10558a15fe7f20f3.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 608
+       }
+      },
+      {
+       "tipo": "prismatica",
+       "modelo": "froslass_mega_rpg__froslass_mega_rpg.json",
+       "tex": {
+        "arq": "f940acd89aedefa4.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 608
+       },
+       "emi": {
+        "arq": "79c455e104b72743.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 608
+       }
+      }
+     ]
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "frosmoth_rpg",
+   "especie": "Frosmoth",
+   "aspecto": "rpg",
+   "nome": "Frosmoth Noite",
+   "categoria": "natureza",
+   "detalhe": "Aparece na natureza: Campo da Geada (nível 30-46)",
+   "lendario": false,
+   "foto": "img/pk/frosmoth_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "frosmoth_rpg__frosmoth_rpg.json",
+     "tex": {
+      "arq": "eaf68af9007104c9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 256
+     },
+     "emi": {
+      "arq": "ded2b757029eb41f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 256
+     },
+     "nome": "Frosmoth Noite",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "frosmoth_rpg__frosmoth_rpg.json",
+     "tex": {
+      "arq": "626e2bb73184cf21.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 256
+     },
+     "emi": {
+      "arq": "68826634dee9efa2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 256
+     },
+     "nome": "Frosmoth Noite Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "frosmoth_rpg__frosmoth_rpg.json",
+     "tex": {
+      "arq": "de052fbedb9e1195.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 256
+     },
+     "emi": {
+      "arq": "6817f7d6cfabbe96.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 256
+     },
+     "nome": "Frosmoth Noite Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "gallade_rpg",
+   "especie": "Gallade",
+   "aspecto": "rpg",
+   "nome": "Gallade Lâmina Escarlate",
+   "categoria": "loja",
+   "detalhe": "Compre com Éter no Mercado. A vitrine troca todo dia às 21h.",
+   "lendario": false,
+   "foto": "img/pk/gallade_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "gallade_rpg__gallade_rpg.json",
+     "tex": {
+      "arq": "f074d64c278147f4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 768
+     },
+     "emi": {
+      "arq": "b6a458d9f064d89c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 768
+     },
+     "nome": "Gallade Lâmina Escarlate",
+     "preco": 2000,
+     "raridade": "epica"
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "gallade_rpg__gallade_rpg.json",
+     "tex": {
+      "arq": "1ce57c210de6312b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 768
+     },
+     "emi": {
+      "arq": "54f3ebe9f54fd47d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 768
+     },
+     "nome": "Gallade Lâmina Corrompida",
+     "preco": 2500,
+     "raridade": "lendaria"
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "gallade_rpg__gallade_rpg.json",
+     "tex": {
+      "arq": "a92a93b33e6e470b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 768
+     },
+     "emi": {
+      "arq": "b6a458d9f064d89c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 768
+     },
+     "nome": "Gallade Lâmina Escarlate Prismática",
+     "preco": 3000,
+     "raridade": "prismatica"
+    }
+   ],
+   "formas": [
+    {
+     "forma": "mega",
+     "variantes": [
+      {
+       "tipo": "normal",
+       "modelo": "gallade_mega_rpg__gallade_mega_rpg.json",
+       "tex": {
+        "arq": "8947fcba7fa91d12.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 936
+       },
+       "emi": {
+        "arq": "1695ef8f871b6e8c.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 936
+       }
+      },
+      {
+       "tipo": "shiny",
+       "modelo": "gallade_mega_rpg__gallade_mega_rpg.json",
+       "tex": {
+        "arq": "1239cefa806743a4.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 936
+       },
+       "emi": {
+        "arq": "2b2bc0c4aca3e266.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 936
+       }
+      },
+      {
+       "tipo": "prismatica",
+       "modelo": "gallade_mega_rpg__gallade_mega_rpg.json",
+       "tex": {
+        "arq": "c0d49a8cd00b8e78.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 936
+       },
+       "emi": {
+        "arq": "1695ef8f871b6e8c.png",
+        "quadros": 1,
+        "fps": 0,
+        "w": 256,
+        "h": 936
+       }
+      }
+     ]
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-18"
+  },
+  {
+   "id": "gimmighoul_rpg",
+   "especie": "Gimmighoul",
+   "aspecto": "rpg",
+   "nome": "Gimmighoul Mimico",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Atração do Instável (Instável).",
+   "lendario": false,
+   "foto": "img/pk/gimmighoul_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "gimmighoul_rpg__gimmighoul_rpg.json",
+     "tex": {
+      "arq": "f4c62e78c04a38c4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "emi": {
+      "arq": "271ccb62373562fd.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "nome": "Gimmighoul Mimico",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "gimmighoul_rpg__gimmighoul_rpg.json",
+     "tex": {
+      "arq": "3f50f3503c248357.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "emi": {
+      "arq": "350ab6a955702e71.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "nome": "Gimmighoul Mimico Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "gimmighoul_rpg__gimmighoul_rpg.json",
+     "tex": {
+      "arq": "8b8c79a12b024703.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "emi": {
+      "arq": "2581f6abb14cff60.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "nome": "Gimmighoul Mimico Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "jigglypuff_rpg",
+   "especie": "Jigglypuff",
+   "aspecto": "rpg",
+   "nome": "Jigglypuff Diva",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Nota que Ninguém Canta (Coral do Alto e Prelúdio).",
+   "lendario": false,
+   "foto": "img/pk/jigglypuff_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "jigglypuff_rpg__jigglypuff_rpg.json",
+     "tex": {
+      "arq": "4ed9ff21899d76ab.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "emi": {
+      "arq": "aa34abdd9d60539f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "nome": "Jigglypuff Diva",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "jigglypuff_rpg__jigglypuff_rpg.json",
+     "tex": {
+      "arq": "57b888dea1254de4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "emi": {
+      "arq": "897533e9bae4ace9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "nome": "Jigglypuff Diva Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "jigglypuff_rpg__jigglypuff_rpg.json",
+     "tex": {
+      "arq": "aee04603226653c9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "emi": {
+      "arq": "234eb5643c2e97e7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 224
+     },
+     "nome": "Jigglypuff Diva Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "jumpluff_rpg",
+   "especie": "Jumpluff",
+   "aspecto": "rpg",
+   "nome": "Jumpluff Baloes",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Roldana Travada (Paiol).",
+   "lendario": false,
+   "foto": "img/pk/jumpluff_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "jumpluff_rpg__jumpluff_rpg.json",
+     "tex": {
+      "arq": "f5ba83bbe586551f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "emi": {
+      "arq": "fc9fc05de20d925f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "nome": "Jumpluff Baloes",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "jumpluff_rpg__jumpluff_rpg.json",
+     "tex": {
+      "arq": "37a7089eea9682bf.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "emi": {
+      "arq": "553e5c346ea09575.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "nome": "Jumpluff Baloes Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "jumpluff_rpg__jumpluff_rpg.json",
+     "tex": {
+      "arq": "faa9af2c8d670a52.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "emi": {
+      "arq": "fc9fc05de20d925f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 192
+     },
+     "nome": "Jumpluff Baloes Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "kricketune_rpg",
+   "especie": "Kricketune",
+   "aspecto": "rpg",
+   "nome": "Kricketune Violino",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Acorde do Bambu (Bambual).",
+   "lendario": false,
+   "foto": "img/pk/kricketune_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "kricketune_rpg__kricketune_rpg.json",
+     "tex": {
+      "arq": "e76ddc07b90e223d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 208
+     },
+     "emi": {
+      "arq": "610c344f13b5a2d7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 208
+     },
+     "nome": "Kricketune Violino",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "kricketune_rpg__kricketune_rpg.json",
+     "tex": {
+      "arq": "41e668bb1ced3a78.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 208
+     },
+     "emi": {
+      "arq": "610c344f13b5a2d7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 208
+     },
+     "nome": "Kricketune Violino Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "kricketune_rpg__kricketune_rpg.json",
+     "tex": {
+      "arq": "aab0bbc1135dfa15.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 208
+     },
+     "emi": {
+      "arq": "610c344f13b5a2d7.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 208
+     },
+     "nome": "Kricketune Violino Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "lampent_rpg",
+   "especie": "Lampent",
+   "aspecto": "rpg",
+   "nome": "Lampent Cripta",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Quem Acende as Fogueiras (Breu).",
+   "lendario": false,
+   "foto": "img/pk/lampent_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "lampent_rpg__lampent_rpg.json",
+     "tex": {
+      "arq": "8f6731609d6610f8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "a4dcd29fe2a399fe.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Lampent Cripta",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "lampent_rpg__lampent_rpg.json",
+     "tex": {
+      "arq": "7c54790d84c6f3a2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "cee1b8e9814d48e8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Lampent Cripta Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "lampent_rpg__lampent_rpg.json",
+     "tex": {
+      "arq": "28dee20c0708d784.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "f6f51c00499d6952.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Lampent Cripta Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "lechonk_rpg",
+   "especie": "Lechonk",
+   "aspecto": "rpg",
+   "nome": "Lechonk Cofre",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Quem Foi à Feira (Granja Alta e Vargem).",
+   "lendario": false,
+   "foto": "img/pk/lechonk_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "lechonk_rpg__lechonk_rpg.json",
+     "tex": {
+      "arq": "706f8bdc2a133f53.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "98a3a954e1998989.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Lechonk Cofre",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "lechonk_rpg__lechonk_rpg.json",
+     "tex": {
+      "arq": "06ba1c2eed810254.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "f58662e28a087923.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Lechonk Cofre Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "lechonk_rpg__lechonk_rpg.json",
+     "tex": {
+      "arq": "3120e993c3a080a4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "98a3a954e1998989.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Lechonk Cofre Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "lycanroc_rpg",
+   "especie": "Lycanroc",
+   "aspecto": "rpg",
+   "nome": "Lycanroc · Skin de Astrea",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Melhor Tiro (Caçada).",
+   "lendario": false,
+   "foto": "img/pk/lycanroc_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "lycanroc_midnight_rpg__lycanroc_midnight_rpg.json",
+     "tex": {
+      "arq": "0af922a83edd438b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "754f38b4f58468a2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Lycanroc · Skin de Astrea",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "lycanroc_midnight_rpg__lycanroc_midnight_rpg.json",
+     "tex": {
+      "arq": "ee4026617fc08b02.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "54ff017ff78e7d4c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Lycanroc · Skin de Astrea Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "lycanroc_midnight_rpg__lycanroc_midnight_rpg.json",
+     "tex": {
+      "arq": "52a05febc6048044.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "6f6a88e0ae642619.png",
+      "quadros": 12,
+      "fps": 8,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Lycanroc · Skin de Astrea Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "meowstic_rpg",
+   "especie": "Meowstic",
+   "aspecto": "rpg",
+   "nome": "Meowstic Sorte",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Voto que Falta (Caiada).",
+   "lendario": false,
+   "foto": "img/pk/meowstic_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "meowstic_rpg__meowstic_rpg.json",
+     "tex": {
+      "arq": "0e24df8dbb15f670.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "d17de59c7f8cb4bd.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Meowstic Sorte",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "meowstic_rpg__meowstic_rpg.json",
+     "tex": {
+      "arq": "f3bdc05e713816ff.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "0c5f359e873f9508.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Meowstic Sorte Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "meowstic_rpg__meowstic_rpg.json",
+     "tex": {
+      "arq": "cc3af39f7240ceb5.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "d17de59c7f8cb4bd.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Meowstic Sorte Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "miltank_rpg",
+   "especie": "Miltank",
+   "aspecto": "rpg",
+   "nome": "Miltank · Skin de Astrea",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Quem Conta o Rebanho (Solar).",
+   "lendario": false,
+   "foto": "img/pk/miltank_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "miltank_rpg__miltank_rpg.json",
+     "tex": {
+      "arq": "09f62e47c69ea185.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 352
+     },
+     "emi": {
+      "arq": "c556ab157d7b6b3f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 352
+     },
+     "nome": "Miltank · Skin de Astrea",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "miltank_rpg__miltank_rpg.json",
+     "tex": {
+      "arq": "9c6113d7bd52d5e9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 352
+     },
+     "emi": {
+      "arq": "c556ab157d7b6b3f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 352
+     },
+     "nome": "Miltank · Skin de Astrea Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "miltank_rpg__miltank_rpg.json",
+     "tex": {
+      "arq": "ceda5fc323f614d3.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 352
+     },
+     "emi": {
+      "arq": "c556ab157d7b6b3f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 352
+     },
+     "nome": "Miltank · Skin de Astrea Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "munna_rpg",
+   "especie": "Munna",
+   "aspecto": "rpg",
+   "nome": "Munna Sonho",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Porta dos Sonhos (Pouso, Estante Solta e Cenáculo).",
+   "lendario": false,
+   "foto": "img/pk/munna_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "munna_rpg__munna_rpg.json",
+     "tex": {
+      "arq": "82ff5cf4dd1b9bfa.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "5074870efac7ccce.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Munna Sonho",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "munna_rpg__munna_rpg.json",
+     "tex": {
+      "arq": "f01dd2f6e2e1ee16.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "796fd5684962579e.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Munna Sonho Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "munna_rpg__munna_rpg.json",
+     "tex": {
+      "arq": "bf99b7e36dbf9c55.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "13baddb78ef77570.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Munna Sonho Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "musharna_rpg",
+   "especie": "Musharna",
+   "aspecto": "rpg",
+   "nome": "Musharna Constelacoes",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Estrela que Zumbe (Atalaia Nublada).",
+   "lendario": false,
+   "foto": "img/pk/musharna_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "musharna_rpg__musharna_rpg.json",
+     "tex": {
+      "arq": "837f98f9c61ff6bf.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "1ce12bf20cd53e1a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Musharna Constelacoes",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "musharna_rpg__musharna_rpg.json",
+     "tex": {
+      "arq": "2862d5d3112ac0b2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "e0fba0e846a9e41a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Musharna Constelacoes Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "musharna_rpg__musharna_rpg.json",
+     "tex": {
+      "arq": "24af6bb5102c82b6.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "emi": {
+      "arq": "7cb49d8525559085.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 304
+     },
+     "nome": "Musharna Constelacoes Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "numel_rpg",
+   "especie": "Numel",
+   "aspecto": "rpg",
+   "nome": "Numel Basalto",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Os Nomes na Pedra (Chamuscada e Braseiro).",
+   "lendario": false,
+   "foto": "img/pk/numel_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "numel_rpg__numel_rpg.json",
+     "tex": {
+      "arq": "8c683f4a9a9e2458.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "2981a12996dca7c6.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Numel Basalto",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "numel_rpg__numel_rpg.json",
+     "tex": {
+      "arq": "a44abb6b2234ac72.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "3ea34ca2fccdc4a5.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Numel Basalto Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "numel_rpg__numel_rpg.json",
+     "tex": {
+      "arq": "983cce68d1e536c6.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "6e72d40b106caa10.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Numel Basalto Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "pangoro_rpg",
+   "especie": "Pangoro",
+   "aspecto": "rpg",
+   "nome": "Pangoro Mercenario",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Contrato Adiantado (Soldo, Saqueio e Torre de Ahndre).",
+   "lendario": false,
+   "foto": "img/pk/pangoro_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "pangoro_rpg__pangoro_rpg.json",
+     "tex": {
+      "arq": "c08f19a7f37b7f22.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 560
+     },
+     "emi": {
+      "arq": "8becc10f69f146f8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 560
+     },
+     "nome": "Pangoro Mercenario",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "pangoro_rpg__pangoro_rpg.json",
+     "tex": {
+      "arq": "fa26e56d64d4a22f.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 560
+     },
+     "emi": {
+      "arq": "7da4a4e4124d1010.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 560
+     },
+     "nome": "Pangoro Mercenario Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "pangoro_rpg__pangoro_rpg.json",
+     "tex": {
+      "arq": "75643e2b45b8a9d4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 560
+     },
+     "emi": {
+      "arq": "8becc10f69f146f8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 560
+     },
+     "nome": "Pangoro Mercenario Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "sandshrew_rpg",
+   "especie": "Sandshrew",
+   "aspecto": "rpg",
+   "nome": "Sandshrew Terracota",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Os Penhores Vencidos (Aguada).",
+   "lendario": false,
+   "foto": "img/pk/sandshrew_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "sandshrew_rpg__sandshrew_rpg.json",
+     "tex": {
+      "arq": "e06668e40315941b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "98a3a954e1998989.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Sandshrew Terracota",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "sandshrew_rpg__sandshrew_rpg.json",
+     "tex": {
+      "arq": "a07c152776f80c52.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "d4bd288dff4429a2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Sandshrew Terracota Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "sandshrew_rpg__sandshrew_rpg.json",
+     "tex": {
+      "arq": "dc8bf80120e7b24d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "98a3a954e1998989.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Sandshrew Terracota Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "shiftry_rpg",
+   "especie": "Shiftry",
+   "aspecto": "rpg",
+   "nome": "Shiftry Druida",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Última Oferta (Cerne e Altar de Khive).",
+   "lendario": false,
+   "foto": "img/pk/shiftry_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "shiftry_rpg__shiftry_rpg.json",
+     "tex": {
+      "arq": "b6a67ec6b289389b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 336
+     },
+     "emi": {
+      "arq": "392a20907a9895c3.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 336
+     },
+     "nome": "Shiftry Druida",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "shiftry_rpg__shiftry_rpg.json",
+     "tex": {
+      "arq": "97fc977a002a31ba.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 336
+     },
+     "emi": {
+      "arq": "29d049c22d29287d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 336
+     },
+     "nome": "Shiftry Druida Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "shiftry_rpg__shiftry_rpg.json",
+     "tex": {
+      "arq": "3eab4d5339a306ce.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 336
+     },
+     "emi": {
+      "arq": "392a20907a9895c3.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 336
+     },
+     "nome": "Shiftry Druida Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "shroomish_rpg",
+   "especie": "Shroomish",
+   "aspecto": "rpg",
+   "nome": "Shroomish Amanita",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Acordo das Raízes (Micélio).",
+   "lendario": false,
+   "foto": "img/pk/shroomish_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "shroomish_rpg__shroomish_rpg.json",
+     "tex": {
+      "arq": "335ec60ff0443708.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "1e33fee2f138e32b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Shroomish Amanita",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "shroomish_rpg__shroomish_rpg.json",
+     "tex": {
+      "arq": "0e6d21a9414c3636.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "dc7cb2f5259e8fdd.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Shroomish Amanita Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "shroomish_rpg__shroomish_rpg.json",
+     "tex": {
+      "arq": "f3d0fb7f1f419dd5.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "1e33fee2f138e32b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Shroomish Amanita Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "slaking_rpg",
+   "especie": "Slaking",
+   "aspecto": "rpg",
+   "nome": "Slaking Guarda",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Chamada da Tropa (Maelmar e arredores).",
+   "lendario": false,
+   "foto": "img/pk/slaking_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "slaking_rpg__slaking_rpg.json",
+     "tex": {
+      "arq": "85eb4cb922e18108.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 720
+     },
+     "emi": {
+      "arq": "9c28f94b34c1c82d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 720
+     },
+     "nome": "Slaking Guarda",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "slaking_rpg__slaking_rpg.json",
+     "tex": {
+      "arq": "1790e800a1208ab1.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 720
+     },
+     "emi": {
+      "arq": "adca286ae49a7935.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 720
+     },
+     "nome": "Slaking Guarda Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "slaking_rpg__slaking_rpg.json",
+     "tex": {
+      "arq": "13a8b63529ee9d81.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 720
+     },
+     "emi": {
+      "arq": "9c28f94b34c1c82d.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 720
+     },
+     "nome": "Slaking Guarda Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "smeargle_rpg",
+   "especie": "Smeargle",
+   "aspecto": "rpg",
+   "nome": "Smeargle Alquimista",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Milésima Vela (Ocre e Palafita).",
+   "lendario": false,
+   "foto": "img/pk/smeargle_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "smeargle_rpg__smeargle_rpg.json",
+     "tex": {
+      "arq": "78ffa838e85a6cf9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "29ab2f11c2ee0e89.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Smeargle Alquimista",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "smeargle_rpg__smeargle_rpg.json",
+     "tex": {
+      "arq": "13d822704428d27c.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "58f872def2b24ee6.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Smeargle Alquimista Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "smeargle_rpg__smeargle_rpg.json",
+     "tex": {
+      "arq": "102f25b4405776c8.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "emi": {
+      "arq": "2c5b116932789b58.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 176
+     },
+     "nome": "Smeargle Alquimista Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "staryu_rpg",
+   "especie": "Staryu",
+   "aspecto": "rpg",
+   "nome": "Staryu Azul",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história O Mar Azul Demais (Baleeira).",
+   "lendario": false,
+   "foto": "img/pk/staryu_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "staryu_rpg__staryu_rpg.json",
+     "tex": {
+      "arq": "1cf1d5abac9c8029.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "1e33fee2f138e32b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Staryu Azul",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "staryu_rpg__staryu_rpg.json",
+     "tex": {
+      "arq": "34940477e16c3982.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "c1cfcf03b6fda897.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Staryu Azul Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "staryu_rpg__staryu_rpg.json",
+     "tex": {
+      "arq": "9154791e62c1d218.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "emi": {
+      "arq": "1e33fee2f138e32b.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 64
+     },
+     "nome": "Staryu Azul Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "swanna_rpg",
+   "especie": "Swanna",
+   "aspecto": "rpg",
+   "nome": "Swanna Dama",
+   "categoria": "loja",
+   "detalhe": "Compre com Éter no Mercado. A vitrine troca todo dia às 21h.",
+   "lendario": false,
+   "foto": "img/pk/swanna_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "swanna_rpg__swanna_rpg.json",
+     "tex": {
+      "arq": "ae38d94ac4ae8091.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 448
+     },
+     "emi": {
+      "arq": "d98479f4e2a8ccb9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 448
+     },
+     "nome": "Swanna Dama",
+     "preco": 2000,
+     "raridade": "epica"
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "swanna_rpg__swanna_rpg.json",
+     "tex": {
+      "arq": "f6a2fbc11d32a243.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 448
+     },
+     "emi": {
+      "arq": "dc20e93ce43f2c08.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 448
+     },
+     "nome": "Swanna Dama Shiny",
+     "preco": 2500,
+     "raridade": "lendaria"
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "swanna_rpg__swanna_rpg.json",
+     "tex": {
+      "arq": "9691b71d024485ea.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 448
+     },
+     "emi": {
+      "arq": "d98479f4e2a8ccb9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 256,
+      "h": 448
+     },
+     "nome": "Swanna Dama Prismática",
+     "preco": 3000,
+     "raridade": "prismatica"
+    }
+   ],
+   "pokemon": true
+  },
+  {
+   "id": "tinkaton_rpg",
+   "especie": "Tinkaton",
+   "aspecto": "rpg",
+   "nome": "Tinkaton Luas",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história As Marcas que Ninguém Lê (Runa, Tesund e Varadouro).",
+   "lendario": false,
+   "foto": "img/pk/tinkaton_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "tinkaton_rpg__tinkaton_rpg.json",
+     "tex": {
+      "arq": "10c6cad363d46086.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 304
+     },
+     "emi": {
+      "arq": "56ea171af9201f1a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 304
+     },
+     "nome": "Tinkaton Luas",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "tinkaton_rpg__tinkaton_rpg.json",
+     "tex": {
+      "arq": "b5ca2a0f8da4b9ca.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 304
+     },
+     "emi": {
+      "arq": "fd0225c17034bb95.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 304
+     },
+     "nome": "Tinkaton Luas Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "tinkaton_rpg__tinkaton_rpg.json",
+     "tex": {
+      "arq": "3e0ced0036d7af57.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 304
+     },
+     "emi": {
+      "arq": "24a87ccdcc8167f1.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 512,
+      "h": 304
+     },
+     "nome": "Tinkaton Luas Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "toedscool_rpg",
+   "especie": "Toedscool",
+   "aspecto": "rpg",
+   "nome": "Toedscool Tinta",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história A Receita Esquecida (Tinteiro).",
+   "lendario": false,
+   "foto": "img/pk/toedscool_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "toedscool_rpg__toedscool_rpg.json",
+     "tex": {
+      "arq": "23a79540f11229db.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "98a3a954e1998989.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Toedscool Tinta",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "toedscool_rpg__toedscool_rpg.json",
+     "tex": {
+      "arq": "64e2610942e223a9.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "2da5617944b730b1.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Toedscool Tinta Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "toedscool_rpg__toedscool_rpg.json",
+     "tex": {
+      "arq": "59fbeb390aa163c5.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "emi": {
+      "arq": "98a3a954e1998989.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 128
+     },
+     "nome": "Toedscool Tinta Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "weavile_rpg",
+   "especie": "Weavile",
+   "aspecto": "rpg",
+   "nome": "Weavile Assassino",
+   "categoria": "historia",
+   "detalhe": "Prêmio do final da história Os Guardas do Frio (Cárcere).",
+   "lendario": false,
+   "foto": "img/pk/weavile_rpg.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "weavile_rpg__weavile_rpg.json",
+     "tex": {
+      "arq": "03b27df367b60b74.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "emi": {
+      "arq": "a93bb968f47e25f2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "nome": "Weavile Assassino",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "weavile_rpg__weavile_rpg.json",
+     "tex": {
+      "arq": "142092254e522d2a.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "emi": {
+      "arq": "dc12acf4b28d72da.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "nome": "Weavile Assassino Shiny",
+     "preco": null,
+     "raridade": null
+    },
+    {
+     "tipo": "prismatica",
+     "modelo": "weavile_rpg__weavile_rpg.json",
+     "tex": {
+      "arq": "7461a950a1e907d4.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "emi": {
+      "arq": "a93bb968f47e25f2.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 128,
+      "h": 160
+     },
+     "nome": "Weavile Assassino Prismática",
+     "preco": null,
+     "raridade": null
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-15"
+  },
+  {
+   "id": "armadura_cavaleiro_lirio",
+   "nome": "Cavaleiro do Lírio",
+   "categoria": "armadura",
+   "preco": 2000,
+   "detalhe": "Skin de armadura · compre com Éter no Mercado.",
+   "foto": "img/eq/armadura_cavaleiro_lirio.webp",
+   "modelo": "eq_armadura_cavaleiro_lirio_67f9edcc46.json",
+   "texturas": [
+    {
+     "arq": "0de3de59f1ac0219.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "armadura_donzela_lirio",
+   "nome": "Donzela do Lírio",
+   "categoria": "armadura",
+   "preco": 2000,
+   "detalhe": "Skin de armadura · compre com Éter no Mercado.",
+   "foto": "img/eq/armadura_donzela_lirio.webp",
+   "modelo": "eq_armadura_donzela_lirio_67f9edcc46.json",
+   "texturas": [
+    {
+     "arq": "4c4e56841a5df5c5.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "armadura_vitorioso_ferro",
+   "nome": "Vitorioso - Ferro",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Prêmio da temporada do PvP ranqueado (Duelos): jogue as partidas mínimas e leve a skin da sua patente.",
+   "foto": "img/eq/armadura_vitorioso_ferro.webp",
+   "modelo": "eq_armadura_vitorioso_ferro_67f9edcc46.json",
+   "texturas": [
+    {
+     "arq": "68d7c043f76adaaf.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_vitorioso_bronze",
+   "nome": "Vitorioso - Bronze",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Prêmio da temporada do PvP ranqueado (Duelos): jogue as partidas mínimas e leve a skin da sua patente.",
+   "foto": "img/eq/armadura_vitorioso_bronze.webp",
+   "modelo": "eq_armadura_vitorioso_bronze_67f9edcc46.json",
+   "texturas": [
+    {
+     "arq": "826d2c94e24809b0.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_vitorioso_prata",
+   "nome": "Vitorioso - Prata",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Prêmio da temporada do PvP ranqueado (Duelos): jogue as partidas mínimas e leve a skin da sua patente.",
+   "foto": "img/eq/armadura_vitorioso_prata.webp",
+   "modelo": "eq_armadura_vitorioso_prata_67f9edcc46.json",
+   "texturas": [
+    {
+     "arq": "8af15453def299f9.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_vitorioso_ouro",
+   "nome": "Vitorioso - Ouro",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Prêmio da temporada do PvP ranqueado (Duelos): jogue as partidas mínimas e leve a skin da sua patente.",
+   "foto": "img/eq/armadura_vitorioso_ouro.webp",
+   "modelo": "eq_armadura_vitorioso_ouro_69ccba7cc6.json",
+   "texturas": [
+    {
+     "arq": "ca57960ae16c5c19.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 512
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_vitorioso_diamante",
+   "nome": "Vitorioso - Diamante",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Prêmio da temporada do PvP ranqueado (Duelos): jogue as partidas mínimas e leve a skin da sua patente.",
+   "foto": "img/eq/armadura_vitorioso_diamante.webp",
+   "modelo": "eq_armadura_vitorioso_diamante_69ccba7cc6.json",
+   "texturas": [
+    {
+     "arq": "fdda7219614419fc.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 512
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_vitorioso_lenda",
+   "nome": "Vitorioso - Lenda",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Prêmio da temporada do PvP ranqueado (Duelos): jogue as partidas mínimas e leve a skin da sua patente.",
+   "foto": "img/eq/armadura_vitorioso_lenda.webp",
+   "modelo": "eq_armadura_vitorioso_lenda_69ccba7cc6.json",
+   "texturas": [
+    {
+     "arq": "4d07af976d443af7.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 512
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_pijama_snorlax",
+   "nome": "Pijama de Snorlax",
+   "categoria": "armadura",
+   "preco": 2000,
+   "detalhe": "Skin de armadura · compre com Éter no Mercado.",
+   "foto": "img/eq/armadura_pijama_snorlax.webp",
+   "modelo": "eq_armadura_pijama_snorlax_69ccba7cc6.json",
+   "texturas": [
+    {
+     "arq": "44e0e4e0dd52973d.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 512
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "armadura_arauto_carmesim",
+   "nome": "Arauto Carmesim",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_arauto_carmesim.webp",
+   "modelo": "eq_armadura_arauto_carmesim_69ccba7cc6.json",
+   "texturas": [
+    {
+     "arq": "3ffc3c21c3e8d282.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 512
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_carmesim",
+   "nome": "Guardião Carmesim",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_carmesim.webp",
+   "modelo": "eq_armadura_carmesim_69ccba7cc6.json",
+   "texturas": [
+    {
+     "arq": "40fe9f2231c2d477.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 128,
+     "h": 128
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_flores",
+   "nome": "Saia Rodada das Flores",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_flores.webp",
+   "modelo": "eq_armadura_saia_flores_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "c8edf2761ed612ce.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_pregas",
+   "nome": "Saia de Pregas Xadrez",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_pregas.webp",
+   "modelo": "eq_armadura_saia_pregas_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "bee7702cb3550a1a.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_gotica",
+   "nome": "Saia Gótica em Camadas",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_gotica.webp",
+   "modelo": "eq_armadura_saia_gotica_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "966d9327d671f2f0.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_jeans",
+   "nome": "Saia Jeans",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_jeans.webp",
+   "modelo": "eq_armadura_saia_jeans_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "7bb4cded35a3ce2f.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_tule",
+   "nome": "Saia de Tule Bailarina",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_tule.webp",
+   "modelo": "eq_armadura_saia_tule_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "5e1a0acee2001fea.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_boho",
+   "nome": "Saia Longa Boho",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_boho.webp",
+   "modelo": "eq_armadura_saia_boho_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "7cecd4affc7d3b5c.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_sakura",
+   "nome": "Saia Sakura",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_sakura.webp",
+   "modelo": "eq_armadura_saia_sakura_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "c2f78f687f0aa110.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_rosa_negra",
+   "nome": "Saia Gótica Rosa Negra",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_rosa_negra.webp",
+   "modelo": "eq_armadura_saia_rosa_negra_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "56d23cf065aae668.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_renda_noturna",
+   "nome": "Saia de Renda Noturna",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_renda_noturna.webp",
+   "modelo": "eq_armadura_saia_renda_noturna_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "67d1bceafd821c26.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_punk",
+   "nome": "Saia Gótica Punk",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_punk.webp",
+   "modelo": "eq_armadura_saia_punk_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "ee571045e43c5b4e.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_renda_branca",
+   "nome": "Saia de Renda Branca",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_renda_branca.webp",
+   "modelo": "eq_armadura_saia_renda_branca_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "726844155aa1b3cf.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_anjo",
+   "nome": "Saia de Anjo",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_anjo.webp",
+   "modelo": "eq_armadura_saia_anjo_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "1bec6c11b807a6e9.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_saia_marinheira",
+   "nome": "Saia Marinheira Branca",
+   "categoria": "armadura",
+   "preco": null,
+   "detalhe": "Vem de eventos e recompensas especiais.",
+   "foto": "img/eq/armadura_saia_marinheira.webp",
+   "modelo": "eq_armadura_saia_marinheira_f9ddd239bf.json",
+   "texturas": [
+    {
+     "arq": "46e116aad99413f6.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-18"
+  },
+  {
+   "id": "armadura_majestade",
+   "nome": "Majestade",
+   "categoria": "armadura",
+   "preco": 2000,
+   "detalhe": "Skin de armadura · compre com Éter no Mercado.",
+   "foto": "img/eq/armadura_majestade.webp",
+   "modelo": "eq_armadura_majestade_67f9edcc46.json",
+   "texturas": [
+    {
+     "arq": "a5e7be6f593194f1.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 512,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-20"
+  },
+  {
+   "id": "draco_alaude",
+   "nome": "Alaúde do Dragão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_alaude.webp",
+   "modelo": "eq_draco_alaude_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "2a03aee95e875890.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_asas",
+   "nome": "Machado das Asas de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_asas.webp",
+   "modelo": "eq_draco_asas_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "b021d8828779b096.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_coluna",
+   "nome": "Montante da Coluna de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_coluna.webp",
+   "modelo": "eq_draco_coluna_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "298cbd0d1b29038b.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_coracao",
+   "nome": "Cajado do Coração de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_coracao.webp",
+   "modelo": "eq_draco_coracao_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "034e5a27224f3776.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_costela",
+   "nome": "Arco da Costela de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_costela.webp",
+   "modelo": "eq_draco_costela_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "47f6adf13dc87943.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_egide",
+   "nome": "Égide do Dragão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_egide.webp",
+   "modelo": "eq_draco_egide_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "1d307cbacaff9af4.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_femur",
+   "nome": "Martelo do Fêmur de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_femur.webp",
+   "modelo": "eq_draco_femur_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "4e0b5c116006d70f.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_ferrao",
+   "nome": "Tridente do Ferrão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_ferrao.webp",
+   "modelo": "eq_draco_ferrao_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "09a246497c5f39d5.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_garra",
+   "nome": "Lança da Garra de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_garra.webp",
+   "modelo": "eq_draco_garra_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "85933a7d4f0175fd.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_mordida",
+   "nome": "Mordida do Dragão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_mordida.webp",
+   "modelo": "eq_draco_mordida_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "ebf2e5679226100d.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_presa",
+   "nome": "Presa do Dragão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_presa.webp",
+   "modelo": "eq_draco_presa_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "b3219008bf26c3dc.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_punho",
+   "nome": "Punho de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_punho.webp",
+   "modelo": "eq_draco_punho_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "29ed9ab63713c619.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "draco_unha",
+   "nome": "Unha do Dragão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/draco_unha.webp",
+   "modelo": "eq_draco_unha_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "cb535af843f7fdec.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "foice_draco",
+   "nome": "Foice do Dragão de Ossos",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/foice_draco.webp",
+   "modelo": "eq_foice_draco_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "61e7f8444815bd77.png",
+     "quadros": 16,
+     "fps": 10,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "rapieira_lotus",
+   "nome": "Rapieira de Lótus",
+   "categoria": "arma",
+   "preco": 1100,
+   "detalhe": "Skin de arma · compre com Éter no Mercado.",
+   "foto": "img/eq/rapieira_lotus.webp",
+   "modelo": "eq_rapieira_lotus_e117daf743.json",
+   "texturas": [
+    {
+     "arq": "fb890f2886f19059.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 256
+    }
+   ],
+   "add": "2026-10-15"
+  },
+  {
+   "id": "asa_plumas_angel",
+   "nome": "Plumas de Angel",
+   "categoria": "asa",
+   "preco": 2500,
+   "detalhe": "Asas · compre com Éter no Mercado.",
+   "foto": "img/eq/asa_plumas_angel.webp",
+   "modelo": "eq_asa_plumas_angel_a7f56d556a.json",
+   "texturas": [
+    {
+     "arq": "050503b447684d3f.png",
+     "quadros": 1,
+     "fps": 0,
+     "w": 256,
+     "h": 128
+    }
+   ],
+   "add": "2026-10-15"
+  }
+ ]
+}
