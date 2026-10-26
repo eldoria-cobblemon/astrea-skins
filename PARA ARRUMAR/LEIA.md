@@ -1,6 +1,6 @@
 # PARA ARRUMAR
 
-Skins tiradas do catálogo do site em 25/10/2026 pela Angela (82 itens), guardadas aqui pra arrumar depois.
+Skins tiradas do catálogo do site em 25/10/2026 pela Angela (83 itens), guardadas aqui pra arrumar depois.
 
 - `itens.json`: a entrada de cada skin exatamente como estava em `dados/catalogo.json`.
 - `img/`, `m3d/`, `tex/`: foto, modelo 3D e texturas de cada uma, nos mesmos caminhos do site.
@@ -48,11 +48,12 @@ pras pastas `img/`, `m3d/` e `tex/` da raiz. A categoria Histórias também est�
 - Toedscool Tinta (`toedscool_rpg`)
 - Weavile Assassino (`weavile_rpg`)
 
-## Loja de Skins (3)
+## Loja de Skins (4)
 
 - Froslass Noiva Yokai (`froslass_rpg`)
 - Gallade Lâmina Escarlate (`gallade_rpg`)
 - Swanna Dama (`swanna_rpg`)
+- Gengar Cartomante (`gengar_rpg3`), tirado em 26/10
 
 ## Natureza (1)
 
