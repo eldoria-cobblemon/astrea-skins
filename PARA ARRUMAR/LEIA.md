@@ -1,110 +1,329 @@
 # PARA ARRUMAR
 
-Skins tiradas do catálogo do site em 25/10/2026 pela Angela (83 itens), guardadas aqui pra arrumar depois.
+Skins tiradas do site e da Loja de Skins em 25/10/2026 pela Angela (82 itens), pra Angela e o Yure capricharem mais.
 
-- `itens.json`: a entrada de cada skin exatamente como estava em `dados/catalogo.json`.
-- `img/`, `m3d/`, `tex/`: foto, modelo 3D e texturas de cada uma, nos mesmos caminhos do site.
+## Onde está cada coisa
 
-Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens` de `dados/catalogo.json` e mover os arquivos dela de volta
-pras pastas `img/`, `m3d/` e `tex/` da raiz. A categoria Histórias também está escondida no `index.html` (procure "historia").
+- **Arquivos de verdade da skin (pra editar):** repo `Angelazamaro/Resourcepack-eldoria`, branch `main`. Os caminhos de cada skin estão na lista abaixo.
+  - Pokémon: modelo em `assets/cobblemon/bedrock/pokemon/models/<nº_espécie>/`, animação em `.../animations/<nº_espécie>/`, texturas na pasta `assets/cobblemon/textures/pokemon/skins_<aspecto>/<skin>/`.
+  - Armaduras e asas: modelo 3D em `assets/astrea/geo/`, textura em `assets/astrea/textures/armor/` (asas: `textures/asas/`). Tem uma cópia antiga em `assets/eldoria/` também.
+  - Armas: `assets/astrea/models/item/` e `assets/astrea/textures/item/`.
+  - Geradores (scripts que criaram as skins): repo `Angelazamaro/Eldoria`, pasta `ferramentas_pack/`.
+- **Cópia do site (esta pasta, repo `eldoria-cobblemon/astrea-skins`):** `itens.json` (a entrada de cada skin como estava no catálogo) e `img/`, `m3d/`, `tex/` (foto, modelo e textura do visualizador 3D). Serve só pra devolver ao site; não é o arquivo do jogo.
+- **Loja do jogo:** os índices estão na lista `fora` de `config/astrea_loja/vitrine.json` no servidor (nomes em `_fora_para_arrumar`). Pra voltar à loja, tirar o índice de lá.
+
+Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens` de `dados/catalogo.json` e mover os arquivos dela daqui de volta pras pastas `img/`, `m3d/` e `tex/` da raiz. A categoria Histórias também está escondida no `index.html` (procure "historia").
 
 ## Histórias (37)
 
-- Aggron Ariete (`aggron_rpg`)
-- Alakazam Arquimago (`alakazam_rpg`)
-- Alcremie Bolo (`alcremie_rpg`)
-- Audino Cleriga (`audino_rpg`)
-- Bergmite Geodo (`bergmite_rpg`)
-- Boldore Safira (`boldore_rpg`)
-- Claydol Idolo (`claydol_rpg`)
-- Clefable Bruxinha (`clefable_rpg`)
-- Cubchoo Aurora (`cubchoo_rpg`)
-- Dedenne Lanterna (`dedenne_rpg`)
-- Drifloon Lanterna (`drifloon_rpg`)
-- Dusclops Mumia (`dusclops_rpg`)
-- Empoleon Paladino (`empoleon_rpg`)
-- Espeon · Skin de Astrea (`espeon_rpg`)
-- Espurr Aprendiz (`espurr_rpg`)
-- Gimmighoul Mimico (`gimmighoul_rpg`)
-- Jigglypuff Diva (`jigglypuff_rpg`)
-- Jumpluff Baloes (`jumpluff_rpg`)
-- Kricketune Violino (`kricketune_rpg`)
-- Lampent Cripta (`lampent_rpg`)
-- Lechonk Cofre (`lechonk_rpg`)
-- Lycanroc · Skin de Astrea (`lycanroc_rpg`)
-- Meowstic Sorte (`meowstic_rpg`)
-- Miltank · Skin de Astrea (`miltank_rpg`)
-- Munna Sonho (`munna_rpg`)
-- Musharna Constelacoes (`musharna_rpg`)
-- Numel Basalto (`numel_rpg`)
-- Pangoro Mercenario (`pangoro_rpg`)
-- Sandshrew Terracota (`sandshrew_rpg`)
-- Shiftry Druida (`shiftry_rpg`)
-- Shroomish Amanita (`shroomish_rpg`)
-- Slaking Guarda (`slaking_rpg`)
-- Smeargle Alquimista (`smeargle_rpg`)
-- Staryu Azul (`staryu_rpg`)
-- Tinkaton Luas (`tinkaton_rpg`)
-- Toedscool Tinta (`toedscool_rpg`)
-- Weavile Assassino (`weavile_rpg`)
+- **Aggron Ariete** (`aggron_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0306_aggron/aggron_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0306_aggron/aggron_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/aggron_rpg/`
+- **Alakazam Arquimago** (`alakazam_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0065_alakazam/alakazam_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0065_alakazam/alakazam_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/alakazam_rpg/`
+- **Alcremie Bolo** (`alcremie_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0869_alcremie/alcremie_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0869_alcremie/alcremie_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/alcremie_rpg/`
+- **Audino Cleriga** (`audino_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0531_audino/audino_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0531_audino/audino_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/audino_rpg/`
+- **Bergmite Geodo** (`bergmite_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0712_bergmite/bergmite_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0712_bergmite/bergmite_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/bergmite_rpg/`
+- **Boldore Safira** (`boldore_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0525_boldore/boldore_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0525_boldore/boldore_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/boldore_rpg/`
+- **Claydol Idolo** (`claydol_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0344_claydol/claydol_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0344_claydol/claydol_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/claydol_rpg/`
+- **Clefable Bruxinha** (`clefable_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0036_clefable/clefable_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0036_clefable/clefable_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/clefable_rpg/`
+- **Cubchoo Aurora** (`cubchoo_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0613_cubchoo/cubchoo_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0613_cubchoo/cubchoo_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/cubchoo_rpg/`
+- **Dedenne Lanterna** (`dedenne_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0702_dedenne/dedenne_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0702_dedenne/dedenne_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/dedenne_rpg/`
+- **Drifloon Lanterna** (`drifloon_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0425_drifloon/drifloon_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0425_drifloon/drifloon_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/drifloon_rpg/`
+- **Dusclops Mumia** (`dusclops_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0356_dusclops/dusclops_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0356_dusclops/dusclops_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/dusclops_rpg/`
+- **Empoleon Paladino** (`empoleon_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0395_empoleon/empoleon_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0395_empoleon/empoleon_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/empoleon_rpg/`
+- **Espeon · Skin de Astrea** (`espeon_rpg`) — usa o modelo oficial, só troca a textura
+  - `assets/cobblemon/textures/pokemon/skins_rpg/espeon_rpg.png` (+ `_emissive` e `_prismatica`)
+  - `assets/cobblemon/bedrock/pokemon/resolvers/skins_rpg/espeon_rpg.json`
+- **Espurr Aprendiz** (`espurr_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0677_espurr/espurr_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0677_espurr/espurr_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/espurr_rpg/`
+- **Gimmighoul Mimico** (`gimmighoul_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0999_gimmighoul/gimmighoul_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0999_gimmighoul/gimmighoul_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/gimmighoul_rpg/`
+- **Jigglypuff Diva** (`jigglypuff_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0039_jigglypuff/jigglypuff_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0039_jigglypuff/jigglypuff_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/jigglypuff_rpg/`
+- **Jumpluff Baloes** (`jumpluff_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0189_jumpluff/jumpluff_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0189_jumpluff/jumpluff_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/jumpluff_rpg/`
+- **Kricketune Violino** (`kricketune_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0402_kricketune/kricketune_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0402_kricketune/kricketune_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/kricketune_rpg/`
+- **Lampent Cripta** (`lampent_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0608_lampent/lampent_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0608_lampent/lampent_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/lampent_rpg/`
+- **Lechonk Cofre** (`lechonk_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0915_lechonk/lechonk_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0915_lechonk/lechonk_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/lechonk_rpg/`
+- **Lycanroc · Skin de Astrea** (`lycanroc_rpg`) — forma Meia-noite
+  - `assets/cobblemon/bedrock/pokemon/models/skins_rpg/lycanroc_midnight_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/skins_rpg/lycanroc_midnight_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/lycanroc_midnight_rpg.png` (+ `_shiny`, `_prismatica`, `_emissive` e a pasta `lycanroc_midnight_rpg_sintonia/`)
+- **Meowstic Sorte** (`meowstic_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0678_meowstic/meowstic_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0678_meowstic/meowstic_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/meowstic_rpg/`
+- **Miltank · Skin de Astrea** (`miltank_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0241_miltank/miltank_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0241_miltank/miltank_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/miltank_rpg/`
+- **Munna Sonho** (`munna_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0517_munna/munna_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0517_munna/munna_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/munna_rpg/`
+- **Musharna Constelacoes** (`musharna_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0518_musharna/musharna_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0518_musharna/musharna_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/musharna_rpg/`
+- **Numel Basalto** (`numel_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0322_numel/numel_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0322_numel/numel_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/numel_rpg/`
+- **Pangoro Mercenario** (`pangoro_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0675_pangoro/pangoro_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0675_pangoro/pangoro_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/pangoro_rpg/`
+- **Sandshrew Terracota** (`sandshrew_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0027_sandshrew/sandshrew_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0027_sandshrew/sandshrew_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/sandshrew_rpg/`
+- **Shiftry Druida** (`shiftry_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0275_shiftry/shiftry_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0275_shiftry/shiftry_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/shiftry_rpg/`
+- **Shroomish Amanita** (`shroomish_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0285_shroomish/shroomish_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0285_shroomish/shroomish_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/shroomish_rpg/`
+- **Slaking Guarda** (`slaking_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0289_slaking/slaking_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0289_slaking/slaking_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/slaking_rpg/`
+- **Smeargle Alquimista** (`smeargle_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0235_smeargle/smeargle_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0235_smeargle/smeargle_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/smeargle_rpg/`
+- **Staryu Azul** (`staryu_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0120_staryu/staryu_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0120_staryu/staryu_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/staryu_rpg/`
+- **Tinkaton Luas** (`tinkaton_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0959_tinkaton/tinkaton_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0959_tinkaton/tinkaton_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/tinkaton_rpg/`
+- **Toedscool Tinta** (`toedscool_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0948_toedscool/toedscool_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0948_toedscool/toedscool_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/toedscool_rpg/`
+- **Weavile Assassino** (`weavile_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0461_weavile/weavile_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0461_weavile/weavile_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/weavile_rpg/`
 
-## Loja de Skins (4)
+## Pokémon da Loja de Skins (3)
 
-- Froslass Noiva Yokai (`froslass_rpg`)
-- Gallade Lâmina Escarlate (`gallade_rpg`)
-- Swanna Dama (`swanna_rpg`)
-- Gengar Cartomante (`gengar_rpg3`), tirado em 26/10
+- **Froslass Noiva Yokai** (`froslass_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0478_froslass/froslass_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0478_froslass/froslass_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/froslass_rpg/`
+- **Gallade Lâmina Escarlate** (`gallade_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0475_gallade/gallade_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0475_gallade/gallade_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/gallade_rpg/`
+- **Swanna Dama** (`swanna_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0581_swanna/swanna_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0581_swanna/swanna_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/swanna_rpg/`
 
 ## Natureza (1)
 
-- Frosmoth Noite (`frosmoth_rpg`)
+- **Frosmoth Noite** (`frosmoth_rpg`)
+  - `assets/cobblemon/bedrock/pokemon/models/0873_frosmoth/frosmoth_rpg.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/animations/0873_frosmoth/frosmoth_rpg.animation.json`
+  - `assets/cobblemon/textures/pokemon/skins_rpg/frosmoth_rpg/`
 
 ## Armaduras (25)
 
-- Cavaleiro do Lírio (`armadura_cavaleiro_lirio`)
-- Donzela do Lírio (`armadura_donzela_lirio`)
-- Vitorioso - Ferro (`armadura_vitorioso_ferro`)
-- Vitorioso - Bronze (`armadura_vitorioso_bronze`)
-- Vitorioso - Prata (`armadura_vitorioso_prata`)
-- Vitorioso - Ouro (`armadura_vitorioso_ouro`)
-- Vitorioso - Diamante (`armadura_vitorioso_diamante`)
-- Vitorioso - Lenda (`armadura_vitorioso_lenda`)
-- Pijama de Snorlax (`armadura_pijama_snorlax`)
-- Arauto Carmesim (`armadura_arauto_carmesim`)
-- Guardião Carmesim (`armadura_carmesim`)
-- Saia Rodada das Flores (`armadura_saia_flores`)
-- Saia de Pregas Xadrez (`armadura_saia_pregas`)
-- Saia Gótica em Camadas (`armadura_saia_gotica`)
-- Saia Jeans (`armadura_saia_jeans`)
-- Saia de Tule Bailarina (`armadura_saia_tule`)
-- Saia Longa Boho (`armadura_saia_boho`)
-- Saia Sakura (`armadura_saia_sakura`)
-- Saia Gótica Rosa Negra (`armadura_saia_rosa_negra`)
-- Saia de Renda Noturna (`armadura_saia_renda_noturna`)
-- Saia Gótica Punk (`armadura_saia_punk`)
-- Saia de Renda Branca (`armadura_saia_renda_branca`)
-- Saia de Anjo (`armadura_saia_anjo`)
-- Saia Marinheira Branca (`armadura_saia_marinheira`)
-- Majestade (`armadura_majestade`)
+- **Cavaleiro do Lírio** (`armadura_cavaleiro_lirio`)
+  - `assets/astrea/geo/armadura_cavaleiro_lirio.geo.json`
+  - `assets/astrea/textures/armor/armadura_cavaleiro_lirio.png`
+  - `assets/astrea/textures/armor/armadura_cavaleiro_lirio_glowmask.png`
+- **Donzela do Lírio** (`armadura_donzela_lirio`)
+  - `assets/astrea/geo/armadura_donzela_lirio.geo.json`
+  - `assets/astrea/textures/armor/armadura_donzela_lirio.png`
+  - `assets/astrea/textures/armor/armadura_donzela_lirio_glowmask.png`
+- **Vitorioso - Ferro** (`armadura_vitorioso_ferro`)
+  - `assets/astrea/geo/armadura_vitorioso_ferro.geo.json`
+  - `assets/astrea/textures/armor/armadura_vitorioso_ferro.png`
+- **Vitorioso - Bronze** (`armadura_vitorioso_bronze`)
+  - `assets/astrea/geo/armadura_vitorioso_bronze.geo.json`
+  - `assets/astrea/textures/armor/armadura_vitorioso_bronze.png`
+- **Vitorioso - Prata** (`armadura_vitorioso_prata`)
+  - `assets/astrea/geo/armadura_vitorioso_prata.geo.json`
+  - `assets/astrea/textures/armor/armadura_vitorioso_prata.png`
+- **Vitorioso - Ouro** (`armadura_vitorioso_ouro`)
+  - `assets/astrea/geo/armadura_vitorioso_ouro.geo.json`
+  - `assets/astrea/textures/armor/armadura_vitorioso_ouro.png`
+- **Vitorioso - Diamante** (`armadura_vitorioso_diamante`)
+  - `assets/astrea/geo/armadura_vitorioso_diamante.geo.json`
+  - `assets/astrea/textures/armor/armadura_vitorioso_diamante.png`
+  - `assets/astrea/textures/armor/armadura_vitorioso_diamante_glowmask.png`
+- **Vitorioso - Lenda** (`armadura_vitorioso_lenda`)
+  - `assets/astrea/geo/armadura_vitorioso_lenda.geo.json`
+  - `assets/astrea/textures/armor/armadura_vitorioso_lenda.png`
+  - `assets/astrea/textures/armor/armadura_vitorioso_lenda_glowmask.png`
+- **Pijama de Snorlax** (`armadura_pijama_snorlax`)
+  - `assets/astrea/geo/armadura_pijama_snorlax.geo.json`
+  - `assets/astrea/textures/armor/armadura_pijama_snorlax.png`
+- **Arauto Carmesim** (`armadura_arauto_carmesim`)
+  - `assets/astrea/geo/armadura_arauto_carmesim.geo.json`
+  - `assets/astrea/textures/armor/armadura_arauto_carmesim.png`
+- **Guardião Carmesim** (`armadura_carmesim`)
+  - `assets/astrea/geo/armadura_carmesim.geo.json`
+  - `assets/astrea/textures/armor/armadura_carmesim.png`
+- **Saia Rodada das Flores** (`armadura_saia_flores`)
+  - `assets/astrea/geo/armadura_saia_flores.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_flores.png`
+- **Saia de Pregas Xadrez** (`armadura_saia_pregas`)
+  - `assets/astrea/geo/armadura_saia_pregas.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_pregas.png`
+- **Saia Gótica em Camadas** (`armadura_saia_gotica`)
+  - `assets/astrea/geo/armadura_saia_gotica.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_gotica.png`
+- **Saia Jeans** (`armadura_saia_jeans`)
+  - `assets/astrea/geo/armadura_saia_jeans.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_jeans.png`
+- **Saia de Tule Bailarina** (`armadura_saia_tule`)
+  - `assets/astrea/geo/armadura_saia_tule.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_tule.png`
+- **Saia Longa Boho** (`armadura_saia_boho`)
+  - `assets/astrea/geo/armadura_saia_boho.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_boho.png`
+- **Saia Sakura** (`armadura_saia_sakura`)
+  - `assets/astrea/geo/armadura_saia_sakura.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_sakura.png`
+- **Saia Gótica Rosa Negra** (`armadura_saia_rosa_negra`)
+  - `assets/astrea/geo/armadura_saia_rosa_negra.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_rosa_negra.png`
+- **Saia de Renda Noturna** (`armadura_saia_renda_noturna`)
+  - `assets/astrea/geo/armadura_saia_renda_noturna.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_renda_noturna.png`
+- **Saia Gótica Punk** (`armadura_saia_punk`)
+  - `assets/astrea/geo/armadura_saia_punk.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_punk.png`
+- **Saia de Renda Branca** (`armadura_saia_renda_branca`)
+  - `assets/astrea/geo/armadura_saia_renda_branca.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_renda_branca.png`
+- **Saia de Anjo** (`armadura_saia_anjo`)
+  - `assets/astrea/geo/armadura_saia_anjo.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_anjo.png`
+- **Saia Marinheira Branca** (`armadura_saia_marinheira`)
+  - `assets/astrea/geo/armadura_saia_marinheira.geo.json`
+  - `assets/astrea/textures/armor/armadura_saia_marinheira.png`
+- **Majestade** (`armadura_majestade`)
+  - `assets/astrea/geo/armadura_majestade.geo.json`
+  - `assets/astrea/textures/armor/armadura_majestade.png`
 
 ## Armas (15)
 
-- Alaúde do Dragão de Ossos (`draco_alaude`)
-- Machado das Asas de Ossos (`draco_asas`)
-- Montante da Coluna de Ossos (`draco_coluna`)
-- Cajado do Coração de Ossos (`draco_coracao`)
-- Arco da Costela de Ossos (`draco_costela`)
-- Égide do Dragão de Ossos (`draco_egide`)
-- Martelo do Fêmur de Ossos (`draco_femur`)
-- Tridente do Ferrão de Ossos (`draco_ferrao`)
-- Lança da Garra de Ossos (`draco_garra`)
-- Mordida do Dragão de Ossos (`draco_mordida`)
-- Presa do Dragão de Ossos (`draco_presa`)
-- Punho de Ossos (`draco_punho`)
-- Unha do Dragão de Ossos (`draco_unha`)
-- Foice do Dragão de Ossos (`foice_draco`)
-- Rapieira de Lótus (`rapieira_lotus`)
+- **Alaúde do Dragão de Ossos** (`draco_alaude`)
+  - `assets/astrea/textures/item/draco_alaude.png`
+  - `assets/astrea/models/item/draco_alaude.json`
+  - `assets/astrea/models/item/draco_alaude_bardo.json`
+- **Machado das Asas de Ossos** (`draco_asas`)
+  - `assets/astrea/textures/item/draco_asas.png`
+  - `assets/astrea/models/item/draco_asas.json`
+- **Montante da Coluna de Ossos** (`draco_coluna`)
+  - `assets/astrea/textures/item/draco_coluna.png`
+  - `assets/astrea/models/item/draco_coluna.json`
+- **Cajado do Coração de Ossos** (`draco_coracao`)
+  - `assets/astrea/textures/item/draco_coracao.png`
+  - `assets/astrea/models/item/draco_coracao.json`
+- **Arco da Costela de Ossos** (`draco_costela`)
+  - `assets/astrea/textures/item/draco_costela.png`
+  - `assets/astrea/models/item/draco_costela.json`
+- **Égide do Dragão de Ossos** (`draco_egide`)
+  - `assets/astrea/textures/item/draco_egide.png`
+  - `assets/astrea/models/item/draco_egide.json`
+  - `assets/astrea/models/item/draco_egide_blocking.json`
+- **Martelo do Fêmur de Ossos** (`draco_femur`)
+  - `assets/astrea/textures/item/draco_femur.png`
+  - `assets/astrea/models/item/draco_femur.json`
+- **Tridente do Ferrão de Ossos** (`draco_ferrao`)
+  - `assets/astrea/textures/item/draco_ferrao.png`
+  - `assets/astrea/models/item/draco_ferrao.json`
+- **Lança da Garra de Ossos** (`draco_garra`)
+  - `assets/astrea/textures/item/draco_garra.png`
+  - `assets/astrea/models/item/draco_garra.json`
+- **Mordida do Dragão de Ossos** (`draco_mordida`)
+  - `assets/astrea/textures/item/draco_mordida.png`
+  - `assets/astrea/models/item/draco_mordida.json`
+- **Presa do Dragão de Ossos** (`draco_presa`)
+  - `assets/astrea/textures/item/draco_presa.png`
+  - `assets/astrea/models/item/draco_presa.json`
+- **Punho de Ossos** (`draco_punho`)
+  - `assets/astrea/textures/item/draco_punho.png`
+  - `assets/astrea/models/item/draco_punho.json`
+- **Unha do Dragão de Ossos** (`draco_unha`)
+  - `assets/astrea/textures/item/draco_unha.png`
+  - `assets/astrea/models/item/draco_unha.json`
+- **Foice do Dragão de Ossos** (`foice_draco`)
+  - `assets/astrea/textures/item/foice_draco.png`
+  - `assets/astrea/models/item/foice_draco.json`
+  - `assets/astrea/models/item/foice_draco_mao.json`
+  - `assets/astrea/models/item/foice_draco_pesada.json`
+- **Rapieira de Lótus** (`rapieira_lotus`)
+  - `assets/astrea/textures/item/rapieira_lotus.png`
+  - `assets/astrea/models/item/rapieira_lotus.json`
 
 ## Asas (1)
 
-- Plumas de Angel (`asa_plumas_angel`)
+- **Plumas de Angel** (`asa_plumas_angel`)
+  - `assets/astrea/geo/asa_plumas_angel.geo.json`
+  - `assets/astrea/textures/asas/asa_plumas_angel.png`
+  - `assets/astrea/textures/item/asas/asa_plumas_angel.png`
+  - `assets/astrea/models/item/asa_plumas_angel.json`

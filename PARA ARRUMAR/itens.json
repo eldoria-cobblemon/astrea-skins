@@ -4036,41 +4036,6 @@
     }
    ],
    "add": "2026-10-15"
-  },
-  {
-   "id": "gengar_rpg3",
-   "especie": "Gengar",
-   "aspecto": "rpg3",
-   "nome": "Gengar Cartomante",
-   "categoria": "loja",
-   "detalhe": "Compre com Éter no Mercado. A vitrine troca todo dia às 21h.",
-   "lendario": false,
-   "foto": "img/pk/gengar_rpg3.webp",
-   "variantes": [
-    {
-     "tipo": "normal",
-     "modelo": "gengar_rpg3__gengar_rpg3.json",
-     "tex": {
-      "arq": "e0d53868c7dcd3ec.png",
-      "quadros": 1,
-      "fps": 0,
-      "w": 512,
-      "h": 1152
-     },
-     "emi": {
-      "arq": "51a285dae760b811.png",
-      "quadros": 1,
-      "fps": 0,
-      "w": 512,
-      "h": 1152
-     },
-     "nome": "Gengar Cartomante",
-     "preco": 2000,
-     "raridade": "epica"
-    }
-   ],
-   "pokemon": true,
-   "add": "2026-10-18"
   }
  ]
 }
