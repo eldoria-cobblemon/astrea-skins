@@ -144,7 +144,7 @@ Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens`
   - `assets/cobblemon/bedrock/pokemon/animations/0461_weavile/weavile_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/weavile_rpg/`
 
-## Pokémon da Loja de Skins (3)
+## Pokémon da Loja de Skins (4)
 
 - **Froslass Noiva Yokai** (`froslass_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0478_froslass/froslass_rpg.geo.json`
@@ -154,6 +154,10 @@ Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens`
   - `assets/cobblemon/bedrock/pokemon/models/0475_gallade/gallade_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0475_gallade/gallade_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/gallade_rpg/`
+- **Mew Coroa** (`mew_coroa`, tirado do site em 27/10/2026)
+  - `assets/cobblemon/bedrock/pokemon/models/0151_mew/mew_coroa.geo.json`
+  - `assets/cobblemon/bedrock/pokemon/resolvers/0151_mew/9_mew_coroa.json`
+  - `assets/cobblemon/textures/pokemon/0151_mew/mew_coroa.png` e `mew_coroa_shiny.png`
 - **Swanna Dama** (`swanna_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0581_swanna/swanna_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0581_swanna/swanna_rpg.animation.json`
