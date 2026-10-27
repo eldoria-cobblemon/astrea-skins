@@ -229,7 +229,7 @@ const CATS = [
   { id: "cosmetico", nome: "Cosméticos", cor: "--c-cosmetico", sub: "Chapéus, coroas, auréolas, símbolos e asinhas de borboleta pro /armario." },
   { id: "pesca", nome: "Pescaria", cor: "--c-pesca", sub: "Pokémon que só aparecem com skin na vara. Cada um tem seu spot de pesca." },
   { id: "natureza", nome: "Natureza", cor: "--c-natureza", sub: "Skins que nascem soltas pelo mundo, em lugares certos. Explore pra encontrar." },
-  // "historia" (Histórias) fica oculto por enquanto (Angela, 25/10)
+  { id: "historia", nome: "Histórias", cor: "--c-historia", sub: "Prêmio do final de uma história de Astrea. Termine a história e o Pokémon vem com a skin." },
   { id: "emissario", nome: "Emissários", cor: "--c-emissario", sub: "O visual dos chefes da Temporada 1, Luz contra Trevas, espalhados pelo mapa." },
   // "eventos" (Eventos e recompensas) fica oculto por enquanto (dono, 19/10)
 ];
@@ -247,7 +247,7 @@ const $ = id => document.getElementById(id);
 async function iniciar() {
   const r = await fetch("dados/catalogo.json", { cache: "no-cache" });
   const cat = await r.json();
-  DADOS = cat.itens.filter(x => x.categoria !== "eventos" && x.categoria !== "historia");
+  DADOS = cat.itens.filter(x => x.categoria !== "eventos");
   $("atualizado").textContent = "Atualizado em " + cat.atualizado;
   const conta = id => DADOS.filter(x => x.categoria === id).length;
   const pk = DADOS.filter(x => x.pokemon).length;

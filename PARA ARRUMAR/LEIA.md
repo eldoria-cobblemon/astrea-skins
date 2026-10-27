@@ -1,6 +1,6 @@
 # PARA ARRUMAR
 
-Skins tiradas do site e da Loja de Skins em 25/10/2026 pela Angela (82 itens), pra Angela e o Yure capricharem mais.
+Skins tiradas do site e da Loja de Skins em 25/10/2026 pela Angela (82 itens; 5 já voltaram refeitas em 27/10: Numel, Toedscool, Staryu, Drifloon, Cubchoo), pra Angela e o Yure capricharem mais.
 
 ## Onde está cada coisa
 
@@ -12,9 +12,9 @@ Skins tiradas do site e da Loja de Skins em 25/10/2026 pela Angela (82 itens), p
 - **Cópia do site (esta pasta, repo `eldoria-cobblemon/astrea-skins`):** `itens.json` (a entrada de cada skin como estava no catálogo) e `img/`, `m3d/`, `tex/` (foto, modelo e textura do visualizador 3D). Serve só pra devolver ao site; não é o arquivo do jogo.
 - **Loja do jogo:** os índices estão na lista `fora` de `config/astrea_loja/vitrine.json` no servidor (nomes em `_fora_para_arrumar`). Pra voltar à loja, tirar o índice de lá.
 
-Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens` de `dados/catalogo.json` e mover os arquivos dela daqui de volta pras pastas `img/`, `m3d/` e `tex/` da raiz. A categoria Histórias também está escondida no `index.html` (procure "historia").
+Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens` de `dados/catalogo.json` e mover os arquivos dela daqui de volta pras pastas `img/`, `m3d/` e `tex/` da raiz. A categoria Histórias voltou ao `index.html` em 27/10 (mostra só as que já saíram daqui).
 
-## Histórias (37)
+## Histórias (32)
 
 - **Aggron Ariete** (`aggron_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0306_aggron/aggron_rpg.geo.json`
@@ -48,18 +48,10 @@ Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens`
   - `assets/cobblemon/bedrock/pokemon/models/0036_clefable/clefable_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0036_clefable/clefable_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/clefable_rpg/`
-- **Cubchoo Aurora** (`cubchoo_rpg`)
-  - `assets/cobblemon/bedrock/pokemon/models/0613_cubchoo/cubchoo_rpg.geo.json`
-  - `assets/cobblemon/bedrock/pokemon/animations/0613_cubchoo/cubchoo_rpg.animation.json`
-  - `assets/cobblemon/textures/pokemon/skins_rpg/cubchoo_rpg/`
 - **Dedenne Lanterna** (`dedenne_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0702_dedenne/dedenne_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0702_dedenne/dedenne_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/dedenne_rpg/`
-- **Drifloon Lanterna** (`drifloon_rpg`)
-  - `assets/cobblemon/bedrock/pokemon/models/0425_drifloon/drifloon_rpg.geo.json`
-  - `assets/cobblemon/bedrock/pokemon/animations/0425_drifloon/drifloon_rpg.animation.json`
-  - `assets/cobblemon/textures/pokemon/skins_rpg/drifloon_rpg/`
 - **Dusclops Mumia** (`dusclops_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0356_dusclops/dusclops_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0356_dusclops/dusclops_rpg.animation.json`
@@ -119,10 +111,6 @@ Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens`
   - `assets/cobblemon/bedrock/pokemon/models/0518_musharna/musharna_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0518_musharna/musharna_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/musharna_rpg/`
-- **Numel Basalto** (`numel_rpg`)
-  - `assets/cobblemon/bedrock/pokemon/models/0322_numel/numel_rpg.geo.json`
-  - `assets/cobblemon/bedrock/pokemon/animations/0322_numel/numel_rpg.animation.json`
-  - `assets/cobblemon/textures/pokemon/skins_rpg/numel_rpg/`
 - **Pangoro Mercenario** (`pangoro_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0675_pangoro/pangoro_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0675_pangoro/pangoro_rpg.animation.json`
@@ -147,18 +135,10 @@ Pra devolver uma skin ao site: copiar a entrada dela de `itens.json` pra `itens`
   - `assets/cobblemon/bedrock/pokemon/models/0235_smeargle/smeargle_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0235_smeargle/smeargle_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/smeargle_rpg/`
-- **Staryu Azul** (`staryu_rpg`)
-  - `assets/cobblemon/bedrock/pokemon/models/0120_staryu/staryu_rpg.geo.json`
-  - `assets/cobblemon/bedrock/pokemon/animations/0120_staryu/staryu_rpg.animation.json`
-  - `assets/cobblemon/textures/pokemon/skins_rpg/staryu_rpg/`
 - **Tinkaton Luas** (`tinkaton_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0959_tinkaton/tinkaton_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0959_tinkaton/tinkaton_rpg.animation.json`
   - `assets/cobblemon/textures/pokemon/skins_rpg/tinkaton_rpg/`
-- **Toedscool Tinta** (`toedscool_rpg`)
-  - `assets/cobblemon/bedrock/pokemon/models/0948_toedscool/toedscool_rpg.geo.json`
-  - `assets/cobblemon/bedrock/pokemon/animations/0948_toedscool/toedscool_rpg.animation.json`
-  - `assets/cobblemon/textures/pokemon/skins_rpg/toedscool_rpg/`
 - **Weavile Assassino** (`weavile_rpg`)
   - `assets/cobblemon/bedrock/pokemon/models/0461_weavile/weavile_rpg.geo.json`
   - `assets/cobblemon/bedrock/pokemon/animations/0461_weavile/weavile_rpg.animation.json`
