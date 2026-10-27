@@ -3651,6 +3651,50 @@
     }
    ],
    "add": "2026-10-15"
+  },
+  {
+   "id": "mew_coroa",
+   "especie": "Mew",
+   "aspecto": "coroa",
+   "nome": "Mew Coroa",
+   "categoria": "loja",
+   "detalhe": "Compre com Éter no Mercado. A vitrine troca todo dia às 21h.",
+   "lendario": true,
+   "foto": "img/pk/mew_coroa.webp",
+   "variantes": [
+    {
+     "tipo": "normal",
+     "modelo": "mew_coroa__mew.json",
+     "tex": {
+      "arq": "d838681b402bd523.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 64,
+      "h": 128
+     },
+     "emi": null,
+     "nome": "Mew Coroa",
+     "preco": 8000,
+     "raridade": "epica"
+    },
+    {
+     "tipo": "shiny",
+     "modelo": "mew_coroa__mew.json",
+     "tex": {
+      "arq": "85936c188950a144.png",
+      "quadros": 1,
+      "fps": 0,
+      "w": 64,
+      "h": 128
+     },
+     "emi": null,
+     "nome": "Mew Coroa Shiny",
+     "preco": 8500,
+     "raridade": "lendaria"
+    }
+   ],
+   "pokemon": true,
+   "add": "2026-10-18"
   }
  ]
 }
