@@ -1,6 +1,7 @@
 // Painel da staff: ver, aprovar e recusar inscrições; conferir times na hora da partida.
 import { validar, timeEmTexto, tid } from './validar.js';
 import { API, carregar, esc, miniTime, toast, copiar, spriteHtml, tipoCor } from './comum.js';
+import { criarChave, marcar, desenharChave, nomeRodada, teveResultado, podio } from './chave.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const CHAVE = 'astrea-torneio:painel';
@@ -83,6 +84,7 @@ function desenhar() {
     ${outroTorneio ? `<div class="problemas avisos" style="padding-left:14px">Você está vendo um torneio antigo. A conferência usa as regras <b>atuais</b> (${esc(ctx.regras.id)}), então os avisos de regra podem não valer pra ele.</div>` : ''}
     <nav class="abas" role="tablist">
       <button class="aba" data-aba="inscricoes" aria-selected="${aba === 'inscricoes'}" style="--c:var(--eter)">Inscrições</button>
+      <button class="aba" data-aba="chave" aria-selected="${aba === 'chave'}" style="--c:var(--lenda)">Chave</button>
       <button class="aba" data-aba="partida" aria-selected="${aba === 'partida'}" style="--c:var(--visao)">Conferir partida</button>
       <button class="aba" data-aba="historico" aria-selected="${aba === 'historico'}" style="--c:var(--pressagio)">Histórico</button>
     </nav>
@@ -91,7 +93,7 @@ function desenhar() {
   $('#b-recarregar').addEventListener('click', () => recarregar().then(() => toast('Atualizado')).catch((e) => toast(e.message)));
   $('#b-sair').addEventListener('click', sair);
   document.querySelectorAll('nav .aba').forEach((b) => b.addEventListener('click', () => { aba = b.dataset.aba; desenhar(); }));
-  ({ inscricoes: desenharLista, partida: desenharPartida, historico: desenharHistorico })[aba]();
+  ({ inscricoes: desenharLista, chave: abrirChave, partida: desenharPartida, historico: desenharHistorico })[aba]();
 }
 
 function desenharLista() {
@@ -187,6 +189,145 @@ async function agir(id, acao) {
     toast('Feito');
   } catch (e) { toast(e.message, 4000); }
 }
+
+// ---------------------------------------------------------------- chave
+let est = { chave: null, versao: 0, por: null, atualizado_em: null, torneio: '' };
+
+async function abrirChave() {
+  $('#conteudo').innerHTML = '<section class="bloco" style="--c:var(--lenda)"><p class="nota">Carregando a chave…</p></section>';
+  try {
+    const j = await api(`/api/admin/chave?torneio=${encodeURIComponent(dados.torneio)}`);
+    est = { ...j, torneio: dados.torneio };
+    desenharChaveAba();
+  } catch (e) { toast(e.message, 4000); }
+}
+
+async function salvar(chave, acao) {
+  const r = await fetch(`${API}/api/admin/chave`, {
+    method: 'POST', headers: { 'content-type': 'application/json', authorization: `Bearer ${senha}` },
+    body: JSON.stringify({ torneio: est.torneio, chave, versao: est.versao, acao }),
+  });
+  const j = await r.json().catch(() => ({ ok: false, msg: `Erro ${r.status}` }));
+  if (j.conflito) { est = { ...est, chave: j.chave, versao: j.versao, por: j.por, atualizado_em: j.atualizado_em }; desenharChaveAba(); toast(j.msg, 5000); return false; }
+  if (!j.ok) { toast(j.msg || 'Erro ao salvar', 4000); return false; }
+  est = { ...est, chave: j.chave, versao: j.versao, por: j.por, atualizado_em: j.atualizado_em };
+  return true;
+}
+
+function desenharChaveAba() {
+  const c = $('#conteudo');
+  const aprovadas = dados.inscricoes.filter((i) => i.status === 'aprovada');
+  const pendentes = dados.inscricoes.filter((i) => i.status === 'pendente');
+  if (!est.chave) {
+    c.innerHTML = `<section class="bloco" style="--c:var(--lenda)">
+      <h2>Montar a chave</h2>
+      <p class="nota">Quando todo mundo estiver inscrito e conferido, clique em criar: os nicks são sorteados e a chave sai pronta
+        (mata-mata${ctx.regras.id ? '' : ''}, com bye automático se o número não fechar, disputa de 3º e final melhor de 3).</p>
+      <div class="premios">
+        <div class="premio" style="--c:var(--ok)"><span>Aprovados</span><b>${aprovadas.length}</b></div>
+        <div class="premio" style="--c:var(--aviso)"><span>Pendentes</span><b>${pendentes.length}</b></div>
+      </div>
+      ${pendentes.length ? `<label class="check"><input type="checkbox" id="inc-pend"><span>Incluir os ${pendentes.length} pendentes também (normalmente só os aprovados entram)</span></label>` : ''}
+      <label class="check"><input type="checkbox" id="c-terc" checked><span>Disputa de 3º lugar</span></label>
+      <label class="check"><input type="checkbox" id="c-md3" checked><span>Final melhor de 3</span></label>
+      <div class="linha-botoes"><button class="btn principal" id="b-criar">Criar a chave automaticamente</button></div>
+      <p class="nota" id="aviso-criar"></p>
+    </section>`;
+    const quantos = () => aprovadas.length + ($('#inc-pend')?.checked ? pendentes.length : 0);
+    const atualizarBotao = () => {
+      const n = quantos();
+      $('#b-criar').disabled = n < 2;
+      let p = 2; while (p < n) p *= 2;
+      $('#aviso-criar').textContent = n < 2 ? 'Precisa de pelo menos 2 jogadores.' : `${n} jogadores → chave de ${p}${p > n ? ` (${p - n} passa${p - n > 1 ? 'm' : ''} direto na 1ª rodada)` : ''}.`;
+    };
+    $('#inc-pend')?.addEventListener('change', atualizarBotao);
+    atualizarBotao();
+    $('#b-criar').addEventListener('click', async () => {
+      const lista = [...aprovadas, ...($('#inc-pend')?.checked ? pendentes : [])].map((i) => i.nick);
+      const chave = criarChave(lista, { terceiro: $('#c-terc').checked, finalMd3: $('#c-md3').checked });
+      if (await salvar(chave, `criou a chave com ${lista.length} jogadores`)) { desenharChaveAba(); toast('Chave criada!'); }
+    });
+    return;
+  }
+
+  const ch = est.chave;
+  const fora = ch.jogadores.filter((n) => !dados.inscricoes.some((i) => i.nick === n));
+  const p = podio(ch);
+  c.innerHTML = `<section class="bloco" style="--c:var(--lenda)">
+    <div style="display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:baseline">
+      <h2>Chave <span class="n">${ch.jogadores.length} jogadores${est.por ? ` · mexida por ${esc(est.por)} ${esc(quando(est.atualizado_em))}` : ''}</span></h2>
+      <div class="linha-botoes">
+        ${!teveResultado(ch) ? '<button class="btn peq" id="b-sortear">Sortear de novo</button>' : ''}
+        <button class="btn peq" id="b-rec">Atualizar</button>
+        <button class="btn peq" id="b-copiar-chave">Copiar resultado</button>
+        <button class="btn peq perigo" id="b-apagar-chave">Apagar chave</button>
+      </div>
+    </div>
+    <p class="nota">${p.campeao ? 'Torneio decidido!' : '<b>Clique no nick de quem venceu</b> e ele avança sozinho. Clicou errado? Clique de novo pra desfazer.'} Passe o mouse num nick pra ver o time inteiro.</p>
+    ${fora.length ? `<div class="problemas avisos" style="padding-left:14px">Na chave mas sem inscrição (foi apagada): ${esc(fora.join(', '))}</div>` : ''}
+    <div id="chave-area">${desenharChave(ch, { editavel: true })}</div>
+  </section>`;
+
+  const area = $('#chave-area');
+  const clicar = async (el) => {
+    const nick = el.dataset.nick;
+    const r = el.dataset.r === 't' ? 't' : +el.dataset.r;
+    const i = +el.dataset.i;
+    const copia = structuredClone(ch);
+    const res = marcar(copia, r, i, nick);
+    if (!res) return;
+    const fase = nomeRodada(copia, r);
+    const acao = res.depois ? `${nick} venceu ${res.adversario} (${fase})` : `desfez o resultado de ${nick} x ${res.adversario} (${fase})`;
+    if (await salvar(copia, acao)) { desenharChaveAba(); if (res.depois) toast(r === 't' ? `${nick} ficou em 3º!` : r === copia.rodadas.length - 1 ? `${nick} é o campeão!` : `${nick} avançou!`); }
+  };
+  area.addEventListener('click', (ev) => { const el = ev.target.closest('.ch-jog.clicavel'); if (el) { esconderBalao(); clicar(el); } });
+  area.addEventListener('keydown', (ev) => { const el = ev.target.closest('.ch-jog.clicavel'); if (el && (ev.key === 'Enter' || ev.key === ' ')) { ev.preventDefault(); clicar(el); } });
+  area.addEventListener('mouseover', (ev) => { const el = ev.target.closest('[data-nick]'); if (el) mostrarBalao(el); });
+  area.addEventListener('mouseout', (ev) => { const el = ev.target.closest('[data-nick]'); if (el && !el.contains(ev.relatedTarget)) esconderBalao(); });
+  area.addEventListener('focusin', (ev) => { const el = ev.target.closest('[data-nick]'); if (el) mostrarBalao(el); });
+  area.addEventListener('focusout', esconderBalao);
+
+  $('#b-rec').addEventListener('click', abrirChave);
+  $('#b-sortear')?.addEventListener('click', async () => {
+    const nova = criarChave(ch.jogadores, { terceiro: !!ch.terceiro, finalMd3: ch.finalMd3 });
+    if (await salvar(nova, 'sorteou a chave de novo')) { desenharChaveAba(); toast('Sorteada de novo'); }
+  });
+  $('#b-apagar-chave').addEventListener('click', async () => {
+    if (!confirm('Apagar a chave inteira (com todos os resultados)? Dá pra criar outra depois.')) return;
+    if (await salvar(null, 'apagou a chave')) { est.chave = null; desenharChaveAba(); }
+  });
+  $('#b-copiar-chave').addEventListener('click', () => {
+    const linhas = [];
+    ch.rodadas.forEach((rod, r) => {
+      linhas.push(`== ${nomeRodada(ch, r)} ==`);
+      for (const m of rod) if (m.a || m.b) linhas.push(`${m.a || 'bye'} x ${m.b || 'bye'}${m.v ? `  ->  ${m.v}` : ''}`);
+    });
+    if (ch.terceiro) linhas.push('== Disputa de 3º lugar ==', `${ch.terceiro.a || '?'} x ${ch.terceiro.b || '?'}${ch.terceiro.v ? `  ->  ${ch.terceiro.v}` : ''}`);
+    if (p.campeao) linhas.push('', `Campeão: ${p.campeao}`, `2º: ${p.vice}`, ...(p.terceiro ? [`3º: ${p.terceiro}`] : []));
+    copiar(linhas.join('\n'));
+  });
+}
+
+// balão com o time de quem está debaixo do mouse
+let balao;
+function mostrarBalao(el) {
+  const nick = el.dataset.nick;
+  const ins = dados.inscricoes.find((i) => i.nick === nick);
+  if (!balao) { balao = document.createElement('div'); balao.className = 'balao'; balao.setAttribute('role', 'tooltip'); document.body.append(balao); }
+  const disc = ins ? Object.entries(ins.campos).filter(([k]) => k !== 'nick').map(([, v]) => v).join(' · ') : '';
+  balao.innerHTML = ins
+    ? `<h4>${esc(nick)} <small>${esc(disc)}</small></h4>${miniTime(ctx, ins.time, conferir(ins).porSlot)}`
+    : `<h4>${esc(nick)}</h4><p class="nota">Inscrição não encontrada (foi apagada).</p>`;
+  balao.hidden = false;
+  const r = el.getBoundingClientRect();
+  const w = balao.offsetWidth, h = balao.offsetHeight;
+  let x = r.right + 12;
+  if (x + w > innerWidth - 8) x = Math.max(8, r.left - w - 12);
+  let y = Math.min(Math.max(8, r.top + r.height / 2 - h / 2), innerHeight - h - 8);
+  balao.style.left = `${x}px`;
+  balao.style.top = `${Math.max(8, y)}px`;
+}
+function esconderBalao() { if (balao) balao.hidden = true; }
 
 function desenharPartida() {
   const nomes = dados.inscricoes.filter((i) => i.status !== 'recusada').map((i) => i.nick).sort((a, b) => a.localeCompare(b));

@@ -1,5 +1,6 @@
 // Página pública do torneio: regulamento + ficha que confere as regras enquanto o jogador preenche.
 import { tid, validar, motivoPokemon, motivoItem, motivoHabilidade, motivoGolpe, aprende, nomeGrupo, timeEmTexto } from './validar.js';
+import { desenharChave } from './chave.js';
 import { API, carregar, esc, negrito, spriteHtml, tipoCor, tipoNome, CATEGORIA, inscricoesAbertas, miniTime, toast, copiar } from './comum.js';
 
 const $ = (s, el = document) => el.querySelector(s);
@@ -536,7 +537,7 @@ function montarConsulta() {
 // ---------------------------------------------------------------- abas
 function irPara(aba) {
   document.querySelectorAll('.aba').forEach((b) => b.setAttribute('aria-selected', String(b.dataset.aba === aba)));
-  for (const id of ['regulamento', 'ficha', 'consulta']) $('#' + id).hidden = id !== aba;
+  for (const id of ['regulamento', 'ficha', 'chave', 'consulta']) $('#' + id).hidden = id !== aba;
   $('#barra').hidden = aba !== 'ficha' || !inscricoesAbertas(ctx.regras);
   if (location.hash !== '#' + aba) history.replaceState(null, '', '#' + aba);
   window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -550,6 +551,19 @@ async function contarInscritos() {
   } catch { desenharTopo(null); }
 }
 
+// chave pública: só aparece quando a staff cria (só nomes, sem os times)
+async function carregarChave() {
+  if (!API) return;
+  try {
+    const j = await fetch(`${API}/api/chave?torneio=${encodeURIComponent(ctx.regras.id)}`).then((r) => r.json());
+    if (!j.chave) return;
+    document.querySelector('.aba[data-aba="chave"]').hidden = false;
+    $('#chave').innerHTML = `<section class="bloco" style="--c:var(--lenda)"><h2>Chave <span class="n">${j.chave.jogadores.length} treinadores</span></h2>
+      <p class="nota">Atualizada pela staff conforme as partidas acontecem.${j.atualizado_em ? ` Última mudança: ${esc(new Date(j.atualizado_em).toLocaleString('pt-BR', { dateStyle: 'short', timeStyle: 'short' }))}.` : ''}</p>
+      ${desenharChave(j.chave)}</section>`;
+  } catch {}
+}
+
 async function iniciar() {
   try { ctx = await carregar(); }
   catch (e) { $('#topo').innerHTML = `<div><h1>Ops</h1><p class="sub">Não consegui carregar o regulamento (${esc(e.message)}). Atualize a página.</p></div>`; return; }
@@ -558,11 +572,12 @@ async function iniciar() {
   montarFicha();
   montarConsulta();
   contarInscritos();
+  carregarChave();
   document.addEventListener('click', (ev) => { const b = ev.target.closest('[data-ir], .aba'); if (b) irPara(b.dataset.ir || b.dataset.aba); });
   $('#enviar').addEventListener('click', enviar);
   const pelaUrl = () => {
     const h = location.hash.slice(1);
-    irPara(['regulamento', 'ficha', 'consulta'].includes(h) ? h : 'regulamento');
+    irPara(['regulamento', 'ficha', 'chave', 'consulta'].includes(h) ? h : 'regulamento');
   };
   window.addEventListener('hashchange', pelaUrl);
   pelaUrl();
