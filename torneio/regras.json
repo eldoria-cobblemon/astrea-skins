@@ -1,0 +1,122 @@
+{
+  "id": "campeonato-mega-2026-11",
+  "nome": "Campeonato Mega",
+  "subtitulo": "Regulamento e ficha de inscrição",
+  "resumo": ["Batalha simples", "6x6", "Nível 50", "Mega liberada", "Jogo limpo, sem stall e sem sorte"],
+  "nivel": 50,
+
+  "inscricoes": {
+    "abertas": true,
+    "fechaEm": null,
+    "avisoFechada": "As inscrições deste torneio estão fechadas. Fique de olho no Discord pro próximo!"
+  },
+
+  "premios": [
+    { "lugar": "1º lugar", "valor": "R$ 150", "cor": "ouro" },
+    { "lugar": "2º lugar", "valor": "R$ 100", "cor": "prata" },
+    { "lugar": "3º lugar", "valor": "R$ 60", "cor": "bronze" },
+    { "lugar": "Quem jogar", "valor": "1 Lucky Block Branco", "cor": "eter" }
+  ],
+  "premiosNota": "Lucky Block Branco pra quem jogar pelo menos uma partida. Dinheiro pago pela staff depois da final.",
+
+  "regulamento": [
+    {
+      "titulo": "Formato",
+      "itens": [
+        "Batalha simples **6x6**, **nível 50**. Os 6 jogam.",
+        "**Team preview:** antes da partida, os dois mostram as 6 espécies um pro outro, arrumam a party e começam a batalha. O 1º da party entra primeiro.",
+        "Sem Pokémon repetido e sem item repetido.",
+        "Partida única em todas as fases. **Só a final é melhor de 3.** Tem disputa de 3º lugar.",
+        "**Time travado:** o time da ficha vale o campeonato inteiro. Só muda a ordem.",
+        "Sem Tera, Z-Move e Dynamax."
+      ]
+    },
+    {
+      "titulo": "Mega",
+      "auto": "mega",
+      "itens": [
+        "**1 Mega por partida.** Pode ter mais de uma pedra Mega no time, mas só um Pokémon megaevolui.",
+        "A pedra Mega é o item do Pokémon (conta na regra de item repetido)."
+      ]
+    },
+    { "titulo": "Pokémon proibidos", "auto": "pokemon" },
+    { "titulo": "Habilidades proibidas", "auto": "habilidades" },
+    { "titulo": "Golpes proibidos", "auto": "golpes" },
+    { "titulo": "Itens proibidos", "auto": "itens" },
+    {
+      "titulo": "Na partida",
+      "itens": [
+        "**60 s por turno.** Estourou: perde o turno. Estourou 3 vezes: perde a partida.",
+        "**Limite de 100 turnos.** Ganha quem tiver mais Pokémon de pé; empatou, mais HP somado (%).",
+        "Os dois zeraram no mesmo turno por Explosion, Self-Destruct, Misty Explosion, Memento ou Final Gambit: perde quem usou.",
+        "Caiu a conexão: perde, a não ser que o adversário aceite recomeçar.",
+        "Bug: a staff pode mandar recomeçar. Abusar de bug desclassifica.",
+        "A staff confere o time antes de cada partida. Time diferente da ficha perde.",
+        "Caso não previsto: a staff decide. Desrespeito ou combinar resultado desclassifica."
+      ]
+    }
+  ],
+  "despedida": "Boa sorte a todos, e que o melhor vença!",
+
+  "ficha": {
+    "tamanho": 6,
+    "golpesMin": 1,
+    "golpesMax": 4,
+    "itemObrigatorio": false,
+    "semEspecieRepetida": true,
+    "semItemRepetido": true,
+    "golpeForaDaLista": "aviso"
+  },
+
+  "campos": [
+    { "id": "nick", "rotulo": "Nick no Minecraft", "obrigatorio": true, "max": 16, "padrao": "^[A-Za-z0-9_]{3,16}$", "erroPadrao": "Nick do Minecraft: 3 a 16 letras, números ou _", "dica": "Exatamente como aparece no servidor" },
+    { "id": "discord", "rotulo": "Discord", "obrigatorio": true, "max": 40, "dica": "Seu @ no Discord, pra staff falar com você" }
+  ],
+
+  "aceites": [
+    "Li e aceito o regulamento.",
+    "Nível 50, sem Pokémon repetido e sem item repetido."
+  ],
+
+  "pokemon": {
+    "gruposProibidos": ["lendario", "mitico", "ultra_besta", "paradoxo"],
+    "notaGrupos": {
+      "lendario": "Todos, inclusive trio dos lagos, Regis, Landorus, Tornadus, Thundurus, Tesouros da Ruína, Leais, Ogerpon, Kubfu/Urshifu, Type: Null/Silvally, Cosmog e família, Tapus, Terapagos."
+    },
+    "proibidos": [
+      "Kingambit", "Dondozo", "Clodsire", "Quagsire", "Blissey", "Toxapex", "Wobbuffet", "Smeargle",
+      "Corsola", "Annihilape", "Palafin",
+      { "nome": "Ursaluna", "forma": "Bloodmoon", "texto": "Ursaluna Lua de Sangue (o normal pode)" }
+    ],
+    "liberados": [],
+    "notaLinha": "Vale pra linha evolutiva inteira e todas as formas, salvo onde estiver escrito."
+  },
+
+  "mega": {
+    "liberada": true,
+    "apenasClassicas": true,
+    "proibidas": ["Kangaskhan", "Salamence", "Lucario", "Gengar", "Mawile", "Medicham", "Blaziken", "Beedrill", "Banette", "Mewtwo", "Latias", "Latios", "Diancie"],
+    "habilidadeProibidaBloqueia": true
+  },
+
+  "habilidades": {
+    "proibidas": ["Speed Boost", "Battle Bond", "Moxie", "Unaware", "Moody", "Snow Cloak", "Sand Veil", "Tangled Feet", "Shadow Tag", "Arena Trap", "Magnet Pull", "Huge Power", "Pure Power", "Simple", "Gorilla Tactics", "Adaptability", "Serene Grace", "Prankster"]
+  },
+
+  "golpes": {
+    "proibidos": {
+      "Stall": ["Rest", "Sleep Talk", "Curse", "Toxic", "Leech Seed", "Perish Song", "Recycle"],
+      "Sono e confusão": ["Spore", "Sleep Powder", "Hypnosis", "Sing", "Grass Whistle", "Lovely Kiss", "Dark Void", "Yawn", "Swagger", "Flatter"],
+      "Nocaute direto": ["Fissure", "Sheer Cold", "Horn Drill", "Guillotine"],
+      "Esquiva e precisão": ["Double Team", "Minimize", "Sand Attack", "Smokescreen", "Flash", "Kinesis", "Mud-Slap", "Mirror Shot", "Octazooka", "Muddy Water", "Night Daze", "Leaf Tornado"],
+      "Prender": ["Mean Look", "Block", "Spider Web", "Jaw Lock", "Anchor Shot", "Spirit Shackle", "Thousand Waves", "Octolock", "Fairy Lock", "Wrap", "Bind", "Clamp", "Whirlpool", "Fire Spin", "Sand Tomb", "Infestation", "Snap Trap", "Thunder Cage", "Magma Storm"],
+      "Outros": ["Baton Pass", "Shed Tail", "Last Respects", "Destiny Bond", "Revival Blessing", "Shell Smash", "Belly Drum", "Fillet Away", "Clangorous Soul"]
+    }
+  },
+
+  "itens": {
+    "proibidos": ["Bright Powder", "Lax Incense", "Quick Claw", "King's Rock", "Razor Fang", "Focus Band", "Leppa Berry", "Binding Band", "Grip Claw"],
+    "cristaisZ": false,
+    "nota": "Cristais Z e pedras das Megas proibidas também."
+  }
+}

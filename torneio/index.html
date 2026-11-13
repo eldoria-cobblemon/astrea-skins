@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Torneios de Astrea</title>
+<meta name="description" content="Regulamento e inscrição dos torneios Pokémon do servidor Astrea (Cobblemon).">
+<meta name="astrea-api" content="https://astrea-torneio.yurebomfim.workers.dev">
+<link rel="icon" href="../img/eter.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;600;700&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&display=swap">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<main class="pagina">
+  <header class="topo" id="topo"><div><div class="eyebrow">Servidor Astrea · Cobblemon</div><h1>Carregando…</h1></div></header>
+  <nav class="abas" role="tablist" aria-label="Seções">
+    <button class="aba" role="tab" data-aba="regulamento" style="--c:var(--visao)">Regulamento</button>
+    <button class="aba" role="tab" data-aba="ficha" style="--c:var(--eter)">Inscrição</button>
+    <button class="aba" role="tab" data-aba="consulta" style="--c:var(--pressagio)">Minha inscrição</button>
+  </nav>
+  <div id="regulamento" style="display:grid;gap:28px"></div>
+  <div id="ficha" style="display:grid;gap:28px" hidden></div>
+  <div id="consulta" hidden></div>
+</main>
+<div class="barra-envio" id="barra" hidden>
+  <div class="dentro">
+    <div class="progresso" id="progresso" aria-hidden="true"></div>
+    <div class="resumo-envio" id="resumo-envio" aria-live="polite"></div>
+    <button class="btn principal" id="enviar" disabled>Enviar inscrição</button>
+  </div>
+</div>
+<script type="module" src="ficha.js"></script>
+</body>
+</html>
