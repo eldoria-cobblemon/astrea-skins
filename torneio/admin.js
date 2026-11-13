@@ -85,6 +85,7 @@ function desenhar() {
     <nav class="abas" role="tablist">
       <button class="aba" data-aba="inscricoes" aria-selected="${aba === 'inscricoes'}" style="--c:var(--eter)">Inscrições</button>
       <button class="aba" data-aba="chave" aria-selected="${aba === 'chave'}" style="--c:var(--lenda)">Chave</button>
+      <button class="aba" data-aba="gerador" aria-selected="${aba === 'gerador'}" style="--c:var(--ok)">Gerador (Juiz)</button>
       <button class="aba" data-aba="partida" aria-selected="${aba === 'partida'}" style="--c:var(--visao)">Conferir partida</button>
       <button class="aba" data-aba="historico" aria-selected="${aba === 'historico'}" style="--c:var(--pressagio)">Histórico</button>
     </nav>
@@ -93,7 +94,7 @@ function desenhar() {
   $('#b-recarregar').addEventListener('click', () => recarregar().then(() => toast('Atualizado')).catch((e) => toast(e.message)));
   $('#b-sair').addEventListener('click', sair);
   document.querySelectorAll('nav .aba').forEach((b) => b.addEventListener('click', () => { aba = b.dataset.aba; desenhar(); }));
-  ({ inscricoes: desenharLista, chave: abrirChave, partida: desenharPartida, historico: desenharHistorico })[aba]();
+  ({ inscricoes: desenharLista, chave: abrirChave, gerador: abrirGerador, partida: desenharPartida, historico: desenharHistorico })[aba]();
 }
 
 function desenharLista() {
@@ -328,6 +329,80 @@ function mostrarBalao(el) {
   balao.style.top = `${Math.max(8, y)}px`;
 }
 function esconderBalao() { if (balao) balao.hidden = true; }
+
+// ---------------------------------------------------------------- gerador do Juiz (NPC no servidor)
+function textoPacote(p) {
+  const l = [`${p.nome} · ${p.jogadores.length} jogadores · nível ${p.nivel} · código ${p.codigo}`, `Gerado por ${p.por} em ${quando(p.gerado_em)}`, ''];
+  for (const j of p.jogadores) {
+    l.push(`=== ${j.nick}${j.discord ? ` (${j.discord})` : ''}${j.status !== 'aprovada' ? ' [PENDENTE]' : ''} ===`);
+    j.time.forEach((t, i) => {
+      l.push(`${i + 1}. ${t.nome}${t.itemNome ? ` @ ${t.itemNome}` : ''}`);
+      l.push(`   ${t.habNome} · ${t.natNome}`);
+      l.push(`   ${t.golpesNomes.join(' / ')}`);
+    });
+    l.push('');
+  }
+  return l.join('
+');
+}
+
+async function abrirGerador() {
+  const aprov = dados.inscricoes.filter((i) => i.status === 'aprovada').length;
+  const pend = dados.inscricoes.filter((i) => i.status === 'pendente').length;
+  $('#conteudo').innerHTML = `<section class="bloco" style="--c:var(--ok)">
+    <h2>Gerador do Juiz</h2>
+    <p class="nota">Gera o texto com todos os times aprovados e um <b>comando curto</b> pra colocar no Juiz do Torneio dentro do jogo.
+      No servidor, rode o comando (op). Quando o player clicar no Juiz, ele confere o time da party com a ficha e,
+      se tiver algo diferente, avisa o player, o Yure e a Angela em mensagem privada.</p>
+    <div class="premios">
+      <div class="premio" style="--c:var(--ok)"><span>Aprovados</span><b>${aprov}</b></div>
+      <div class="premio" style="--c:var(--aviso)"><span>Pendentes</span><b>${pend}</b></div>
+    </div>
+    ${pend ? `<label class="check"><input type="checkbox" id="g-pend"><span>Incluir os pendentes também</span></label>` : ''}
+    <div class="linha-botoes"><button class="btn principal" id="g-gerar" ${aprov + pend ? '' : 'disabled'}>Gerar</button></div>
+    <div id="g-saida" style="display:grid;gap:12px"></div>
+    <h3>Gerados antes</h3><div id="g-lista" class="nota">Carregando…</div>
+  </section>`;
+  const mostrar = (p) => {
+    const cmd = `/torneio carregar ${p.codigo}`;
+    $('#g-saida').innerHTML = `
+      <div class="campo"><span class="rot">Comando pro servidor (cole no chat do jogo, como op)</span>
+        <div style="display:flex;gap:8px;flex-wrap:wrap"><input class="entrada" readonly value="${esc(cmd)}" style="flex:1;min-width:220px;font:700 18px var(--f-pixel);color:var(--eter)"><button class="btn" id="g-cp-cmd">Copiar comando</button></div></div>
+      <div class="campo"><span class="rot">Texto do gerador (${p.jogadores.length} jogadores)</span><textarea class="entrada" readonly id="g-txt" style="min-height:320px"></textarea></div>
+      <div class="linha-botoes"><button class="btn" id="g-cp-txt">Copiar texto</button><button class="btn" id="g-baixar">Baixar arquivo (times.json)</button></div>
+      <p class="nota">Sem internet no servidor? Mande o times.json por SFTP pra <code>config/astrea_torneio/pacote.json</code> e rode <code>/torneio recarregar</code>.</p>`;
+    $('#g-txt').value = textoPacote(p);
+    $('#g-cp-cmd').addEventListener('click', () => copiar(cmd));
+    $('#g-cp-txt').addEventListener('click', () => copiar($('#g-txt').value));
+    $('#g-baixar').addEventListener('click', () => {
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([JSON.stringify(p, null, 1)], { type: 'application/json' }));
+      a.download = 'times.json';
+      a.click();
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+    });
+  };
+  const listar = async () => {
+    try {
+      const j = await api(`/api/admin/pacotes?torneio=${encodeURIComponent(dados.torneio)}`);
+      $('#g-lista').innerHTML = j.pacotes.length ? `<div class="tabela">${j.pacotes.map((p) => `<div class="linha-t"><span>${esc(p.codigo)}</span><span>${esc(quando(p.criado_em))} por ${esc(p.por)} · <a href="#" data-cod="${esc(p.codigo)}">abrir</a></span></div>`).join('')}</div>` : 'Nenhum ainda.';
+      $('#g-lista').querySelectorAll('[data-cod]').forEach((a) => a.addEventListener('click', async (ev) => {
+        ev.preventDefault();
+        const r = await fetch(`${API}/api/pacote/${a.dataset.cod}`).then((x) => x.json());
+        mostrar(r);
+      }));
+    } catch (e) { $('#g-lista').textContent = e.message; }
+  };
+  $('#g-gerar').addEventListener('click', async () => {
+    try {
+      const j = await api('/api/admin/pacote', { method: 'POST', body: JSON.stringify({ torneio: dados.torneio, incluirPendentes: !!$('#g-pend')?.checked }) });
+      mostrar(j.pacote);
+      listar();
+      toast(`Pacote ${j.codigo} gerado`);
+    } catch (e) { toast(e.message, 4000); }
+  });
+  listar();
+}
 
 function desenharPartida() {
   const nomes = dados.inscricoes.filter((i) => i.status !== 'recusada').map((i) => i.nick).sort((a, b) => a.localeCompare(b));
