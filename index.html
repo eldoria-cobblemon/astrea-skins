@@ -254,7 +254,7 @@ const CATS = [
   // "eventos" (Eventos e recompensas) fica oculto por enquanto (dono, 19/10)
 ];
 const NOME_VAR = { normal: "Normal", shiny: "Shiny", prismatica: "Prismática" };
-const NOME_FORMA = { mega: "Mega", mega_x: "Mega X", mega_y: "Mega Y", mega_z: "Mega Z", primal: "Primal", gmax: "Gigamax" };
+const NOME_FORMA = { mega: "Mega", mega_x: "Mega X", mega_y: "Mega Y", mega_z: "Mega Z", primal: "Primal", gmax: "Gigamax", dormindo: "Dormindo" };
 const nomeForma = f => NOME_FORMA[f] || f;
 const fmt = n => n == null ? "" : n.toLocaleString("pt-BR");
 const eter = (n, cls = "") => n == null ? "" : `<span class="v ${cls}"><img class="pix" src="img/eter.png" alt="Éter">${fmt(n)}</span>`;
@@ -328,7 +328,7 @@ function card(x) {
   const vars = (x.variantes || []).map(v => `<span class="var ${v.tipo}"><i></i>${NOME_VAR[v.tipo]}${v.preco != null ? " " + eter(v.preco) : ""}</span>`).join("");
   const pk = x.pokemon ? `<span class="esp">${esc(x.especie)}</span>` : "";
   const unico = !x.pokemon && x.preco != null ? `<div class="preco-grande">${eter(x.preco)}</div>` : "";
-  const tag = (x.lendario ? `<div class="tag">Lendário</div>` : "") + (x.formas ? `<div class="mega">+ ${x.formas.map(f => nomeForma(f.forma)).join(" / ")}</div>` : "");
+  const tag = (x.lendario ? `<div class="tag">Lendário</div>` : "") + ((x.formas || []).some(f => !f.pose) ? `<div class="mega">+ ${x.formas.filter(f => !f.pose).map(f => nomeForma(f.forma)).join(" / ")}</div>` : "");
   return `<button class="skin${x.lendario ? " lendario" : ""}" data-id="${esc(x.id)}" aria-label="Ver ${esc(x.nome)} em 3D">
     <div class="palco">${tag}<img class="pix" loading="lazy" decoding="async" src="${esc(x.foto)}" alt="${esc(x.nome)}"><div class="selo3d">3D</div></div>
     <figcaption><b>${esc(x.nome)}</b>${pk}${serve(x)}${vars ? `<div class="vars">${vars}</div>` : ""}${unico}${(x.categoria !== "loja" && x.pokemon) || (!x.pokemon && x.preco == null) ? `<span class="onde">${esc(x.detalhe)}</span>` : ""}</figcaption></button>`;
@@ -494,7 +494,7 @@ function abrir(x) {
     return v;
   };
   $("v-formas").hidden = formas.length < 2;
-  $("v-formas").innerHTML = formas.map((f, i) => `<button class="fb" data-i="${i}">${f.forma ? nomeForma(f.forma) : "Normal"}</button>`).join("");
+  $("v-formas").innerHTML = formas.map((f, i) => `<button class="fb" data-i="${i}">${f.forma ? nomeForma(f.forma) : (x.formaBase || "Normal")}</button>`).join("");
   $("v-formas").querySelectorAll("button").forEach(b => b.addEventListener("click", () => { fi = +b.dataset.i; mostrar(x, atualiza(), false); }));
   $("v-vars").innerHTML = vs.length ? vs.map(v => `<button class="bv ${v.tipo}" data-t="${v.tipo}"><span><i></i>${NOME_VAR[v.tipo]}${v.nome !== x.nome && v.tipo !== "normal" ? ` <small>${esc(v.nome)}</small>` : ""}</span>${eter(v.preco)}</button>`).join("")
     : (x.preco != null ? `<div class="bv ativo"><span>Preço</span>${eter(x.preco)}</div>` : "");
