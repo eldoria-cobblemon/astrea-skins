@@ -336,7 +336,7 @@ function card(x) {
 
 function desenhar() {
   const q = sem($("busca").value.trim());
-  const filtra = x => !q || sem(`${x.nome} ${x.especie || ""} ${(x.variantes || []).map(v => v.nome).join(" ")} ${(x.formas || []).map(f => nomeForma(f.forma)).join(" ")}`).includes(q);
+  const filtra = x => !q || sem(`${x.nome} ${x.especie || ""} ${(x.variantes || []).map(v => v.nome).join(" ")} ${(x.formas || []).map(f => nomeForma(f.forma)).join(" ")} ${x.aspecto || ""} ${((x.detalhe || "").match(/Coleção [^:.,]+/) || [""])[0]}`).includes(q);   // coleção: "natal" acha o Chien-Pao Nevasca
   let total = 0;
   $("secoes").innerHTML = CATS.map(c => {
     const itens = ordenar(DADOS.filter(x => x.categoria === c.id && filtra(x)));
