@@ -459,7 +459,10 @@ function abrirImportar() {
     };
     const pkPorNome = (nome) => {
       const q = tid(nome.replace(/\(.*?\)/g, (x) => (/(m|f)\)$/i.test(x) ? '' : x)));
-      const o = ctx.dados.pokemon.find((o) => tid(o.n) === q || tid(o.k) === q || tid(o.spr) === q) || ctx.dados.pokemon.find((o) => !o.fo && tid(o.n) === tid(nome.split(/[(@]/)[0]));
+      const o = ctx.dados.pokemon.find((o) => tid(o.n) === q || tid(o.k) === q || tid(o.spr) === q)
+        // forma só visual vinda do /torneio time (Gastrodon-East, Alcremie-Matcha-Cream...) = a opção base
+        || ctx.dados.pokemon.find((o) => (o.eq || []).some((f) => f && tid(o.sp + f) === q))
+        || ctx.dados.pokemon.find((o) => !o.fo && tid(o.n) === tid(nome.split(/[(@]/)[0]));
       return o?.k || '';
     };
     const blocos = txt.split(/\r?\n\s*\r?\n/).map((b) => b.trim()).filter(Boolean).slice(0, ctx.ficha.tamanho);
