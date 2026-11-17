@@ -71,7 +71,7 @@ export function miniTime(ctx, time, problemas = {}) {
       <div style="min-width:0">
         <div class="nm ${ruimPk ? 'x' : ''}">${i + 1}. ${esc(o.n)}</div>
         <div class="det">${it ? `<span class="${ruimItem ? 'x' : ''}">@ <b>${esc(it.n)}</b></span><br>` : '<span>sem item</span><br>'}
-          <span class="${ruimHab ? 'x' : ''}">${esc(hab?.n || '?')}</span> · ${esc(nat ? `${nat.n}` : '?')}</div>
+          <span class="${ruimHab ? 'x' : ''}">${esc(hab?.n || '?')}</span> · ${esc(nat ? `${nat.n}` : '?')}${s.tera ? ` · <span class="tipo" style="--t:${s.tera === 'stellar' ? '#c9b8f2' : tipoCor(s.tera)}">Tera ${esc(s.tera === 'stellar' ? 'Stellar' : tipoNome(s.tera))}</span>` : ''}</div>
         <ul>${golpes}</ul>
       </div></div>`;
   }).join('')}</div>`;

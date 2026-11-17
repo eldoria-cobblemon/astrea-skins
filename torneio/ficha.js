@@ -1,5 +1,5 @@
 // Página pública do torneio: regulamento + ficha que confere as regras enquanto o jogador preenche.
-import { tid, validar, motivoPokemon, motivoItem, motivoHabilidade, motivoGolpe, aprende, nomeGrupo, timeEmTexto } from './validar.js';
+import { tid, validar, motivoPokemon, motivoItem, motivoHabilidade, motivoGolpe, motivoTera, aprende, nomeGrupo, timeEmTexto, TIPOS_TERA } from './validar.js';
 import { desenharChave } from './chave.js';
 import { API, carregar, esc, negrito, spriteHtml, tipoCor, tipoNome, CATEGORIA, inscricoesAbertas, miniTime, toast, copiar } from './comum.js';
 
@@ -9,7 +9,7 @@ let estado;
 let chaveRascunho;
 const slots = [];
 
-const vazioSlot = () => ({ pk: '', item: '', hab: '', nat: '', golpes: ['', '', '', ''] });
+const vazioSlot = () => ({ pk: '', item: '', hab: '', nat: '', tera: '', golpes: ['', '', '', ''] });
 
 // ---------------------------------------------------------------- caixa de busca
 function caixaBusca({ rotulo, dica = '', placeholder = 'Digite pra buscar…', opcoes, textoDe, aoEscolher, corDe }) {
@@ -136,6 +136,13 @@ function opcoesItem() {
 function opcoesNatureza() {
   return ctx.dados.naturezas.map((n, i) => ({ id: n.id, nome: n.n, pt: n.pt, ordem: i, direita: n.mais ? `+${n.mais} −${n.menos}` : 'neutra' }));
 }
+function opcoesTera() {
+  return Object.keys(TIPOS_TERA).map((id, i) => ({
+    id, nome: id === 'stellar' ? 'Stellar' : tipoNome(id), pt: TIPOS_TERA[id], ordem: i, cor: id === 'stellar' ? '#c9b8f2' : tipoCor(id),
+    motivo: motivoTera(ctx, id),
+  }));
+}
+const nomeTera = (id) => (id === 'stellar' ? 'Stellar' : tipoNome(id));
 function opcoesGolpe(slotI) {
   const o = ctx.pk.get(estado.time[slotI].pk);
   const fora = ctx.ficha.golpeForaDaLista !== 'erro';
@@ -188,6 +195,17 @@ function desenharRegulamento() {
       }
       return `<ul>${itens.map((t) => `<li>${negrito(t)}</li>`).join('')}</ul>
         ${M.liberada !== false && (M.proibidas || []).length ? `<div class="tabela"><div class="linha-t"><span>Megas proibidas</span>${tags(M.proibidas)}</div></div>` : ''}`;
+    },
+    tera(sec) {
+      const T = R.tera || {};
+      const itens = [...(sec.itens || [])];
+      if (T.liberada !== true) itens.unshift('**Tera desligada neste torneio.**');
+      else {
+        itens.push(`Vale qualquer um dos 18 tipos.${T.stellar ? ' Stellar também.' : ' **Stellar não.**'}`);
+        if (T.teraBlast !== false) itens.push('Tera Blast liberado.');
+        itens.push('Na ficha, escolha o **tipo Tera** de cada Pokémon.');
+      }
+      return `<ul>${itens.map((t) => `<li>${negrito(t)}</li>`).join('')}</ul>`;
     },
     pokemon() {
       const P = R.pokemon || {};
@@ -244,7 +262,8 @@ function montarFicha() {
     <section class="bloco" style="--c:var(--visao)">
       <h2>Seu time <span class="n">${ctx.ficha.tamanho} Pokémon · nível ${esc(R.nivel || 50)}</span></h2>
       <p class="nota">Escolha da lista: o que é proibido já aparece riscado com o motivo. Golpes do Pokémon vêm primeiro. O rascunho fica salvo neste navegador.</p>
-      <div class="linha-botoes"><button class="btn peq" id="importar">Colar time do Showdown</button><button class="btn peq perigo" id="zerar">Limpar tudo</button></div>
+      <p class="nota"><b>Atalho:</b> no jogo, com o time na party, digite <code>/torneio time</code> e clique em <b>[Copiar time]</b> no chat. Depois aperte <b>Colar time</b> aqui embaixo e cole (Ctrl+V).</p>
+      <div class="linha-botoes"><button class="btn peq" id="importar">Colar time (do jogo ou do Showdown)</button><button class="btn peq perigo" id="zerar">Limpar tudo</button></div>
       <div class="time" id="time"></div>
     </section>
     <section class="bloco"><h2>Confirmação</h2><div class="aceites" id="aceites"></div>
@@ -308,6 +327,12 @@ function montarSlot(i) {
   const nat = caixaBusca({ rotulo: 'Natureza', placeholder: 'Natureza…', opcoes: opcoesNatureza, textoDe: (id) => ctx.nat.get(id)?.n || id,
     aoEscolher: (id) => { estado.time[i].nat = id; atualizar(); } });
   $('.g1', el).append(item.el, nat.el);
+  let tera = null;
+  if (ctx.tera.liberada) {
+    tera = caixaBusca({ rotulo: 'Tipo Tera', placeholder: 'Tipo Tera…', opcoes: opcoesTera, textoDe: nomeTera, corDe: (id) => (id === 'stellar' ? '#c9b8f2' : tipoCor(id)),
+      aoEscolher: (id) => { estado.time[i].tera = id; atualizar(); } });
+    $('.g1', el).append(tera.el);
+  }
   const golpes = s.golpes.map((_, j) => {
     const g = caixaBusca({ rotulo: `Golpe ${j + 1}`, placeholder: 'Golpe…', opcoes: () => opcoesGolpe(i), textoDe: (id) => ctx.golpe.get(id)?.n || id,
       corDe: (id) => tipoCor(ctx.golpe.get(id)?.t), aoEscolher: (id) => { estado.time[i].golpes[j] = id; atualizar(); } });
@@ -336,10 +361,10 @@ function montarSlot(i) {
   $('.limpar', el).addEventListener('click', () => { estado.time[i] = vazioSlot(); api.preencher(estado.time[i]); atualizar(); });
 
   const api = {
-    el, pk, item, nat, golpes,
+    el, pk, item, nat, tera, golpes,
     preencher(t) {
       const o = ctx.pk.get(t.pk);
-      pk.set(t.pk); item.set(t.item); nat.set(t.nat);
+      pk.set(t.pk); item.set(t.item); nat.set(t.nat); tera?.set(t.tera);
       golpes.forEach((g, j) => g.set(t.golpes[j]));
       $('.img', el).innerHTML = spriteHtml(o);
       el.style.setProperty('--c', o ? tipoCor(o.tp[0]) : '#8d80aa');
@@ -364,7 +389,7 @@ function atualizar() {
   const r = validar(ctx, estado);
   ultimo = r;
   // quais slots o jogador já mexeu (não grita "escolha o Pokémon" em slot vazio que ele nem tocou)
-  const mexido = (s) => s.pk || s.item || s.nat || s.golpes.some(Boolean);
+  const mexido = (s) => s.pk || s.item || s.nat || s.tera || s.golpes.some(Boolean);
   slots.forEach((sl, i) => {
     const t = estado.time[i];
     const daqui = (campo) => r.erros.filter((e) => e.onde === i && e.campo === campo);
@@ -373,10 +398,10 @@ function atualizar() {
       const e = daqui(campo), a = aviso(campo);
       if (e.length && (mexido(t) || campo === 'pk' && t.pk)) comp.msg(e.map((x) => x.msg).join(' · '), 'erro');
       else if (a.length) comp.msg(a.map((x) => x.msg).join(' · '), 'aviso');
-      else comp.msg('', (campo === 'pk' ? t.pk : campo === 'item' ? t.item : t.nat) ? 'ok' : '');
+      else comp.msg('', t[campo === 'pk' ? 'pk' : campo] ? 'ok' : '');
     };
-    if (t.pk || mexido(t)) { por(sl.pk, 'pk'); por(sl.item, 'item'); por(sl.nat, 'nat'); }
-    else { sl.pk.msg(''); sl.item.msg(''); sl.nat.msg(''); }
+    if (t.pk || mexido(t)) { por(sl.pk, 'pk'); por(sl.item, 'item'); por(sl.nat, 'nat'); if (sl.tera) por(sl.tera, 'tera'); }
+    else { sl.pk.msg(''); sl.item.msg(''); sl.nat.msg(''); sl.tera?.msg(''); }
     sl.golpes.forEach((g, j) => {
       const e = daqui(`golpe${j}`), a = aviso(`golpe${j}`);
       if (e.length) g.msg(e[0].msg, 'erro'); else if (a.length) g.msg(a[0].msg, 'aviso'); else g.msg('', t.golpes[j] ? 'ok' : '');
@@ -421,8 +446,8 @@ function irParaProblema(e) {
 
 // ---------------------------------------------------------------- importar texto do Showdown
 function abrirImportar() {
-  const m = modal(`<h2>Colar time do Showdown</h2>
-    <p class="nota">Cole o time exportado (Pokémon Showdown ou parecido). O que não for reconhecido fica em branco pra você escolher.</p>
+  const m = modal(`<h2>Colar time</h2>
+    <p class="nota">Cole o time copiado no jogo (<code>/torneio time</code> → <b>[Copiar time]</b>) ou exportado do Pokémon Showdown. O que não for reconhecido fica em branco pra você escolher.</p>
     <textarea class="entrada" id="txt-import" placeholder="Charizard @ Charizardite Y&#10;Ability: Blaze&#10;Timid Nature&#10;- Flamethrower&#10;- Solar Beam"></textarea>
     <div class="linha-botoes"><button class="btn principal" id="ok-import">Importar</button><button class="btn" data-fechar>Cancelar</button></div>`);
   $('#ok-import', m).addEventListener('click', () => {
@@ -452,6 +477,7 @@ function abrirImportar() {
       for (const l of linhas.slice(1)) {
         if (/^ability:/i.test(l)) t.hab = achar(ctx.hab, l.split(':')[1]);
         else if (/nature$/i.test(l)) t.nat = achar(ctx.nat, l.replace(/nature$/i, ''));
+        else if (/^tera type:/i.test(l)) { const q = tid(l.split(':')[1]); t.tera = Object.keys(TIPOS_TERA).find((id) => id === q || tid(TIPOS_TERA[id]) === q || tid(tipoNome(id)) === q) || ''; }
         else if (/^-/.test(l) && gi < ctx.ficha.golpesMax) t.golpes[gi++] = achar(ctx.golpe, l.replace(/^-\s*/, '').split('/')[0]);
       }
       estado.time[i] = t;

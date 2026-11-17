@@ -13,6 +13,13 @@ const GRUPOS = {
 };
 export const nomeGrupo = (g) => GRUPOS[g] || g;
 
+// Tipos Tera (id -> nome em inglês, como o Showdown escreve "Tera Type: ...").
+export const TIPOS_TERA = {
+  normal: 'Normal', fire: 'Fire', water: 'Water', electric: 'Electric', grass: 'Grass', ice: 'Ice',
+  fighting: 'Fighting', poison: 'Poison', ground: 'Ground', flying: 'Flying', psychic: 'Psychic', bug: 'Bug',
+  rock: 'Rock', ghost: 'Ghost', dragon: 'Dragon', dark: 'Dark', steel: 'Steel', fairy: 'Fairy', stellar: 'Stellar',
+};
+
 // Deixa as regras prontas pra consulta rápida e anota nome que não existe na base
 // (ajuda quem edita o regras.json a achar erro de digitação).
 export function preparar(regras, dados) {
@@ -89,6 +96,9 @@ export function preparar(regras, dados) {
     })),
     habBloqueia: M.habilidadeProibidaBloqueia !== false,
   };
+  // Tera: com "tera.liberada" a ficha pede o tipo Tera de cada Pokémon
+  const T = R.tera || {};
+  ctx.tera = { liberada: T.liberada === true, stellar: T.stellar === true };
   ctx.ficha = {
     tamanho: 6, golpesMin: 1, golpesMax: 4, itemObrigatorio: false,
     semEspecieRepetida: true, semItemRepetido: true, golpeForaDaLista: 'aviso',
@@ -111,6 +121,13 @@ export function motivoPokemon(ctx, o) {
     if (r.so || !base || base.sp === o.sp) return 'Proibido';
     return `Proibido (linha do ${base.n})`;
   }
+  return null;
+}
+
+export function motivoTera(ctx, id) {
+  if (!id) return null;
+  if (!TIPOS_TERA[id]) return 'Tipo Tera inválido';
+  if (id === 'stellar' && !ctx.tera.stellar) return 'Tera Stellar proibido';
   return null;
 }
 
@@ -149,7 +166,7 @@ export function aprende(ctx, o, golpeId) {
 }
 
 // ---------- ficha inteira ----------
-// inscricao = { campos: {nick, discord, ...}, time: [{pk, item, hab, nat, golpes: [..4]}], aceites: [true, ...] }
+// inscricao = { campos: {nick, discord, ...}, time: [{pk, item, hab, nat, tera, golpes: [..4]}], aceites: [true, ...] }
 // devolve { erros: [{onde, campo, msg}], avisos: [...] }  (onde = índice do Pokémon ou 'ficha')
 export function validar(ctx, inscricao) {
   const erros = [];
@@ -211,6 +228,12 @@ export function validar(ctx, inscricao) {
       }
     }
 
+    // tipo Tera
+    if (ctx.tera.liberada) {
+      if (!s.tera) e('tera', 'Escolha o tipo Tera');
+      else { const mt = motivoTera(ctx, s.tera); if (mt) e('tera', mt); }
+    }
+
     // golpes
     const golpes = (Array.isArray(s.golpes) ? s.golpes : []).filter(Boolean);
     if (golpes.length < F.golpesMin) e('golpes', F.golpesMin === 1 ? 'Escolha pelo menos 1 golpe' : `Escolha ${F.golpesMin} golpes`);
@@ -249,6 +272,7 @@ export function timeEmTexto(ctx, time) {
     const linhas = [`${o.n}${it ? ` @ ${it.n}` : ''}`];
     if (s.hab) linhas.push(`Ability: ${ctx.hab.get(s.hab)?.n || s.hab}`);
     linhas.push(`Level: ${ctx.regras.nivel || 50}`);
+    if (s.tera && TIPOS_TERA[s.tera]) linhas.push(`Tera Type: ${TIPOS_TERA[s.tera]}`);
     if (s.nat) linhas.push(`${ctx.nat.get(s.nat)?.n || s.nat} Nature`);
     for (const g of s.golpes || []) if (g) linhas.push(`- ${ctx.golpe.get(g)?.n || g}`);
     return linhas.join('\n');
