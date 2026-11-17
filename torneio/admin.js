@@ -342,8 +342,7 @@ function textoPacote(p) {
     });
     l.push('');
   }
-  return l.join('
-');
+  return l.join('\n');
 }
 
 async function abrirGerador() {
