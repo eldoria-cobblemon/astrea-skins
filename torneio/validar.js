@@ -121,7 +121,7 @@ export function preparar(regras, dados) {
   };
   // Tera: com "tera.liberada" a ficha pede o tipo Tera de cada Pokémon
   const T = R.tera || {};
-  ctx.tera = { liberada: T.liberada === true, stellar: T.stellar === true };
+  ctx.tera = { liberada: T.liberada === true, stellar: T.stellar === true, soTipoDoTime: T.soTipoDoTime === true };
   ctx.mono = { ativo: R.monotype?.ativo === true };
   ctx.ficha = {
     tamanho: 6, golpesMin: 1, golpesMax: 4, itemObrigatorio: false,
@@ -148,10 +148,12 @@ export function motivoPokemon(ctx, o) {
   return null;
 }
 
-export function motivoTera(ctx, id) {
+// tipoTime: com "tera.soTipoDoTime" (monotype), a Tera tem que ser do tipo do time.
+export function motivoTera(ctx, id, tipoTime) {
   if (!id) return null;
   if (!TIPOS_TERA[id]) return 'Tipo Tera inválido';
   if (id === 'stellar' && !ctx.tera.stellar) return 'Tera Stellar proibido';
+  if (ctx.tera.soTipoDoTime && tipoTime && id !== tipoTime) return `Tera só do tipo do time (${TIPO_PT[tipoTime] || tipoTime})`;
   return null;
 }
 
@@ -212,6 +214,7 @@ export function validar(ctx, inscricao) {
 
   const especies = new Map();
   const itens = new Map();
+  const tipoTime = ctx.mono.ativo ? (TIPO_PT[ins.tipo] ? ins.tipo : (tiposEmComum(ctx, time).length === 1 ? tiposEmComum(ctx, time)[0] : '')) : '';
   time.forEach((s, i) => {
     s = s || {};
     const e = (campo, msg) => erros.push({ onde: i, campo, msg });
@@ -255,7 +258,7 @@ export function validar(ctx, inscricao) {
     // tipo Tera
     if (ctx.tera.liberada) {
       if (!s.tera) e('tera', 'Escolha o tipo Tera');
-      else { const mt = motivoTera(ctx, s.tera); if (mt) e('tera', mt); }
+      else { const mt = motivoTera(ctx, s.tera, tipoTime); if (mt) e('tera', mt); }
     }
 
     // golpes

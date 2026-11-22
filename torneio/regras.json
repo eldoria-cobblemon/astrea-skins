@@ -1,18 +1,20 @@
 {
   "id": "campeonato-doubles-monotype-2026-12",
   "nome": "Campeonato Doubles Monotype",
-  "subtitulo": "Regulamento e ficha de inscrição",
+  "subtitulo": "Sábado, 28/11 às 19h · Regulamento e ficha de inscrição",
   "resumo": [
+    "28/11 às 19h",
     "Batalha dupla",
     "Monotype: time de um tipo só",
     "Leva 6, escolhe 4",
     "Nível 50",
-    "Tera liberada",
+    "Tera só no tipo do time",
     "Jogo limpo, sem stall e sem sorte"
   ],
   "nivel": 50,
   "inscricoes": {
     "abertas": true,
+    "fechaEm": "2026-11-28T17:00:00-03:00",
     "avisoFechada": "As inscrições deste torneio estão fechadas. Fique de olho no Discord pro próximo!"
   },
   "premios": [
@@ -32,12 +34,17 @@
       "cor": "bronze"
     },
     {
+      "lugar": "Bônus tipo fraco",
+      "valor": "+R$ 50 em cupom",
+      "cor": "eter"
+    },
+    {
       "lugar": "Quem jogar",
       "valor": "1 Lucky Block Branco",
       "cor": "eter"
     }
   ],
-  "premiosNota": "Lucky Block Branco pra quem jogar pelo menos uma partida. Dinheiro pago pela staff depois da final.",
+  "premiosNota": "Bônus tipo fraco: quem ficar no top 3 com time de Inseto, Planta, Gelo, Normal, Venenoso, Elétrico ou Pedra ganha mais R$ 50 em cupom no site. Vale o tipo do time escolhido na ficha. Lucky Block Branco pra quem jogar pelo menos uma partida. Dinheiro pago pela staff depois da final.",
   "regulamento": [
     {
       "titulo": "Formato",
@@ -63,7 +70,7 @@
       "auto": "tera",
       "itens": [
         "**1 Tera por partida**, em qualquer turno.",
-        "**O Pokémon que usa a Tera pode mudar** a cada partida. **O tipo Tera não muda:** é o da ficha."
+        "**O Pokémon que usa a Tera pode mudar** a cada partida."
       ]
     },
     {
@@ -279,7 +286,8 @@
   "tera": {
     "liberada": true,
     "stellar": false,
-    "teraBlast": true
+    "teraBlast": true,
+    "soTipoDoTime": true
   },
   "monotype": {
     "ativo": true

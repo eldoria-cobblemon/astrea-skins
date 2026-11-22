@@ -145,7 +145,7 @@ function opcoesNatureza() {
 function opcoesTera() {
   return Object.keys(TIPOS_TERA).map((id, i) => ({
     id, nome: id === 'stellar' ? 'Stellar' : tipoNome(id), pt: TIPOS_TERA[id], ordem: i, cor: id === 'stellar' ? '#c9b8f2' : tipoCor(id),
-    motivo: motivoTera(ctx, id),
+    motivo: motivoTera(ctx, id, estado?.tipo),
   }));
 }
 const nomeTera = (id) => (id === 'stellar' ? 'Stellar' : tipoNome(id));
@@ -207,9 +207,10 @@ function desenharRegulamento() {
       const itens = [...(sec.itens || [])];
       if (T.liberada !== true) itens.unshift('**Tera desligada neste torneio.**');
       else {
-        itens.push(`Vale qualquer um dos 18 tipos.${T.stellar ? ' Stellar também.' : ' **Stellar não.**'}`);
+        if (T.soTipoDoTime) itens.push('**Tera só no tipo do time.** Time de Fogo tera em Fogo. Stellar não.');
+        else itens.push(`Vale qualquer um dos 18 tipos.${T.stellar ? ' Stellar também.' : ' **Stellar não.**'}`);
         if (T.teraBlast !== false) itens.push('Tera Blast liberado.');
-        itens.push('Na ficha, escolha o **tipo Tera** de cada Pokémon.');
+        itens.push(T.soTipoDoTime ? 'Na ficha, o **tipo Tera** já vem preenchido com o tipo do time.' : 'Na ficha, escolha o **tipo Tera** de cada Pokémon.');
       }
       return `<ul>${itens.map((t) => `<li>${negrito(t)}</li>`).join('')}</ul>`;
     },
@@ -295,7 +296,11 @@ function montarFicha() {
 
   if (ctx.mono.ativo) {
     tipoTime = caixaBusca({ rotulo: 'Tipo do time', placeholder: 'Água, Fogo, Dragão…', opcoes: opcoesTipoTime, textoDe: tipoNome, corDe: tipoCor,
-      aoEscolher: (id) => { estado.tipo = id; atualizar(); } });
+      aoEscolher: (id) => {
+        estado.tipo = id;
+        if (ctx.tera.soTipoDoTime && id) estado.time.forEach((t, i) => { t.tera = id; slots[i]?.tera?.set(id); });
+        atualizar();
+      } });
     tipoTime.el.dataset.campo = 'tipo';
     tipoTime.set(estado.tipo);
     $('#campo-tipo').append(tipoTime.el);
@@ -376,7 +381,7 @@ function montarSlot(i) {
       return `<button type="button" class="hab ${ruim ? 'proib' : ''}" data-id="${esc(h)}" data-nome="${esc(info.n)}" aria-pressed="${t.hab === h}" title="${esc(info.pt)}${ruim ? ' · proibida' : ''}">${esc(info.n)}${oculta ? '<small>oculta</small>' : ''}</button>`;
     }).join('');
   };
-  $('.limpar', el).addEventListener('click', () => { estado.time[i] = vazioSlot(); api.preencher(estado.time[i]); atualizar(); });
+  $('.limpar', el).addEventListener('click', () => { estado.time[i] = { ...vazioSlot(), tera: ctx.tera.soTipoDoTime ? estado.tipo || '' : '' }; api.preencher(estado.time[i]); atualizar(); });
 
   const api = {
     el, pk, item, nat, tera, golpes,
@@ -515,6 +520,7 @@ function abrirImportar() {
       const comum = tiposEmComum(ctx, estado.time);
       if (comum.length === 1) { estado.tipo = comum[0]; tipoTime.set(comum[0]); }
     }
+    if (ctx.tera.soTipoDoTime && estado.tipo) estado.time.forEach((t, i) => { if (t.pk) { t.tera = estado.tipo; slots[i].tera?.set(estado.tipo); } });
     atualizar();
     m.remove();
     toast(`${blocos.length} Pokémon importado${blocos.length > 1 ? 's' : ''}. Confira os avisos.`);
