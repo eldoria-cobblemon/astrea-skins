@@ -20,6 +20,29 @@ export const TIPOS_TERA = {
   rock: 'Rock', ghost: 'Ghost', dragon: 'Dragon', dark: 'Dark', steel: 'Steel', fairy: 'Fairy', stellar: 'Stellar',
 };
 
+// Nome dos tipos em português (pra mensagem do monotype; o validador roda também no servidor, sem o comum.js).
+const TIPO_PT = {
+  normal: 'Normal', fire: 'Fogo', water: 'Água', electric: 'Elétrico', grass: 'Planta', ice: 'Gelo', fighting: 'Lutador',
+  poison: 'Venenoso', ground: 'Terrestre', flying: 'Voador', psychic: 'Psíquico', bug: 'Inseto', rock: 'Pedra',
+  ghost: 'Fantasma', dragon: 'Dragão', dark: 'Sombrio', steel: 'Aço', fairy: 'Fada',
+};
+
+// Monotype: os 6 Pokémon precisam ter um tipo em comum (tipo da forma escolhida, não o Tera).
+// Devolve os tipos que todo o time tem (ignora slot vazio).
+export function tiposEmComum(ctx, time) {
+  let comum = null;
+  for (const s of time || []) {
+    const o = ctx.pk.get(s?.pk);
+    if (!o) continue;
+    comum = comum ? comum.filter((t) => o.tp.includes(t)) : [...o.tp];
+  }
+  return comum || [];
+}
+export function motivoMonotype(ctx, o, tipo) {
+  if (!ctx.mono.ativo || !o || !tipo) return null;
+  return o.tp.includes(tipo) ? null : `Não é do tipo ${TIPO_PT[tipo] || tipo}`;
+}
+
 // Deixa as regras prontas pra consulta rápida e anota nome que não existe na base
 // (ajuda quem edita o regras.json a achar erro de digitação).
 export function preparar(regras, dados) {
@@ -99,6 +122,7 @@ export function preparar(regras, dados) {
   // Tera: com "tera.liberada" a ficha pede o tipo Tera de cada Pokémon
   const T = R.tera || {};
   ctx.tera = { liberada: T.liberada === true, stellar: T.stellar === true };
+  ctx.mono = { ativo: R.monotype?.ativo === true };
   ctx.ficha = {
     tamanho: 6, golpesMin: 1, golpesMax: 4, itemObrigatorio: false,
     semEspecieRepetida: true, semItemRepetido: true, golpeForaDaLista: 'aviso',
@@ -166,7 +190,7 @@ export function aprende(ctx, o, golpeId) {
 }
 
 // ---------- ficha inteira ----------
-// inscricao = { campos: {nick, discord, ...}, time: [{pk, item, hab, nat, tera, golpes: [..4]}], aceites: [true, ...] }
+// inscricao = { campos: {nick, discord, ...}, tipo (monotype, opcional: sem ele vale o tipo em comum), time: [{pk, item, hab, nat, tera, golpes: [..4]}], aceites: [true, ...] }
 // devolve { erros: [{onde, campo, msg}], avisos: [...] }  (onde = índice do Pokémon ou 'ficha')
 export function validar(ctx, inscricao) {
   const erros = [];
@@ -255,6 +279,22 @@ export function validar(ctx, inscricao) {
       }
     });
   });
+
+  // monotype
+  if (ctx.mono.ativo) {
+    const tipo = TIPO_PT[ins.tipo] ? ins.tipo : '';
+    if (!tipo && ins.tipo) erros.push({ onde: 'ficha', campo: 'tipo', msg: 'Tipo do time inválido' });
+    if (tipo) {
+      time.forEach((s, i) => {
+        const m = motivoMonotype(ctx, ctx.pk.get(s?.pk), tipo);
+        if (m) erros.push({ onde: i, campo: 'pk', msg: `${ctx.pk.get(s.pk).n}: ${m}` });
+      });
+    } else if (time.some((s) => ctx.pk.get(s?.pk)) && !tiposEmComum(ctx, time).length) {
+      erros.push({ onde: 'ficha', campo: 'tipo', msg: 'Monotype: os 6 Pokémon precisam ter um tipo em comum' });
+    } else if (!ins.tipo) {
+      erros.push({ onde: 'ficha', campo: 'tipo', msg: 'Escolha o tipo do time' });
+    }
+  }
 
   (R.aceites || []).forEach((txt, i) => {
     if (!(ins.aceites || [])[i]) erros.push({ onde: 'ficha', campo: `aceite${i}`, msg: `Marque: ${txt}` });

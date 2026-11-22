@@ -1,5 +1,5 @@
 // Painel da staff: ver, aprovar e recusar inscrições; conferir times na hora da partida.
-import { validar, timeEmTexto, tid } from './validar.js';
+import { validar, timeEmTexto, tid, tiposEmComum } from './validar.js';
 import { API, carregar, esc, miniTime, toast, copiar, spriteHtml, tipoCor } from './comum.js';
 import { criarChave, marcar, desenharChave, nomeRodada, teveResultado, podio } from './chave.js';
 
@@ -56,7 +56,7 @@ async function recarregar(torneio = dados.torneio) {
 // confere de novo com as regras ATUAIS (pega time que ficou ilegal se a regra mudou depois)
 function conferir(ins) {
   const aceites = (ctx.regras.aceites || []).map(() => true);
-  const r = validar(ctx, { campos: ins.campos, time: ins.time, aceites });
+  const r = validar(ctx, { campos: ins.campos, tipo: ins.tipo || tiposEmComum(ctx, ins.time)[0] || '', time: ins.time, aceites });
   const porSlot = {};
   for (const e of r.erros) if (e.onde !== 'ficha') (porSlot[e.onde] ||= { erros: [], avisos: [] }).erros.push(e);
   for (const a of r.avisos) if (a.onde !== 'ficha') (porSlot[a.onde] ||= { erros: [], avisos: [] }).avisos.push(a);

@@ -1,9 +1,10 @@
 {
-  "id": "campeonato-doubles-2026-11",
-  "nome": "Campeonato Doubles",
+  "id": "campeonato-doubles-monotype-2026-12",
+  "nome": "Campeonato Doubles Monotype",
   "subtitulo": "Regulamento e ficha de inscrição",
   "resumo": [
     "Batalha dupla",
+    "Monotype: time de um tipo só",
     "Leva 6, escolhe 4",
     "Nível 50",
     "Tera liberada",
@@ -12,7 +13,6 @@
   "nivel": 50,
   "inscricoes": {
     "abertas": true,
-    "fechaEm": "2026-11-21T19:00:00-03:00",
     "avisoFechada": "As inscrições deste torneio estão fechadas. Fique de olho no Discord pro próximo!"
   },
   "premios": [
@@ -48,6 +48,14 @@
         "Partida única em todas as fases. **Só a final é melhor de 3.** Tem disputa de 3º lugar.",
         "**Time travado:** o time da ficha vale o campeonato inteiro. Só muda quais 4 você leva e a ordem.",
         "Sem Mega, Z-Move e Dynamax."
+      ]
+    },
+    {
+      "titulo": "Monotype",
+      "itens": [
+        "**Time de um tipo só:** os 6 Pokémon da ficha precisam ter **um tipo em comum** (ex.: time de Água pode ter Gyarados Água/Voador e Swampert Água/Terrestre).",
+        "Vale o **tipo da forma** que você usa (Rotom-Wash é Elétrico/Água, Ninetales de Alola é Gelo/Fada). **O tipo Tera não conta** pra isso.",
+        "Na ficha, escolha o **tipo do time**. Ele aparece pro adversário no team preview de qualquer jeito."
       ]
     },
     {
@@ -117,7 +125,7 @@
   ],
   "aceites": [
     "Li e aceito o regulamento.",
-    "Nível 50, sem Pokémon repetido e sem item repetido."
+    "Nível 50, time de um tipo só, sem Pokémon repetido e sem item repetido."
   ],
   "pokemon": {
     "gruposProibidos": [
@@ -181,7 +189,6 @@
         "Rest",
         "Sleep Talk",
         "Curse",
-        "Toxic",
         "Leech Seed",
         "Salt Cure",
         "Perish Song",
@@ -216,7 +223,6 @@
         "Mud-Slap",
         "Mirror Shot",
         "Octazooka",
-        "Muddy Water",
         "Night Daze",
         "Leaf Tornado"
       ],
@@ -274,5 +280,8 @@
     "liberada": true,
     "stellar": false,
     "teraBlast": true
+  },
+  "monotype": {
+    "ativo": true
   }
 }

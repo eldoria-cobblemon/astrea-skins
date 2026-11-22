@@ -1,12 +1,13 @@
 // Página pública do torneio: regulamento + ficha que confere as regras enquanto o jogador preenche.
-import { tid, validar, motivoPokemon, motivoItem, motivoHabilidade, motivoGolpe, motivoTera, aprende, nomeGrupo, timeEmTexto, TIPOS_TERA } from './validar.js';
+import { tid, validar, motivoPokemon, motivoItem, motivoHabilidade, motivoGolpe, motivoTera, motivoMonotype, tiposEmComum, aprende, nomeGrupo, timeEmTexto, TIPOS_TERA } from './validar.js';
 import { desenharChave } from './chave.js';
-import { API, carregar, esc, negrito, spriteHtml, tipoCor, tipoNome, CATEGORIA, inscricoesAbertas, miniTime, toast, copiar } from './comum.js';
+import { API, carregar, esc, negrito, spriteHtml, tipoCor, tipoNome, TIPOS, CATEGORIA, inscricoesAbertas, miniTime, toast, copiar } from './comum.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 let ctx;
 let estado;
 let chaveRascunho;
+let tipoTime = null; // caixa "Tipo do time" (só no monotype)
 const slots = [];
 
 const vazioSlot = () => ({ pk: '', item: '', hab: '', nat: '', tera: '', golpes: ['', '', '', ''] });
@@ -121,7 +122,12 @@ function opcoesPokemon() {
       direita: `#${o.num} · ${o.tp.map(tipoNome).join('/')}`, cor: tipoCor(o.tp[0]),
     }));
   }
-  return cacheOpPk;
+  // monotype: com o tipo do time escolhido, quem não é do tipo aparece riscado
+  if (!ctx.mono.ativo || !estado?.tipo) return cacheOpPk;
+  return cacheOpPk.map((op) => (op.motivo ? op : { ...op, motivo: motivoMonotype(ctx, ctx.pk.get(op.id), estado.tipo) }));
+}
+function opcoesTipoTime() {
+  return Object.keys(TIPOS).map((id, i) => ({ id, nome: tipoNome(id), ordem: i, cor: tipoCor(id) }));
 }
 let cacheOpItem;
 function opcoesItem() {
@@ -259,6 +265,9 @@ function montarFicha() {
   }
   ficha.innerHTML = `
     <section class="bloco"><h2>Treinador</h2><div class="campos" id="campos"></div></section>
+    ${ctx.mono.ativo ? `<section class="bloco" style="--c:var(--visao)"><h2>Tipo do time <span class="n">monotype</span></h2>
+      <p class="nota">Os 6 Pokémon precisam ser deste tipo (vale o tipo da forma, não o Tera). Quem não for aparece riscado na lista.</p>
+      <div class="campos" id="campo-tipo"></div></section>` : ''}
     <section class="bloco" style="--c:var(--visao)">
       <h2>Seu time <span class="n">${ctx.ficha.tamanho} Pokémon · nível ${esc(R.nivel || 50)}</span></h2>
       <p class="nota">Escolha da lista: o que é proibido já aparece riscado com o motivo. Golpes do Pokémon vêm primeiro. O rascunho fica salvo neste navegador.</p>
@@ -284,12 +293,21 @@ function montarFicha() {
   $('#aceites').innerHTML = (R.aceites || []).map((t, i) => `<label class="check" data-campo="aceite${i}"><input type="checkbox" data-i="${i}" ${estado.aceites[i] ? 'checked' : ''}><span>${esc(t)}</span></label>`).join('');
   $('#aceites').addEventListener('change', (ev) => { estado.aceites[+ev.target.dataset.i] = ev.target.checked; atualizar(); });
 
+  if (ctx.mono.ativo) {
+    tipoTime = caixaBusca({ rotulo: 'Tipo do time', placeholder: 'Água, Fogo, Dragão…', opcoes: opcoesTipoTime, textoDe: tipoNome, corDe: tipoCor,
+      aoEscolher: (id) => { estado.tipo = id; atualizar(); } });
+    tipoTime.el.dataset.campo = 'tipo';
+    tipoTime.set(estado.tipo);
+    $('#campo-tipo').append(tipoTime.el);
+  }
   const time = $('#time');
   estado.time.forEach((_, i) => time.append(montarSlot(i)));
   $('#importar').addEventListener('click', abrirImportar);
   $('#zerar').addEventListener('click', () => {
     if (!confirm('Apagar o time inteiro do rascunho?')) return;
     estado.time = estado.time.map(vazioSlot);
+    estado.tipo = '';
+    tipoTime?.set('');
     slots.forEach((s, i) => s.preencher(estado.time[i]));
     atualizar();
   });
@@ -415,6 +433,13 @@ function atualizar() {
     sl.el.classList.toggle('pronto', !!t.pk && nErros === 0);
     $('.marca', sl.el).textContent = !t.pk ? '' : nErros ? '!' : '✓';
   });
+  // tipo do time (monotype)
+  if (tipoTime) {
+    const e = r.erros.find((x) => x.onde === 'ficha' && x.campo === 'tipo');
+    const mexeu = estado.tipo || estado.time.some((t) => t.pk);
+    if (e && mexeu) tipoTime.msg(e.msg, 'erro');
+    else tipoTime.msg(estado.tipo ? `${estado.time.filter((t) => t.pk).length} de ${ctx.ficha.tamanho} escolhidos` : '', estado.tipo ? 'ok' : '');
+  }
   // campos do treinador
   document.querySelectorAll('#campos .campo').forEach((d) => {
     const e = r.erros.find((x) => x.onde === 'ficha' && x.campo === d.dataset.campo);
@@ -486,6 +511,10 @@ function abrirImportar() {
       estado.time[i] = t;
       slots[i].preencher(t);
     });
+    if (tipoTime && !estado.tipo) {
+      const comum = tiposEmComum(ctx, estado.time);
+      if (comum.length === 1) { estado.tipo = comum[0]; tipoTime.set(comum[0]); }
+    }
     atualizar();
     m.remove();
     toast(`${blocos.length} Pokémon importado${blocos.length > 1 ? 's' : ''}. Confira os avisos.`);
