@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Postador de Astrea</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><path d='M32 4l7 19 20 1-16 12 6 20-17-12-17 12 6-20L5 24l20-1z' fill='%23e3b35b'/></svg>">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+
+<!-- ===================== ENTRAR ===================== -->
+<section id="entrar" class="entrar" hidden>
+  <div class="ceu" aria-hidden="true"></div>
+  <form class="cartao-entrar" id="form-entrar" autocomplete="on">
+    <div class="selo"><img id="entrar-icone" alt="" hidden><span class="selo-letra">A</span></div>
+    <h1>Postador de Astrea</h1>
+    <p class="sub">Escreva, veja como vai ficar e publique no Discord, de qualquer computador.</p>
+    <label class="campo">
+      <span>Senha</span>
+      <input type="password" id="senha" autocomplete="current-password" required autofocus>
+    </label>
+    <label class="check"><input type="checkbox" id="lembrar" checked> <span>Lembrar neste computador</span></label>
+    <button class="btn btn-ouro btn-grande" type="submit" id="btn-entrar">Entrar</button>
+    <p class="erro" id="erro-entrar" role="alert"></p>
+  </form>
+</section>
+
+<!-- ===================== APP ===================== -->
+<div id="app" class="app" hidden>
+  <header class="topo">
+    <div class="marca">
+      <img id="topo-icone" alt="">
+      <div>
+        <div class="marca-nome">Postador de Astrea</div>
+        <div class="marca-sub" id="topo-servidor">…</div>
+      </div>
+    </div>
+    <nav class="abas" role="tablist">
+      <button class="aba ativa" data-aba="escrever" role="tab">Escrever</button>
+      <button class="aba" data-aba="modelos" role="tab">Modelos</button>
+      <button class="aba" data-aba="enviadas" role="tab">Enviadas</button>
+    </nav>
+    <div class="quem">
+      <span>Olá, <b id="quem-nome">…</b></span>
+      <button class="btn-icone" id="btn-sair" title="Sair">⏻</button>
+    </div>
+  </header>
+
+  <!-- ESCREVER -->
+  <main class="tela" id="tela-escrever">
+    <div class="faixa-edicao" id="faixa-edicao" hidden>
+      <span>✎ Editando a mensagem enviada <b id="edicao-qual"></b>. Ao salvar, ela muda no Discord.</span>
+      <button class="btn btn-fantasma btn-p" id="btn-cancelar-edicao">Cancelar edição</button>
+    </div>
+    <div class="colunas">
+      <section class="editor">
+        <!-- Onde -->
+        <div class="painel">
+          <div class="painel-titulo"><span class="num">1</span> Onde publicar</div>
+          <div class="linha-canal">
+            <button class="seletor-canal" id="btn-canal" type="button">
+              <span class="sc-hash">#</span><span id="canal-nome" class="sc-nome">Escolha o canal</span><span class="sc-cat" id="canal-cat"></span><span class="sc-seta">▾</span>
+            </button>
+          </div>
+          <div id="opcoes-forum" class="opcoes-forum" hidden>
+            <label class="campo"><span>Título do post <small id="cont-titulo">0/100</small></span><input id="titulo-forum" maxlength="100" placeholder="Ex.: Como chegar na Torre Infinita"></label>
+            <div class="campo"><span>Etiquetas <small id="tag-aviso"></small></span><div id="tags-forum" class="chips"></div></div>
+          </div>
+          <label class="check" id="opcao-anunciar" hidden><input type="checkbox" id="anunciar"> <span>Publicar também pros servidores que seguem este canal de anúncios</span></label>
+
+          <details class="persona" id="persona">
+            <summary>
+              <img id="persona-foto" alt="">
+              <span>Publicar como <b id="persona-nome">Astrea Cobblemon</b></span>
+              <span class="mudar">mudar</span>
+            </summary>
+            <div class="persona-corpo">
+              <label class="campo"><span>Nome</span><input id="nome" maxlength="80" placeholder="Astrea Cobblemon"></label>
+              <div class="campo"><span>Foto</span>
+                <div class="fotos" id="fotos"></div>
+                <input id="avatar" placeholder="ou cole o link de uma imagem (https://…)">
+              </div>
+              <p class="dica">Nome e foto valem só pra mensagens novas (o Discord não deixa trocar depois).</p>
+            </div>
+          </details>
+        </div>
+
+        <!-- Mensagem -->
+        <div class="painel">
+          <div class="painel-titulo"><span class="num">2</span> Mensagem
+            <div class="painel-acoes">
+              <button class="btn-icone" id="btn-desfazer" title="Desfazer (Ctrl+Z fora do texto)">↶</button>
+              <button class="btn-icone" id="btn-refazer" title="Refazer">↷</button>
+            </div>
+          </div>
+          <div id="blocos" class="blocos"></div>
+          <div class="adicionar" id="adicionar-raiz"></div>
+        </div>
+      </section>
+
+      <!-- Prévia -->
+      <aside class="previa-coluna">
+        <div class="previa-cabeca">
+          <span>Como vai aparecer no Discord</span>
+          <span class="contador" id="contador">0 / 4000</span>
+        </div>
+        <div class="discord" id="previa"></div>
+        <div class="avisos" id="avisos"></div>
+      </aside>
+    </div>
+
+    <footer class="rodape">
+      <div class="rodape-esq">
+        <button class="btn btn-fantasma" id="btn-limpar">Começar do zero</button>
+        <button class="btn btn-fantasma" id="btn-salvar-modelo">Salvar como modelo</button>
+        <span class="salvo" id="salvo">Rascunho salvo</span>
+      </div>
+      <button class="btn btn-ouro btn-grande" id="btn-enviar">Publicar no Discord <span class="atalho">Ctrl+Enter</span></button>
+    </footer>
+  </main>
+
+  <!-- MODELOS -->
+  <main class="tela" id="tela-modelos" hidden>
+    <div class="tela-cabeca">
+      <h2>Modelos</h2>
+      <p>Comece de um jeito pronto e só troque o que muda. Os modelos que vocês salvarem ficam aqui pra Angela e pro Yure.</p>
+    </div>
+    <h3 class="sec">Seus modelos</h3>
+    <div class="grade-cartoes" id="modelos-salvos"></div>
+    <h3 class="sec">Prontos de Astrea</h3>
+    <div class="grade-cartoes" id="modelos-prontos"></div>
+  </main>
+
+  <!-- ENVIADAS -->
+  <main class="tela" id="tela-enviadas" hidden>
+    <div class="tela-cabeca">
+      <h2>Enviadas</h2>
+      <p>As últimas mensagens publicadas pelo Postador. Dá pra editar, repetir ou apagar.</p>
+    </div>
+    <div class="lista-enviadas" id="enviadas"></div>
+  </main>
+</div>
+
+<!-- Escolher canal -->
+<div class="modal" id="modal-canal" hidden>
+  <div class="modal-caixa modal-canal">
+    <input id="busca-canal" placeholder="Procurar canal…" autocomplete="off">
+    <div id="lista-canais" class="lista-canais"></div>
+  </div>
+</div>
+
+<!-- Confirmar envio -->
+<div class="modal" id="modal-enviar" hidden>
+  <div class="modal-caixa">
+    <h3 id="conf-titulo">Publicar agora?</h3>
+    <div id="conf-corpo" class="conf-corpo"></div>
+    <div class="progresso" id="progresso" hidden><div class="barra"><i id="progresso-barra"></i></div><span id="progresso-txt">Enviando…</span></div>
+    <p class="erro" id="erro-enviar" role="alert"></p>
+    <div class="modal-botoes">
+      <button class="btn btn-fantasma" data-fechar>Voltar</button>
+      <button class="btn btn-ouro" id="btn-confirmar">Publicar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Publicado -->
+<div class="modal" id="modal-ok" hidden>
+  <div class="modal-caixa ok">
+    <div class="ok-selo">✓</div>
+    <h3 id="ok-titulo">Publicado!</h3>
+    <p id="ok-texto"></p>
+    <div class="modal-botoes coluna">
+      <button class="btn btn-ouro" id="ok-novo">Escrever outra</button>
+      <button class="btn btn-fantasma" id="ok-continuar">Continuar com esta (pra editar)</button>
+      <a class="btn btn-fantasma" id="ok-link" target="_blank" rel="noopener">Abrir no Discord</a>
+    </div>
+  </div>
+</div>
+
+<!-- Pergunta genérica -->
+<div class="modal" id="modal-pergunta" hidden>
+  <div class="modal-caixa">
+    <h3 id="perg-titulo"></h3>
+    <p id="perg-texto"></p>
+    <input id="perg-campo" hidden>
+    <div class="modal-botoes">
+      <button class="btn btn-fantasma" id="perg-nao">Cancelar</button>
+      <button class="btn btn-ouro" id="perg-sim">OK</button>
+    </div>
+  </div>
+</div>
+
+<!-- Horário -->
+<div class="modal" id="modal-hora" hidden>
+  <div class="modal-caixa">
+    <h3>Inserir horário</h3>
+    <p class="dica">Cada pessoa vê no fuso dela, e o "daqui a…" conta sozinho.</p>
+    <label class="campo"><span>Quando</span><input type="datetime-local" id="hora-quando"></label>
+    <div class="formatos" id="hora-formatos"></div>
+    <div class="modal-botoes">
+      <button class="btn btn-fantasma" data-fechar>Cancelar</button>
+    </div>
+  </div>
+</div>
+
+<div class="sugestoes" id="sugestoes" hidden></div>
+<div class="toast" id="toast" hidden></div>
+<input type="file" id="arquivo" multiple hidden>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
